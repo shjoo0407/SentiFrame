@@ -1,0 +1,2827 @@
+PAGE 1
+TPS7A02 Nanopower IQ, 25-nA, 200-mA, Low-Dropout Voltage Regulator With Fast 
+Transient Response
+1 Features
+• Ultra-low IQ: 25 nA (typ), even in dropout
+• Shutdown IQ: 3 nA (typ)
+• Excellent transient response (1 mA to 50 mA)
+– < 10-µs settling time
+– 100-mV undershoot
+• Packages:
+– 1.0-mm × 1.0-mm X2SON
+– SOT23-5
+– 0.64-mm × 0.64-mm DSBGA
+• Input voltage range: 1.5 V to 6.0 V
+• Output voltage range: 0.8 V to 5.0 V (fixed)
+• Output accuracy: 1.5% over temperature
+• Smart enable pulldown
+• Very low dropout:
+– 270 mV (max) at 200 mA (VOUT = 3.3 V)
+• Stable with a 1-µF or larger capacitor
+2 Applications
+• Wearables electronics
+• Thermostats, smoke and heat detectors
+• Gas, heat, and water meters
+• Blood glucose monitors and pulse oximeters
+• Residential circuit breakers and fault indicators
+• Building security and video surveillance devices
+• EPOS card readers
+3 Description
+The TPS7A02 is an ultra-small, ultra-low quiescent 
+current low-dropout linear regulator (LDO) that can 
+source 200 mA with excellent transient performance.
+The TPS7A02, with an ultra-low I Q of 25 nA, is 
+designed specifically for applications where very-low 
+quiescent current is a critical parameter. This device 
+maintains low I Q consumption even in dropout mode 
+to further increase battery life. When in shutdown or 
+disabled mode, the device consumes ultra-low,
+3-nA IQ that helps increase the shelf life of the battery. 
+The TPS7A02 has an output range of 0.8 V to 5.0 
+V available in 50-mV steps to support the lower core 
+voltages of modern microcontrollers (MCUs).
+The TPS7A02 features a smart enable circuit with an 
+internally controlled pulldown resistor that keeps the 
+LDO disabled even when the EN pin is left floating 
+and helps minimize the external components used to 
+pulldown the EN pin. This circuit also helps minimize 
+the current drawn through the external pulldown 
+circuit when the device is enabled.
+The TPS7A02 is fully specified for T J = –40°C to 
++125°C operation.
+Package Information(1) 
+PART NUMBER PACKAGE BODY SIZE (NOM)
+TPS7A02
+DQN (X2SON, 4) 1.00 mm × 1.00 mm
+YCH (DSBGA, 4) 0.64 mm × 0.64 mm
+DBV (SOT-23, 5) 2.90 mm × 1.60 mm
+(1) For all available packages, see the package option 
+addendum at the end of the data sheet.
+ 
+Time (µs)
+AC-Coupled Output Voltage (mV)
+Output Current (mA)
+-200 -100 0 100 200 300 400 500 600 700 800
+-200 -350
+-150 -300
+-100 -250
+-50 -200
+0 -150
+50 -100
+100 -50
+150 0
+200 50
+250 100
+300 150
+350 200
+400 250
+VOUT
+IOUT
+Load Transient Response (VIN = VOUT + 1 V, COUT = 
+1 µF, IOUT = 1 mA to 50 mA in 1 µs)
+Output Current (mA)
+Current Efficiency (%)
+84
+86
+88
+90
+92
+94
+96
+98
+100
+102
+0.001 0.01 0.1 1 10 100
+Curr
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C Ground Current Efficiency vs Output Current
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, 
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+PAGE 2
+Table of Contents
+1 Features............................................................................1
+2 Applications.....................................................................1
+3 Description.......................................................................1
+4 Revision History.............................................................. 2
+5 Pin Configuration and Functions...................................3
+6 Specifications.................................................................. 4
+6.1 Absolute Maximum Ratings........................................ 4
+6.2 ESD Ratings............................................................... 4
+6.3 Recommended Operating Conditions.........................5
+6.4 Thermal Information....................................................5
+6.5 Electrical Characteristics.............................................6
+6.6 Switching Characteristics............................................7
+6.7 Typical Characteristics................................................8
+7 Detailed Description......................................................18
+7.1 Overview...................................................................18
+7.2 Functional Block Diagram.........................................18
+7.3 Feature Description...................................................19
+7.4 Device Functional Modes..........................................22
+8 Application and Implementation..................................23
+8.1 Application Information............................................. 23
+8.2 Typical Application.................................................... 26
+8.3 Power Supply Recommendations.............................27
+8.4 Layout....................................................................... 27
+9 Device and Documentation Support............................29
+9.1 Device Support......................................................... 29
+9.2 Receiving Notification of Documentation Updates....29
+9.3 Support Resources................................................... 29
+9.4 Trademarks...............................................................29
+9.5 Electrostatic Discharge Caution................................29
+9.6 Glossary....................................................................29
+10 Mechanical, Packaging, and Orderable 
+Information.................................................................... 29
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision B (March 2020) to Revision C (September 2022) Page
+• Changed YCH (DGBGA) package from preview to production data.................................................................. 1
+Changes from Revision A (December 2019) to Revision B (March 2020) Page
+• Changed DBV (SOT23-5) package from preview to production data.................................................................1
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+2 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 3
+5 Pin Configuration and Functions
+1OUT
+2GND
+Thermal Pad
+3 EN
+4 IN
+Not to scale
+Figure 5-1. DQN Package, 1-mm × 1-mm, 4-Pin 
+X2SON (Top View) 
+1IN
+2GND
+3EN 4 NC
+5 OUT
+Not to scale
+Figure 5-2. DBV Package, 5-Pin SOT-23 (Top View) 
+Table 5-1. Pin Functions: DQN, DBV
+PIN
+I/O(1) DESCRIPTIONNAME DQN DBV
+EN 3 3 Input
+Enable pin. Driving this pin to logic high enables the device; driving this pin to logic low 
+or floating this pin disables the device. This pin features an internal pulldown resistor, 
+which is disconnected when EN is driven high externally and the device has started up.
+GND 2 2 — Ground pin. This pin must be connected to ground on the board.
+IN 4 1 Input
+Input pin. For best transient response and to minimize input impedance, use 
+the recommended value or larger ceramic capacitor from IN to ground; see the 
+Recommended Operating Conditions table. Place the input capacitor as close to the 
+input of the device as possible.
+NC — 4 — No connect pin. This pin is not internally connected. Connect to ground or leave floating.
+OUT 1 5 Output
+Regulated output pin. A 0.5-µF or greater effective capacitance is required from OUT to 
+ground for stability. For best transient response, use a 1-µF or larger ceramic capacitor 
+from OUT to ground. Place the output capacitor as close to output of the device as 
+possible; see the Recommended Operating Conditions table.
+Thermal pad –– — Connect the thermal pad to a large-area ground plane. The thermal pad is internally 
+connect to ground.
+(1) NC = No internal connection.
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 3
+Product Folder Links: TPS7A02
+PAGE 4
+1  2  
+A  
+B  
+Not to scale
+IN OUT
+EN GND
+Figure 5-3. YCH Package, 4-Pin DSBGA, 0.35-mm 
+Pitch (Top View) 
+1  2  
+B  
+A  
+Not to scale
+EN GND
+IN OUT
+Figure 5-4. YCH Package, 4-Pin DSBGA, 0.35-mm 
+Pitch (Bottom View) 
+Table 5-2. Pin Functions: YCH
+PIN
+I/O DESCRIPTIONYCH NAME
+A1 IN Input
+Input pin. For best transient response and to minimize input impedance, use the recommended 
+value or larger ceramic capacitor from IN to ground; see the Recommended Operating 
+Conditions table. Place the input capacitor as close to input of the device as possible.
+A2 OUT Output
+Regulated output pin. A 0.5-µF or greater effective capacitance is required from OUT to ground 
+for stability. For best transient response, use a 1-µF or larger ceramic capacitor from OUT 
+to ground. Place the output capacitor as close to output of the device as possible; see the 
+Recommended Operating Conditions table.
+B1 EN Input
+Enable pin. Driving this pin to logic high enables the device; driving this pin to logic low or floating 
+this pin disables the device. This pin features an internal pulldown resistor, which is disconnected 
+when EN is driven high externally and the device has started up.
+B2 GND — Ground pin. This pin must be connected to ground and the thermal pad.
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+MIN MAX UNIT
+Voltage
+VIN –0.3 6.5
+VVEN –0.3 6.5
+VOUT –0.3 VIN + 0.3 or 5.5(2)
+Current Maximum output Internally limited A
+Temperature
+Operating junction, TJ –40 150
+°C
+Storage, Tstg –65 150
+(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress 
+ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under 
+Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device 
+reliability.
+(2) Maximum is VIN + 0.3 V or 5.5 V, whichever is smaller.
+6.2 ESD Ratings
+VALUE UNIT
+V(ESD) Electrostatic discharge
+Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001(1) ±1000
+V
+Charged-device model (CDM), per JEDEC specification JESD22-C101(2) ±500
+(1) JEDEC document JEP155 states that 500-V HBM allows safemanufacturing with a standard ESD control process.
+(2) JEDEC document JEP157 states that 250-V CDM allows safemanufacturing with a standard ESD control process.
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+4 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 5
+6.3 Recommended Operating Conditions
+over operating junction temperature range (unless otherwise noted)
+MIN NOM MAX UNIT
+VIN Input voltage 1.5 6.0 V
+VEN Enable voltage 0 6.0 V
+VOUT Output voltage 0.8 5.0 V
+IOUT Output current 0 200 mA
+CIN Input capacitor 1 µF
+COUT Output capacitor(1) (2) 1 1 22 µF
+FEN EN toggle frequency 10 kHz
+TJ Operating junction temperature –40 125 °C
+(1) Effective output capacitance of 0.5 µF minimum required for stability.
+(2) 22 µF is the maximum derated capacitance that can be used for stability.
+6.4 Thermal Information
+THERMAL METRIC(1)
+TPS7A02
+UNITDQN (X2SON) DBV (SOT-23-5) YCH (DSBGA)
+4 PINS 5 PINS 4 PINS
+RθJA Junction-to-ambient thermal resistance 179.1 181.9 201.1 °C/W
+RθJC(top) Junction-to-case(top) thermal resistance 137.6 53.0 2.3 °C/W
+RθJB Junction-to-board thermal resistance 116.3 88.1 67.3 °C/W
+ψJT Junction-to-top characterization parameter 6.1 27.1 1.1 °C/W
+ψJB Junction-to-board characterization parameter 116.3 52.7 67.2 °C/W
+RθJC(bot) Junction-to-case(bottom) thermal resistance 112.3 N/A N/A °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application 
+report.
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 5
+Product Folder Links: TPS7A02
+PAGE 6
+6.5 Electrical Characteristics
+Specified at TJ = –40°C to +125°C, VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, VEN = VIN, and CIN = 
+COUT = 1 µF (unless otherwise noted). Typical values are at TJ = 25°C.
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+Nominal accuracy
+TJ = 25°C, VOUT ≥ 1.5 V, 1 µA(3) ≤ IOUT ≤ 1 mA –1 1 %
+TJ = 25°C; VOUT < 1.5 V –15 15 mV
+Accuracy over 
+temperature
+VOUT ≥ 1.5 V
+TJ = –40°C to +125°C
+–1.5 1.5 %
+VOUT < 1.5 V –20 20 mV
+ΔVOUT(ΔVIN) Line regulation VOUT(nom) + 0.5 V ≤ VIN ≤ 6.0 V(1)
+ TJ = –40°C to +125°C 5 mV
+ΔVOUT(ΔIOUT) Load regulation(2)
+1 mA ≤ IOUT ≤ 200 mA,
+VIN = VOUT(nom) + 0.5 V(1)
+ 
+TJ = –40°C to +85°C 20 38
+mV
+TJ = –40°C to +125°C 50
+IGND Ground current IOUT = 0 mA
+TJ = 25°C 25 46
+nA
+TJ = –40°C to +85°C 60
+IGND/IOUT
+Ground current vs 
+load current
+5 µA ≤ IOUT < 1 mA
+TJ = 25°C
+1
+%1 mA ≤ IOUT < 100 mA 0.25
+IOUT ≥ 100 mA 0.15
+IGND(DO)
+Ground current in 
+dropout(3) IOUT = 0 mA, VIN = 95% x VOUT (NOM) TJ = 25°C 25 nA
+ISHDN Shutdown current VEN = 0 V, 1.5 V ≤ VIN ≤ 5.0 V, TJ = 25°C 3 10 nA
+ICL Output current limit VOUT = 90% × VOUT(nom)
+VOUT < 2.5V,
+VIN = VOUT(nom) + 
+VDO(max) + 1.0 V
+240 450 750 mA
+VOUT ≥ 2.5V,
+VIN = VOUT(nom) + 
+VDO(max) + 0.5 V
+240 450 750 mA
+ISC
+Short-circuit current 
+limit VOUT = 0 V 65 mA
+VDO Dropout voltage(4)
+TJ = –40°C to +85°C
+0.8 V ≤ VOUT < 1.0 V 1050
+mV
+1.0 V ≤ VOUT < 1.2 V 790
+1.2 V ≤ VOUT < 1.5 V 650
+1.5 V ≤ VOUT < 1.8 V 490
+1.8 V ≤ VOUT < 2.5 V 400
+2.5 V ≤ VOUT < 3.3 V 310
+3.3 V ≤ VOUT ≤ 5.0 V 270
+TJ = –40°C to +125°C
+0.8 V ≤ VOUT < 1.0 V 1100
+1.0 V ≤ VOUT < 1.2 V 850
+1.2 V ≤ VOUT < 1.5 V 700
+1.5 V ≤ VOUT < 1.8 V 560
+1.8 V ≤ VOUT < 2.5 V 450
+2.5 V ≤ VOUT < 3.3 V 360
+3.3 V ≤ VOUT ≤ 5.0 V 310
+PSRR Power-supply 
+rejection ratio f = 1 kHz, IOUT = 30 mA 55 dB
+VN
+Output voltage 
+noise BW = 10 Hz to 100 kHz, VOUT = 0.8 V, IOUT = 30 mA 130 µVRMS
+VUVLO UVLO threshold
+VIN rising 1.23 1.3 1.47
+V
+VIN falling 1.0 1.12 1.41
+VUVLO(HYST) UVLO hysteresis VIN hysteresis 180 mV
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+6 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 7
+6.5 Electrical Characteristics (continued)
+Specified at TJ = –40°C to +125°C, VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, VEN = VIN, and CIN = 
+COUT = 1 µF (unless otherwise noted). Typical values are at TJ = 25°C.
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+VEN(HI)
+EN pin logic high 
+voltage 1.1 V
+VEN(LOW)
+EN pin logic low 
+voltage 0.3 V
+IEN
+EN pin leakage 
+current VEN = VIN = 6.0 V 10 nA
+REN(PULLDOWN)
+Smart enable 
+pulldown resistor VEN = 0.3 V 500 KΩ
+RPULLDOWN Pulldown resistor VIN = 3.3 V, device disabled 60 Ω
+TSD(shutdown)
+Thermal shutdown 
+temperature Shutdown, temperature increasing 170
+°C
+TSD(reset)
+Thermal shutdown 
+reset temperature Reset, temperature decreasing 145
+(1) VIN = 2.0 V for VOUT ≤ 1.5 V.
+(2) Load Regulation is normalized to the output voltage at IOUT = 1 mA.
+(3) Specified by design
+(4) Dropout is measured by ramping VIN down until VOUT = VOUT (nom) x 95%, with IOUT = 200 mA.
+6.6 Switching Characteristics
+Specified at TJ = –40°C to +125°C, VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, VEN = VIN, and CIN = 
+COUT = 1 µF (unless otherwise noted). Typical values are at TJ = 25°C.
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+tSTR Start-up time From EN assertion to VOUT = 90% × VOUT(nom) 
+0.8V ≤ VOUT ≤ 1.5 V 500 800
+µs1.5V < VOUT ≤ 3.0 V 750 1200
+3.0V < VOUT ≤ 5.0 V 1200 1600
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 7
+Product Folder Links: TPS7A02
+PAGE 8
+6.7 Typical Characteristics
+at operating temperature range (TJ = –40°C to +125°C), VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, 
+VEN = VIN, and CIN = COUT = 1 µF (unless otherwise noted)
+Input Voltage (V)
+Quiescent Current (nA)
+1.5 2 2.5 3 3.5 4 4.5 5 5.5 6
+0
+10
+20
+30
+40
+50
+60
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+IOUT = 0 mA, VEN = VIN
+Figure 6-1. IQ vs VIN and Temperature
+Input Voltage (V)
+Quiescent Current (nA)
+1.5 2 2.5 3 3.5 4 4.5 5 5.5 6
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+550
+600
+650
+700
+TJ
+125°C
+140°C
+IOUT = 0 mA, VEN = VIN
+Figure 6-2. IQ vs VIN and Temperature
+Output Current (mA)
+Ground Current (nA)
+0.001 0.01 0.1 1 10 100200
+10
+100
+1000
+10000
+100000
+500000
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 1.8 V, VIN = VEN = 2.3 V
+Figure 6-3. IQ vs IOUT and Temperature up to 200 mA
+Output Current (mA)
+Ground Current (PA)
+0 20 40 60 80 100 120 140 160 180 200
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 1.8 V, VIN = VEN = 2.3 V
+Figure 6-4. IQ vs IOUT and Temperature Up to 200 mA
+Output Current (mA)
+Ground Current (nA)
+0 0.2 0.4 0.6 0.8 1
+0
+1000
+2000
+3000
+4000
+5000
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 1.8 V, VIN = VEN = 2.3 V
+Figure 6-5. IQ vs IOUT and Temperature Up to 1 mA
+Output Current (mA)
+Ground Current (PA)
+1 3 5 7 9 10
+0
+5
+10
+15
+20
+25
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 1.8 V, VIN = VEN = 2.3 V
+Figure 6-6. IQ vs IOUT and Temperature for 1 mA to 10 mA
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+8 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 9
+6.7 Typical Characteristics (continued)
+at operating temperature range (TJ = –40°C to +125°C), VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, 
+VEN = VIN, and CIN = COUT = 1 µF (unless otherwise noted)
+Input Voltage (V)
+Quiescent Current (nA)
+1.5 2 2.5 3 3.5 4 4.5 5
+0
+10
+20
+30
+40
+50
+60
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+VOUT = 5.0 V, VEN = VIN
+Figure 6-7. IQ in Dropout vs VIN and Temperature
+Input Voltage (V)
+Quiescent Current (nA)
+1.5 2 2.5 3 3.5 4 4.5 5
+0
+50
+100
+150
+200
+250
+300
+TJ
+125°C
+140°C
+VOUT = 5.0 V, VEN = VIN
+Figure 6-8. IQ in Dropout vs VIN and Temperature
+Input Voltage (V)
+Quiescent Current (nA)
+1.5 2 2.5 3 3.5 4 4.5 5 5.5 6
+0
+1000
+2000
+3000
+4000
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+IOUT = 0 mA, VEN = 1.1 V
+Figure 6-9. IQ vs VIN and Temperature
+Input Voltage (V)
+Quiescent Current (nA)
+1.5 2 2.5 3 3.5 4 4.5 5 5.5 6
+0
+1
+2
+3
+4
+5
+6
+TJ
+-55°C
+-40°C
+0°C
+25°C
+VEN = 0 V
+Figure 6-10. ISHDN vs VIN and Temperature
+Input Voltage (V)
+Quiescent Current (nA)
+1.5 2 2.5 3 3.5 4 4.5 5 5.5 6
+0
+50
+100
+150
+200
+250
+300
+350
+400
+TJ
+85°C
+125°C
+140°C
+VEN = 0 V
+Figure 6-11. ISHDN vs VIN and Temperature
+Time (µs)
+AC-Coupled Output Voltage (mV)
+Output Current (mA)
+-200 -100 0 100 200 300 400 500 600 700 800
+-200 -350
+-150 -300
+-100 -250
+-50 -200
+0 -150
+50 -100
+100 -50
+150 0
+200 50
+250 100
+300 150
+350 200
+400 250
+VOUT
+IOUT
+VOUT = 1.8 V, VIN = 2.8 V, COUT = 1 µF, tr = tf = 1 µs
+Figure 6-12. IOUT Transient From 1 mA to 50 mA
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 9
+Product Folder Links: TPS7A02
+PAGE 10
+6.7 Typical Characteristics (continued)
+at operating temperature range (TJ = –40°C to +125°C), VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, 
+VEN = VIN, and CIN = COUT = 1 µF (unless otherwise noted)
+Time (µs)
+AC-Coupled Output Voltage (mV)
+Output Current (mA)
+-200 -100 0 100 200 300 400 500 600 700 800
+-200 -350
+-150 -300
+-100 -250
+-50 -200
+0 -150
+50 -100
+100 -50
+150 0
+200 50
+250 100
+300 150
+350 200
+400 250
+Load
+VOUT
+IOUT
+VOUT = 1.8 V, VIN = 2.8 V, COUT = 1 µF, tr = tf = 1 µs
+Figure 6-13. IOUT Transient From 1 mA to 100 mA
+Time (µs)
+AC-Coupled Output Voltage (mV)
+Output Current (mA)
+-200 -100 0 100 200 300 400 500 600 700 800
+-200 -350
+-150 -300
+-100 -250
+-50 -200
+0 -150
+50 -100
+100 -50
+150 0
+200 50
+250 100
+300 150
+350 200
+400 250
+VOUT
+IOUT
+VOUT = 1.8 V, VIN = 2.8 V, COUT = 1 µF, tr = tf = 1 µs
+Figure 6-14. IOUT Transient From 1 mA to 200 mA
+Time (µs)
+AC-Coupled Output Voltage (mV)
+Output Current (mA)
+-60 -40 -20 0 20 40 60 80 100 120 140
+-200 -200
+-160 -175
+-120 -150
+-80 -125
+-40 -100
+0 -75
+40 -50
+80 -25
+120 0
+160 25
+200 50
+240 75
+280 100
+Load
+VOUT
+IOUT
+VOUT = 1.8 V, VIN = 2.8 V, COUT = 1 µF, tr = tf = 1 µs
+Figure 6-15. IOUT Transient From 0 mA to 50 mA
+Time (ms)
+AC-Coupled Output Voltage (mV)
+Output Current (mA)
+80 90 100 110 120 130 140 150 160 170 180
+-100 -200
+-75 -175
+-50 -150
+-25 -125
+0 -100
+25 -75
+50 -50
+75 -25
+100 0
+125 25
+150 50
+175 75
+200 100
+Load
+VOUT
+IOUT
+VOUT = 1.8 V, VIN = 2.8 V, COUT = 1 µF, tr = tf = 1 µs
+Figure 6-16. IOUT Transient From 50 mA to 0 mA
+Time (µs)
+)AC-Coupled Output Voltage (mV)
+Output Current (mA
+-80 -60 -40 -20 0 20 40 60 80 100 120
+-300 -400
+-240 -350
+-180 -300
+-120 -250
+-60 -200
+0 -150
+60 -100
+120 -50
+180 0
+240 50
+300 100
+360 150
+420 200
+Load
+IOUT
+VOUT
+VOUT = 1.8 V, VIN = 2.8 V, COUT = 1 µF, tr = tf = 1 µs
+Figure 6-17. IOUT Transient From 0 mA to 100 mA
+Time (ms)
+AC-Coupled Output Voltage (mV)
+Output Current (mA)
+-10 0 10 20 30 40 50 60 70 80 90
+-100 -400
+-75 -350
+-50 -300
+-25 -250
+0 -200
+25 -150
+50 -100
+75 -50
+100 0
+125 50
+150 100
+175 150
+200 200
+Load
+VOUT
+IOUT
+VOUT = 1.8 V, VIN = 2.8 V, COUT = 1 µF, tr = tf = 1 µs
+Figure 6-18. IOUT Transient From 100 mA to 0 mA
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+10 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 11
+6.7 Typical Characteristics (continued)
+at operating temperature range (TJ = –40°C to +125°C), VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, 
+VEN = VIN, and CIN = COUT = 1 µF (unless otherwise noted)
+Time (µs)
+AC-Coupled Output Voltage (mV)
+Output Current (mA)
+-30 -20 -10 0 10 20 30 40 50 60 70
+-300 -300
+-240 -250
+-180 -200
+-120 -150
+-60 -100
+0 -50
+60 0
+120 50
+180 100
+240 150
+300 200
+360 250
+420 300
+Load
+VOUT
+IOUT
+VOUT = 1.8 V, VIN = 2.8 V, COUT = 1 µF, tr = tf = 1 µs
+Figure 6-19. IOUT Transient From 0 mA to 200 mA
+Time (ms)
+)AC-Coupled Output Voltage (mV)
+Output Current (mA
+-10 0 10 20 30 40 50 60 70 80
+-200 -800
+-150 -700
+-100 -600
+-50 -500
+0 -400
+50 -300
+100 -200
+150 -100
+200 0
+250 100
+300 200
+350 300
+400 400
+VOUT
+IOUT VOUT = 1.8 V, VIN = 2.8 V, COUT = 1 µF, tr = tf = 1 µs
+Figure 6-20. IOUT Transient From 200 mA to 0 mA
+Time (µs)
+AC-Coupled Output Voltage (mV)
+Input Voltage (V)
+-40 0 40 80 120 160 200 240 280 320 360
+-50 -6
+-25 -4.5
+0 -3
+25 -1.5
+50 0
+75 1.5
+100 3
+125 4.5
+150 6
+Line
+VOUT
+VIN
+VOUT = 1.8 V, IOUT = 200 mA, COUT = 1 µF, slew rate = 1 V/µs
+Figure 6-21. VIN Transient From 2.8 V to 4.8 V
+Time (µs)
+AC-Coupled Output Voltage (mV)
+Input Voltage (V)
+-200 -100 0 100 200 300 400 500 600 700
+-200 -20
+-150 -17.5
+-100 -15
+-50 -12.5
+0 -10
+50 -7.5
+100 -5
+150 -2.5
+200 0
+250 2.5
+300 5
+350 7.5
+400 10
+Line
+VOUT
+VIN
+VOUT = 1.8 V, IOUT = 1 mA, COUT = 1 µF, slew rate = 1 V/µs
+Figure 6-22. VIN Transient From 2.8 V to 6.0 V
+Time (µs)
+AC-Coupled Output Voltage (mV)
+Input Voltage (V)
+-40 -20 0 20 40 60 80 100 120 140 160
+-50 -10
+-25 -7.5
+0 -5
+25 -2.5
+50 0
+75 2.5
+100 5
+125 7.5
+150 10
+Line
+VOUT
+VIN
+VOUT = 1.8 V, IOUT = 200 mA, COUT = 1 µF, slew rate = 1 V/µs
+Figure 6-23. VIN Transient From 2.8 V to 6.0 V
+Time (µs)
+Output Voltage (V)
+Input Voltage (V)
+-40 0 40 80 120 160 200 240 280 320 360
+0 0
+0.5 0.5
+1 1
+1.5 1.5
+2 2
+2.5 2.5
+3 3
+3.5 3.5
+4 4
+4.5 4.5
+5 5
+Drop
+VOUT
+VIN
+VOUT = 1.8 V, IOUT = 100 mA, COUT = 1 µF, slew rate = 1 V/µs
+Figure 6-24. VIN Transient From 1.5 V to 4.5 V
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 11
+Product Folder Links: TPS7A02
+PAGE 12
+6.7 Typical Characteristics (continued)
+at operating temperature range (TJ = –40°C to +125°C), VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, 
+VEN = VIN, and CIN = COUT = 1 µF (unless otherwise noted)
+Input Voltage (V)
+Change in Output Voltage (mV)
+2 2.5 3 3.5 4 4.5 5 5.5 6
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 1.8 V, IOUT = 1 mA
+Figure 6-25. Line Regulation vs VIN and Temperature
+Input Voltage (V)
+Output Voltage Accuracy (%)
+2 2.5 3 3.5 4 4.5 5 5.5 6
+-0.5
+-0.3
+-0.1
+0.1
+0.3
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 1.8 V, IOUT = 1 mA
+Figure 6-26. Output Accuracy vs VIN and Temperature
+Temperature (qC)
+Output Voltage Accuracy %)
+-60 -40 -20 0 20 40 60 80 100 120 140 150
+-0.5
+-0.3
+-0.1
+0.1
+0.3
+VOUT %
+VOUT = 1.8 V, IOUT = 1 mA
+Figure 6-27. Output Accuracy vs Temperature
+Input Voltage (V)
+Change in Output Voltage (mV)
+5 5.2 5.4 5.6 5.8 6
+-15
+-10
+-5
+0
+5
+10
+15
+20
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 5.0 V, IOUT = 1 mA
+Figure 6-28. Line Regulation vs VIN and Temperature
+Input Voltage (V)
+Output Voltage Accuracy (%)
+5 5.2 5.4 5.6 5.8 6
+-0.3
+-0.1
+0.1
+0.3
+0.5
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 5.0 V, IOUT = 1 mA
+Figure 6-29. Output Accuracy vs VIN and Temperature
+Temperature (qC)
+Output Voltage Accuracy %)
+-60 -40 -20 0 20 40 60 80 100 120 140 150
+-0.5
+-0.3
+-0.1
+0.1
+0.3
+0.5
+VOUT %
+VOUT = 5.0 V, IOUT = 1 mA
+Figure 6-30. Output Accuracy vs Temperature
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+12 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 13
+6.7 Typical Characteristics (continued)
+at operating temperature range (TJ = –40°C to +125°C), VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, 
+VEN = VIN, and CIN = COUT = 1 µF (unless otherwise noted)
+Output Current (mA)
+Change in Output Voltage (mV)
+0 20 40 60 80 100 120 140 160 180 200
+-20
+-15
+-10
+-5
+0
+5
+10
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 1.8 V
+Figure 6-31. Load Regulation vs VIN and Temperature
+Output Current (mA)
+Dropout Voltage (mV)
+0 20 40 60 80 100 120 140 160 180 200
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+550
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 1.8 V
+Figure 6-32. Dropout vs IOUT and Temperature
+Output Current (mA)
+Dropout Voltage (mV)
+0 20 40 60 80 100 120 140 160 180 200
+0
+20
+40
+60
+80
+100
+120
+140
+160
+180
+200
+220
+240
+260
+280
+300
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 5.0 V
+Figure 6-33. Dropout vs IOUT and Temperature
+Input Voltage (V)
+Dropout Voltage (mV)
+2 2.5 3 3.5 4 4.5 5
+0
+200
+400
+600
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C IOUT = 200 mA
+Figure 6-34. Dropout vs VIN and Temperature
+Input Voltage (V)
+Dropout Voltage (mV)
+1.5 2 2.5 3 3.5 4 4.5 5
+0
+50
+100
+150
+200
+250
+300
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+IOUT = 50 mA
+Figure 6-35. Dropout vs VIN and Temperature
+Output Current (mA)
+Output Voltage (V)
+0 50 100 150 200 250 300 350 400 450 500 550 600
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+VOUT = 0.8 V
+Figure 6-36. Foldback Current Limit vs IOUT and Temperature
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 13
+Product Folder Links: TPS7A02
+PAGE 14
+6.7 Typical Characteristics (continued)
+at operating temperature range (TJ = –40°C to +125°C), VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, 
+VEN = VIN, and CIN = COUT = 1 µF (unless otherwise noted)
+Output Current (mA)
+Output Voltage (V)
+0 50 100 150 200 250 300 350 400 450 500 550 600
+0
+0.5
+1
+1.5
+2
+2.5
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+VOUT = 1.8 V
+Figure 6-37. Foldback Current Limit vs IOUT and Temperature
+Temperature (qC)
+Enable Voltage (V)
+-60 -40 -20 0 20 40 60 80 100 120 140 150
+0.6
+0.65
+0.7
+0.75
+0.8
+0.85
+0.9
+VEN(LOW)
+VEN(HIGH)
+VOUT = 0.8 V
+Figure 6-38. EN High and Low Threshold vs Temperature
+Temperature (qC)
+Enable Voltage (V)
+-60 -40 -20 0 20 40 60 80 100 120 140 150
+0.7
+0.75
+0.8
+0.85
+0.9
+0.95
+1
+1.05
+1.1
+VEN(LOW)
+VEN(HIGH)
+VOUT = 5.0 V
+Figure 6-39. EN High and Low Threshold vs Temperature
+Temperature (qC)
+UVLO Voltage (V)
+-60 -40 -20 0 20 40 60 80 100 120 140 150
+1.1
+1.15
+1.2
+1.25
+1.3
+1.35
+1.4
+1.45
+1.5
+VUVLO(HIGH)
+VUVLO(LOW) VOUT = 5.0 V, IOUT = 1 mA
+Figure 6-40. UVLO Rising and Falling Threshold vs Temperature
+Temperature (qC)
+Pulldown Resistor (ohm)
+-60 -40 -20 0 20 40 60 80 100 120 140 160
+40
+45
+50
+55
+60
+65
+70
+VOUT
+0.8V 1.8V 5.0V
+ 
+Figure 6-41. Pulldown Resistor vs Temperature and VOUT 
+Temperature (qC)
+Pulldown Resistor (ohm)
+-60 -40 -20 0 20 40 60 80 100 120 140 160
+480
+490
+500
+510
+520
+530
+540
+550
+560
+570
+580
+VOUT
+0.8V 1.8V 5.0V
+ 
+Figure 6-42. Smart Enable Pulldown Resistor vs Temperature 
+and VOUT 
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+14 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 15
+6.7 Typical Characteristics (continued)
+at operating temperature range (TJ = –40°C to +125°C), VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, 
+VEN = VIN, and CIN = COUT = 1 µF (unless otherwise noted)
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+10 100 1k 10k 100k 1M 10M
+IOUT
+0 mA
+1 mA
+10 mA
+20 mA
+100 mA
+200 mA
+VIN = 2.8 V, VOUT = 1.8 V, COUT = 1 µF
+Figure 6-43. PSRR vs Frequency and IOUT 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+10 100 1k 10k 100k 1M 10M
+D001
+VIN
+2.3 V
+2.8 V
+3.8 V
+4.8 V
+6.0 V
+VOUT = 1.8 V, IOUT = 20 mA, COUT = 1 µF
+Figure 6-44. PSRR vs Frequency and VIN 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+10 100 1k 10k 100k 1M 10M
+D001
+VIN
+2.3 V
+2.8 V
+3.8 V
+4.8 V
+6.0 V
+VOUT = 1.8 V, IOUT = 100 mA, COUT = 1 µF
+Figure 6-45. PSRR vs Frequency and VIN 
+Frequency (Hz)
+Power Supply Rejection Ratio (dB)
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+10 100 1k 10k 100k 1M 10M
+D001
+VIN
+2.8 V
+3.8 V
+4.8 V
+6.0 V
+VOUT = 1.8 V, IOUT = 200 mA, COUT = 1 µF
+Figure 6-46. PSRR vs Frequency and VIN 
+Frequency (Hz)
+Output Voltage Noise (PVHz)
+0.050.05
+0.1
+0.2
+0.5
+1
+2
+5
+10
+20
+50
+100
+10 100 1k 10k 100k 1M 10M
+VOUT
+1.8 V, RMS Noise = 269.5 PVRMS
+5.0 V, RMS Noise = 710 PVRMS
+VIN = VOUT+ 1.0 V, IOUT = 1 mA, COUT = 1 µF
+Figure 6-47. Output Noise vs Frequency and VOUT 
+Frequency (Hz)
+Output Voltage Noise (PVHz)
+0.050.05
+0.1
+0.2
+0.3
+0.5
+1
+2
+3
+5
+10
+20
+30
+50
+10 100 1k 10k 100k 1M 10M
+IOUT
+100 PA, RMS Noise = 117.5 PVRMS
+1 mA, RMS Noise = 269.5 PVRMS
+VOUT = 1.8 V, VIN = 2.8 V, COUT = 1 µF
+Figure 6-48. Output Noise vs Frequency and IOUT 
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 15
+Product Folder Links: TPS7A02
+PAGE 16
+6.7 Typical Characteristics (continued)
+at operating temperature range (TJ = –40°C to +125°C), VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, 
+VEN = VIN, and CIN = COUT = 1 µF (unless otherwise noted)
+Frequency (Hz)
+Output Voltage Noise (PVHz)
+0.050.05
+0.1
+0.2
+0.3
+0.5
+1
+2
+3
+5
+10
+20
+30
+50
+10 100 1k 10k 100k 1M 10M
+COUT
+1 PF, RMS Noise = 269.5 PVRMS
+22 PF, RMS Noise = 301.1 PVRMS
+VOUT = 1.8 V, VIN = 2.8 V, IOUT = 1 mA
+Figure 6-49. Output Noise vs Frequency and COUT 
+Time (ms)
+Voltage (V)
+-450 -300 -150 0 150 300 450 600 750 900 1050
+-2
+-1
+0
+1
+2
+3
+4
+5
+Star
+VOUT
+VEN = VIN
+VOUT = 1.8 V, IOUT = 200 mA, COUT = 1 µF
+Figure 6-50. Startup With VEN = VIN 
+Time (ms)
+Voltage (V)
+-450 -300 -150 0 150 300 450 600 750 900 1050
+-2
+-1
+0
+1
+2
+3
+4
+5
+Star
+VOUT
+VEN
+VIN
+VOUT = 1.8 V, IOUT = 200 mA, COUT = 1 µF
+Figure 6-51. Startup With VEN Before VIN 
+Time (ms)
+Voltage (V)
+-600 -400 -200 0 200 400 600 800 1000 1200 1400
+-1
+0
+1
+2
+3
+4
+5
+6
+Star
+VOUT
+VEN
+VIN
+VOUT = 1.8 V, IOUT = 200 mA, COUT = 1 µF
+Figure 6-52. Startup With VEN After VIN 
+Time (Ps)
+Voltage (V)
+-450 -300 -150 0 150 300 450 600 750 900 1050
+-0.5
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+4.5
+5
+5.5
+Star
+VOUT
+VEN
+VIN
+VOUT = 1.8 V, IOUT = 0 mA, COUT = 1 µF
+Figure 6-53. Startup With VEN After VIN 
+Time (ms)
+Voltage (V)
+-800 -400 0 400 800 1200 1600 2000 2400 2800 3200
+-1
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Star
+VOUT
+VEN
+VIN
+VOUT = 5.0 V, IOUT = 200 mA, COUT = 1 µF
+Figure 6-54. Startup With VEN After VIN 
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+16 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 17
+6.7 Typical Characteristics (continued)
+at operating temperature range (TJ = –40°C to +125°C), VIN = VOUT(nom) + 0.5 V or 2.0 V (whichever is greater), IOUT = 1 mA, 
+VEN = VIN, and CIN = COUT = 1 µF (unless otherwise noted)
+Time (Ps)
+Voltage (V)
+Current (mA)
+-400 -200 0 200 400 600 800 1000 1200
+-1 -50
+0 -40
+1 -30
+2 -20
+3 -10
+4 0
+5 10
+6 20
+7 30
+8 40
+9 50
+Star
+VIN
+VEN
+VOUT
+IIN
+VOUT = 1.8 V, IOUT = 0 mA
+Figure 6-55. Startup Inrush Current With COUT= 1 µF
+Time (Ps)
+Voltage (V)
+Current (mA)
+-400 -200 0 200 400 600 800 1000 1200
+-1 -600
+0 -500
+1 -400
+2 -300
+3 -200
+4 -100
+5 0
+6 100
+7 200
+8 300
+9 400
+VIN
+VEN
+VOUT
+IIN
+VOUT = 1.8 V, IOUT = 0 mA
+Figure 6-56. Startup Inrush Current With COUT= 22 µF
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 17
+Product Folder Links: TPS7A02
+PAGE 18
+7 Detailed Description
+7.1 Overview
+The TPS7A02 is a ultra-low I Q linear voltage regulator that is optimized for excellent transient performance. 
+These characteristics make the device ideal for most battery-powered applications.
+This low-dropout linear regulator (LDO) offers active discharge, foldback current limit, shutdown, and thermal 
+protection capability.
+7.2 Functional Block Diagram
++
+±
+Current 
+Limit
+1.2-V 
+Bandgap
+Thermal 
+Shutdown
+Error 
+Amp
+Internal
+Controller
+OUT
+EN
+IN
+GND
+Active Discharge
+P-Version Only
++
+±
+UVLO
+Smart 
+Enable 
+Resistor
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+18 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 19
+7.3 Feature Description
+7.3.1 Excellent Transient Response
+The TPS7A02 includes several innovative circuits to ensure excellent transient response. Dynamic biasing 
+increases the I Q for a short duration during transients to extend the closed-loop bandwidth and improve the 
+output response time to transients.
+Adaptive biasing increases the I Q as the DC load current increases, extending the bandwidth of the loop. The 
+response time across the output voltage range is constant because a buffered reference topology is used, which 
+keeps the control loop in unity gain at any output voltage.
+These features give the device a wide loop bandwidth during transients that ensures excellent transient 
+response while maintaining low IQ in steady-state conditions.
+7.3.2 Active Discharge (P-Version Only)
+The device has an internal pulldown MOSFET that connects a R PULLDOWN resistor to ground when the device is 
+disabled to actively discharge the output voltage. The active discharge circuit is activated by the enable pin or by 
+the undervoltage lockout (UVLO).
+Do not rely on the active discharge circuit for discharging a large amount of output capacitance after the input 
+supply has collapsed because reverse current can possibly flow from the output to the input. This reverse current 
+flow can cause damage to the device. Limit reverse current to no more than 5% of the device rated current for a 
+short period of time.
+7.3.3 Low IQ in Dropout
+In most LDOs the I Q significantly increases when the device is placed into dropout, which is especially true for 
+low IQ LDOs. The TPS7A02 helps to reduce the battery discharge by detecting when the device is operating in 
+dropout conditions and maintaining a low IQ.
+7.3.4 Smart Enable
+The enable (EN) input polarity is active high. The output voltage is enabled when the voltage of the enable input 
+is greater than V EN(HI) and disabled when the enable input voltage is less than V EN(LOW). If independent control 
+of the output voltage is not needed, connect EN to IN.
+This device has a smart enable circuit to reduce quiescent current. When the voltage on the enable pin is 
+driven above VEN(HI), as listed in the Electrical Characteristics table, the device is enabled and the smart enable 
+internal pulldown resistor (REN(PULLDOWN)) is disconnected. When the enable pin is floating, the R EN(PULLDOWN) is 
+connected and pulls the enable pin low to disable the device. The R EN(PULLDOWN) value is listed in the Electrical 
+Characteristics table.
+This device has an internal pulldown circuit that activates when the device is disabled to actively discharge the 
+output voltage.
+7.3.5 Dropout Voltage
+Dropout voltage (V DO) is defined as the input voltage minus the output voltage (V IN – V OUT) at the rated output 
+current (IRATED), where the pass transistor is fully on. I RATED is the maximum I OUT listed in the Recommended 
+Operating Conditions  table. The pass transistor is in the ohmic or triode region of operation, and acts as a 
+switch. The dropout voltage indirectly specifies a minimum input voltage greater than the nominal programmed 
+output voltage at which the output voltage is expected to stay in regulation. If the input voltage falls to less than 
+the nominal output regulation, then the output voltage falls as well.
+For a CMOS regulator, the dropout voltage is determined by the drain-source on-state resistance (RDS(ON)) of the 
+pass transistor. Therefore, if the linear regulator operates at less than the rated current, the dropout voltage for 
+that current scales accordingly. The following equation calculates the RDS(ON) of the device.
+R =DS(ON)
+VDO
+IRATED
+(1)
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 19
+Product Folder Links: TPS7A02
+PAGE 20
+7.3.6 Foldback Current Limit
+The device has an internal current limit circuit that protects the regulator during transient high-load current faults 
+or shorting events. The current limit is a hybrid brick-wall-foldback scheme. The current limit transitions from a 
+brick-wall scheme to a foldback scheme at the foldback voltage (V FOLDBACK). In a high-load current fault with 
+the output voltage above V FOLDBACK, the brick-wall scheme limits the output current to the current limit (I CL). 
+When the voltage drops below V FOLDBACK, a foldback current limit activates that scales back the current as the 
+output voltage approaches GND. When the output is shorted, the device supplies a typical current called the 
+short-circuit current limit (ISC). ICL and ISC are listed in the Electrical Characteristics table.
+For this device, VFOLDBACK = 0.5 V.
+The output voltage is not regulated when the device is in current limit. When a current limit event occurs, the 
+device begins to heat up because of the increase in power dissipation. When the device is in brick-wall current 
+limit, the pass transistor dissipates power [(V IN – VOUT) × ICL]. When the device output is shorted and the output 
+is below V FOLDBACK, the pass transistor dissipates power [(V IN – V OUT) × I SC]. If thermal shutdown is triggered, 
+the device turns off. After the device cools down, the internal thermal shutdown circuit turns the device back on. 
+If the output current fault condition continues, the device cycles between current limit and thermal shutdown. For 
+more information on current limits, see the Know Your Limits application report.
+Figure 7-1 shows a diagram of the foldback current limit.
+VOUT(NOM)
+0 V
+0 mA
+VOUT
+VFOLDBACK
+ICLISC IRATED
+IOUT
+Brickwall
+Foldback
+Figure 7-1. Foldback Current Limit
+7.3.7 Undervoltage Lockout (UVLO)
+The device has an independent undervoltage lockout (UVLO) circuit that monitors the input voltage, allowing a 
+controlled and consistent turn on and off of the output voltage. To prevent the device from turning off if the input 
+drops during turn on, the UVLO has hysteresis as specified in the Electrical Characteristics table.
+7.3.8 Thermal Shutdown
+The device contains a thermal shutdown protection circuit to disable the device when the junction temperature
+(TJ) of the pass transistor rises to T SD(shutdown) (typical). Thermal shutdown hysteresis assures that the device 
+resets (turns on) when the temperature falls to TSD(reset) (typical).
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+20 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 21
+The thermal time-constant of the semiconductor die is fairly short, thus the device may cycle on and off 
+when thermal shutdown is reached until power dissipation is reduced. Power dissipation during start up can 
+be high from large V IN – V OUT voltage drops across the device or from high inrush currents charging large 
+output capacitors. Under some conditions, the thermal shutdown protection disables the device before start up 
+completes.
+For reliable operation, limit the junction temperature to the maximum listed in the Recommended Operating 
+Conditions table. Operation above this maximum temperature causes the device to exceed operational 
+specifications. Although the internal protection circuitry of the device is designed to protect against thermal 
+overall conditions, this circuitry is not intended to replace proper heat sinking. Continuously running the device 
+into thermal shutdown or above the maximum recommended junction temperature reduces long-term reliability.
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 21
+Product Folder Links: TPS7A02
+PAGE 22
+7.4 Device Functional Modes
+7.4.1 Device Functional Mode Comparison
+Table 7-1 shows the conditions that lead to the different modes of operation. See the Electrical Characteristics 
+table for parameter values.
+Table 7-1. Device Functional Mode Comparison
+OPERATING MODE
+PARAMETER
+VIN VEN IOUT TJ
+Normal operation VIN > VOUT(nom) + VDO and VIN > VIN(min) VEN > VEN(HI) IOUT < IOUT(max) TJ < TSD(shutdown)
+Dropout operation VIN(min) < VIN < VOUT(nom) + VDO VEN > VEN(HI) IOUT < IOUT(max) TJ < TSD(shutdown)
+Disabled
+(any true condition 
+disables the device)
+VIN < VUVLO VEN < VEN(LOW) Not applicable TJ > TSD(shutdown)
+7.4.2 Normal Operation
+The device regulates to the nominal output voltage when the following conditions are met:
+• The input voltage is greater than the nominal output voltage plus the dropout voltage (VOUT(nom) + VDO)
+• The output current is less than the current limit (IOUT < ICL)
+• The device junction temperature is less than the thermal shutdown temperature (TJ < TSD)
+• The enable voltage has previously exceeded the enable rising threshold voltage and has not yet decreased 
+to less than the enable falling threshold
+7.4.3 Dropout Operation
+If the input voltage is lower than the nominal output voltage plus the specified dropout voltage, but all other 
+conditions are met for normal operation, the device operates in dropout mode. In this mode, the output voltage 
+tracks the input voltage. During this mode, the transient performance of the device becomes significantly 
+degraded because the pass transistor is in the ohmic or triode region, and acts as a switch. Line or load 
+transients in dropout can result in large output-voltage deviations.
+When the device is in a steady dropout state (defined as when the device is in dropout, V IN < VOUT(NOM) + VDO, 
+directly after being in a normal regulation state, but not during start-up), the pass transistor is driven into the 
+ohmic or triode region. When the input voltage returns to a value greater than or equal to the nominal output 
+voltage plus the dropout voltage (V OUT(NOM) + V DO), the output voltage can overshoot for a short period of time 
+while the device pulls the pass transistor back into the linear region.
+7.4.4 Disabled
+The output of the device can be shutdown by forcing the voltage of the enable pin to less than the maximum 
+EN pin low-level input voltage (see the Electrical Characteristics table). When disabled, the pass transistor is 
+turned off, internal circuits are shutdown, and the output voltage is actively discharged to ground by an internal 
+discharge circuit from the output to ground.
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+22 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 23
+8 Application and Implementation
+Note
+Information in the following applications sections is not part of the TI component specification, 
+and TI does not warrant its accuracy or completeness. TI’s customers are responsible for 
+determining suitability of components for their purposes, as well as validating and testing their design 
+implementation to confirm system functionality.
+8.1 Application Information
+8.1.1 Recommended Capacitor Types
+The device is designed to be stable using low equivalent series resistance (ESR) ceramic capacitors at the input 
+and output. Multilayer ceramic capacitors have become the industry standard for these types of applications and 
+are recommended, but must be used with good judgment. Ceramic capacitors that employ X7R-, X5R-, and 
+C0G-rated dielectric materials provide relatively good capacitive stability across temperature, whereas the use of 
+Y5V-rated capacitors is discouraged because of large variations in capacitance.
+Regardless of the ceramic capacitor type selected, the effective capacitance varies with operating voltage and 
+temperature. As a rule of thumb, expect the effective capacitance to decrease by as much as 50%. The input 
+and output capacitors recommended in the Recommended Operating Conditions  table account for an effective 
+capacitance of approximately 50% of the nominal value.
+8.1.2 Input and Output Capacitor Requirements
+Although an input capacitor is not required for stability, good analog design practice is to connect a capacitor 
+from IN to GND. This capacitor counteracts reactive input sources and improves transient response, input ripple, 
+and PSRR. An input capacitor is recommended if the source impedance is more than 0.5 Ω. A higher value 
+capacitor may be necessary if large, fast rise-time load or line transients are anticipated or if the device is 
+located several inches from the input power source.
+Dynamic performance of the device is improved with the use of an output capacitor. Use an output capacitor 
+within the range specified in the Recommended Operating Conditions table for stability.
+8.1.3 Load Transient Response
+The load-step transient response is the output voltage response by the LDO to a step in load current, whereby 
+output voltage regulation is maintained. There are two key transitions during a load transient response: the 
+transition from a light to a heavy load and the transition from a heavy to a light load. The regions shown in Figure 
+8-1 are broken down as follows. Regions A, E, and H are where the output voltage is in steady-state.
+tAt tDt tEttCt tGt tHt
+FB
+Figure 8-1. Load Transient Waveform
+During transitions from a light load to a heavy load, the:
+• Initial voltage dip is a result of the depletion of the output capacitor charge and parasitic impedance to the 
+output capacitor (region B)
+• Recovery from the dip results from the LDO increasing the sourcing current, and leads to output voltage 
+regulation (region C)
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 23
+Product Folder Links: TPS7A02
+PAGE 24
+During transitions from a heavy load to a light load, the:
+• Initial voltage rise results from the LDO sourcing a large current, and leads to the output capacitor charge to 
+increase (region F)
+• Recovery from the rise results from the LDO decreasing the sourcing current in combination with the load 
+discharging the output capacitor (region G)
+A larger output capacitance reduces the peaks during a load transient but slows down the response time of the 
+device. A larger DC load also reduces the peaks because the amplitude of the transition is lowered and a higher 
+current discharge path is provided for the output capacitor.
+8.1.4 Undervoltage Lockout (UVLO) Operation
+The UVLO circuit ensures that the device stays disabled before the input supply reaches the minimum 
+operational voltage range, and ensures that the device shuts down when the input supply collapses. Figure 
+8-2 shows the UVLO circuit response to various input voltage events. The diagram can be separated into the 
+following parts:
+• Region A: The device does not start until the input reaches the UVLO rising threshold.
+• Region B: Normal operation, regulating device.
+• Region C: Brownout event above the UVLO falling threshold (UVLO rising threshold – UVLO hysteresis). The 
+output may fall out of regulation but the device remains enabled.
+• Region D: Normal operation, regulating device.
+• Region E: Brownout event below the UVLO falling threshold. The device is disabled in most cases and the 
+output falls because of the load and active discharge circuit. The device is reenabled when the UVLO rising 
+threshold is reached by the input voltage and a normal start-up follows.
+• Region F: Normal operation followed by the input falling to the UVLO falling threshold.
+• Region G: The device is disabled when the input voltage falls below the UVLO falling threshold to 0 V. The 
+output falls because of the load and active discharge circuit.
+C
+tAt
+VIN
+VOUT
+UVLO Rising Threshold
+UVLO Hysteresis
+tBt tDt tEt tFt tGt
+Figure 8-2. Typical UVLO Operation
+8.1.5 Power Dissipation (PD)
+Circuit reliability demands that proper consideration be given to device power dissipation, location of the circuit 
+on the printed circuit board (PCB), and correct sizing of the thermal plane. The PCB area around the regulator 
+must be as free as possible of other heat-generating devices that cause added thermal stresses.
+As a first-order approximation, power dissipation in the regulator depends on the input-to-output voltage 
+difference and load conditions. Use Equation 2 to approximate PD:
+PD = (VIN – VOUT) × IOUT (2)
+Power dissipation can be minimized, and thus greater efficiency achieved, by proper selection of the system 
+voltage rails. Proper selection allows the minimum input-to-output voltage differential to be obtained. The low 
+dropout of the TPS7A02 allows for maximum efficiency across a wide range of output voltages.
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+24 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 25
+The main heat conduction path for the device is through the thermal pad on the package. As such, the thermal 
+pad must be soldered to a copper pad area under the device. This pad area contains an array of plated vias that 
+conduct heat to any inner plane areas or to a bottom-side copper plane.
+The maximum power dissipation determines the maximum allowable junction temperature (T J) for the device. 
+According to Equation 3, power dissipation and junction temperature are most often related by the junction-to-
+ambient thermal resistance (RθJA) of the combined PCB and device package and the temperature of the ambient 
+air (TA). Equation 4 rearranges Equation 3 for output current.
+TJ = TA + (RθJA × PD) (3)
+IOUT = (TJ – TA) / [RθJA × (VIN – VOUT)] (4)
+Unfortunately, this thermal resistance (R θJA) is highly dependent on the heat-spreading capability built into the 
+particular PCB design, and therefore varies according to the total copper area, copper weight, and location of 
+the planes. The R θJA recorded in the Thermal Information table is determined by the JEDEC standard, PCB, 
+and copper-spreading area, and is only used as a relative measure of package thermal performance. For a 
+well-designed thermal layout, R θJA is actually the sum of the X2SON package junction-to-case (bottom) thermal 
+resistance (RθJC(bot)) plus the thermal resistance contribution by the PCB copper.
+8.1.5.1 Estimating Junction Temperature
+The JEDEC standard now recommends the use of psi ( Ψ) thermal metrics to estimate the junction temperatures 
+of the LDO when in-circuit on a typical PCB board application. These metrics are not strictly speaking thermal 
+resistances, but rather offer practical and relative means of estimating junction temperatures. These psi metrics 
+are determined to be significantly independent of the copper-spreading area. The key thermal metrics ( ΨJT and 
+ΨJB) are used in accordance with Equation 5 and are given in the Thermal Information table.
+ΨJT : TJ = TT + ΨJT × PD and ΨJB : TJ = TB + ΨJB × PD (5)
+where:
+• PD is the power dissipated as explained in Equation 2
+• TT is the temperature at the center-top of the device package, and
+• TB is the PCB surface temperature measured 1 mm from the device package and centered on the package 
+edge
+8.1.5.2 Recommended Area for Continuous Operation
+The operational area of an LDO is limited by the dropout voltage, output current, junction temperature, and input 
+voltage. The recommended area for continuous operation for a linear regulator is given in Figure 8-3 and can be 
+separated into the following parts:
+• Dropout voltage limits the minimum differential voltage between the input and the output (VIN – VOUT) at a 
+given output current level. See the Dropout Operation section for more details.
+• The rated output currents limits the maximum recommended output current level. Exceeding this rating 
+causes the device to fall out of specification.
+• The rated junction temperature limits the maximum junction temperature of the device. Exceeding this rating 
+causes the device to fall out of specification and reduces long-term reliability.
+– The shape of the slope is given by Equation 4. The slope is nonlinear because the maximum rated 
+junction temperature of the LDO is controlled by the power dissipation across the LDO; thus when VIN – 
+VOUT increases the output current must decrease.
+• The rated input voltage range governs both the minimum and maximum of VIN – VOUT.
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 25
+Product Folder Links: TPS7A02
+PAGE 26
+Figure 8-3 shows the recommended area of operation for this device on a JEDEC-standard high-K board with a 
+RθJA as given in the Thermal Information table.
+Rated output 
+current
+Output current limited by 
+dropout Output current limited by thermals
+Limited by 
+minimum VIN
+Limited by 
+maximum VIN
+VIN ± VOUT (V)
+Output Current (A)
+Figure 8-3. Region Description of Continuous Operation Regime
+8.2 Typical Application
+LoadVBAT
+IN OUT
+EN GND
+Device
+CIN
+COUT
+Figure 8-4. Operation From a Battery Input Supply
+8.2.1 Design Requirements
+Table 8-1. Design Parameters
+PARAMETER DESIGN REQUIREMENT
+Input voltage 1.8 V to 3.0 V (two 1.5-V batteries)
+Output voltage 1.0 V, ±1%
+Input current 200 mA, maximum
+Output load 10-mA DC
+Maximum ambient temperature 70°C
+8.2.2 Detailed Design Procedure
+For this design example, the 1.0-V, fixed-version TPS7A0210 is selected. A dual AA Alkaline battery was used, 
+thus a 1.0-µF input capacitor is recommended to minimize transient currents drawn from the battery. A 1.0-µF 
+output capacitor is also recommended for excellent load transient response. The dropout voltage (V DO) is kept 
+within the TPS7A02 dropout voltage specification for the 1.0-V output voltage option to keep the device in 
+regulation under all load and temperature conditions for this design. Use the recommend 1-µF input and output 
+capacitor because the input source has a high equivalent series resistor (ESR) of 600 mΩ (typ). The very small 
+ground current consumed by the regulator maintains a high current efficiency as compared to the load current 
+consumed by the system, as shown in Figure 8-5 which allows for long battery life. Equation 6 can be used to 
+calculate the current efficiency (Iη) of this system.
+Iη(%) = IOUT / (IOUT + IQ) × 100 (6)
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+26 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 27
+8.2.3 Application Curve
+Output Current (mA)
+Current Efficiency (%)
+84
+86
+88
+90
+92
+94
+96
+98
+100
+102
+0.001 0.01 0.1 1 10 100
+Curr
+TJ
+-55°C
+-40°C
+0°C
+25°C
+85°C
+125°C
+140°C
+Figure 8-5. Current Efficiency vs IOUT and Temperature
+8.3 Power Supply Recommendations
+This device is designed to operate from an input supply voltage range of 1.5 V to 6.0 V. The input supply must 
+be well regulated and free of spurious noise. To ensure that the output voltage is well regulated and dynamic 
+performance is optimum, the input supply must be at least VOUT(nom) + 0.5 V. TI highly recommends using a 1-µF 
+or greater input capacitor to reduce the impedance of the input supply, especially during transients.
+8.4 Layout
+8.4.1 Layout Guidelines
+• Place input and output capacitors as close to the device as possible.
+• Use copper planes for device connections to optimize thermal performance.
+• Place thermal vias around the device to distribute the heat.
+• Do not place a thermal via directly beneath the thermal pad of the DQN package. A via can wick solder or 
+solder paste away from the thermal pad joint during the soldering process, leading to a compromised solder 
+joint on the thermal pad.
+8.4.2 Layout Examples
+  
+  
+  
+COUT
+VOUT VIN
+GND PLANE
+CIN
+Represents via used for 
+application specific connections
+1
+2 3
+4
+Figure 8-6. Layout Example for the DQN Package
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 27
+Product Folder Links: TPS7A02
+PAGE 28
+    
+  
+COUT
+VOUTVIN
+GND PLANE
+CIN
+Represents via used for 
+application specific connections
+1
+2
+3 4
+5
+Figure 8-7. Layout Example for the DBV Package
+CIN COUT
+OUTIN
+GNDEN
+A2
+B2
+A1
+B1
+Via
+Figure 8-8. Layout Example for the YCH Package
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022 www.ti.com
+28 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPS7A02
+PAGE 29
+9 Device and Documentation Support
+9.1 Device Support
+9.1.1 Device Nomenclature
+Table 9-1. Device Nomenclature(1) (2) 
+PRODUCT VOUT
+TPS7A02 xx(x)Pyyyz
+XX(X) is the nominal output voltage. For output voltages with a resolution of 100 mV, two digits are used 
+in the ordering number; otherwise, three digits are used (for example, 28 = 2.8 V; 125 = 1.25 V).
+P indicates an active output discharge feature. All members of the TPS7A02 family actively discharge 
+the output when the device is disabled.
+YYY is the package designator.
+Z is the package quantity. R is for reel (3000 pieces), T is for tape (250 pieces).
+(1) For the most current package and ordering information see the Package Option Addendum at the end of this document, or visit the 
+device product folder on www.ti.com.
+(2) Output voltages from 1.0 V to 3.3 V in 50-mV increments are available. Contact the factory for details and availability.
+9.2 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on 
+Subscribe to updates  to register and receive a weekly digest of any product information that has changed. For 
+change details, review the revision history included in any revised document.
+9.3 Support Resources
+TI E2E ™ support forums  are an engineer's go-to source for fast, verified answers and design help — straight 
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do 
+not necessarily reflect TI's views; see TI's Terms of Use.
+9.4 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+9.5 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled 
+with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may 
+be more susceptible to damage because very small parametric changes could cause the device not to meet its published 
+specifications.
+9.6 Glossary
+TI Glossary This glossary lists and explains terms, acronyms, and definitions.
+10 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most 
+current data available for the designated devices. This data is subject to change without notice and revision of 
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+www.ti.com
+TPS7A02
+SBVS277C – JULY 2019 – REVISED SEPTEMBER 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 29
+Product Folder Links: TPS7A02
+PAGE 30
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Sep-2026
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+TPS7A0210PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 GH
+TPS7A0210PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 GH
+TPS7A0212PDBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 21GF
+TPS7A0212PDBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21GF
+TPS7A0212PYCHR Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 A
+TPS7A0212PYCHR.A Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 A
+TPS7A0215DQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 OS
+TPS7A0215DQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 OS
+TPS7A0215PDBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 21KF
+TPS7A0215PDBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21KF
+TPS7A0215PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 F3
+TPS7A0215PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 F3
+TPS7A02175PYCHR Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 S
+TPS7A02175PYCHR.A Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 S
+TPS7A02185DQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 OR
+TPS7A02185DQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 OR
+TPS7A02185PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 HO
+TPS7A02185PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 HO
+TPS7A0218DBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes SN Level-1-260C-UNLIM -40 to 125 2CDT
+TPS7A0218DBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes SN Level-1-260C-UNLIM -40 to 125 2CDT
+TPS7A0218PDBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 21LF
+TPS7A0218PDBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21LF
+TPS7A0218PDBVRG4 Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21LF
+TPS7A0218PDBVRG4.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21LF
+TPS7A0218PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 F4
+TPS7A0218PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 F4
+TPS7A0218PYCHR Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 B
+TPS7A0218PYCHR.A Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 B
+TPS7A0220PDBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 22MT
+Addendum-Page 1
+PAGE 31
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Sep-2026
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+TPS7A0220PDBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 22MT
+TPS7A0220PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 F5
+TPS7A0220PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 F5
+TPS7A0222DQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 IN
+TPS7A0222DQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 IN
+TPS7A0222PDBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 21HF
+TPS7A0222PDBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21HF
+TPS7A0222PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 GI
+TPS7A0222PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 GI
+TPS7A0223PDBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 21IF
+TPS7A0223PDBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21IF
+TPS7A0223PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 F6
+TPS7A0223PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 F6
+TPS7A0225PDBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 21DF
+TPS7A0225PDBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21DF
+TPS7A0225PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 F7
+TPS7A0225PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 F7
+TPS7A0225PYCHR Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 C
+TPS7A0225PYCHR.A Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 C
+TPS7A0228DBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 29PT
+TPS7A0228DBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 29PT
+TPS7A0228DQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 IE
+TPS7A0228DQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 IE
+TPS7A0228PDBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 21EF
+TPS7A0228PDBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21EF
+TPS7A0228PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 F8
+TPS7A0228PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 F8
+TPS7A0228PYCHR Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 D
+TPS7A0228PYCHR.A Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 D
+TPS7A0230PDBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 21MF
+TPS7A0230PDBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21MF
+Addendum-Page 2
+PAGE 32
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Sep-2026
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+TPS7A0230PDBVRG4 Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21MF
+TPS7A0230PDBVRG4.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21MF
+TPS7A0230PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 F9
+TPS7A0230PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 F9
+TPS7A0230PYCHR Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 F
+TPS7A0230PYCHR.A Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 F
+TPS7A0231PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 GJ
+TPS7A0231PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 GJ
+TPS7A0233DBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes SN Level-1-260C-UNLIM -40 to 125 29QT
+TPS7A0233DBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes SN Level-1-260C-UNLIM -40 to 125 29QT
+TPS7A0233DQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 IF
+TPS7A0233DQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 IF
+TPS7A0233PDBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 21FF
+TPS7A0233PDBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 21FF
+TPS7A0233PDQNR Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 FA
+TPS7A0233PDQNR.A Active Production X2SON (DQN) | 4 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 FA
+TPS7A0233PYCHR Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 G
+TPS7A0233PYCHR.A Active Production DSBGA (YCH) | 4 12000 | LARGE T&R Yes SNAGCU Level-1-260C-UNLIM -40 to 125 G
+TPS7A0236PDBVR Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU | SN Level-1-260C-UNLIM -40 to 125 (21FF, 21JF)
+TPS7A0236PDBVR.A Active Production SOT-23 (DBV) | 5 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 (21FF, 21JF)
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+Addendum-Page 3
+PAGE 33
+PACKAGE OPTION ADDENDUM
+www.ti.com 15-Sep-2026
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+Addendum-Page 4
+PAGE 34
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 9-Sep-2026
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+TPS7A0210PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0212PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0212PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0212PYCHR DSBGA YCH 4 12000 180.0 8.4 0.72 0.72 0.42 2.0 8.0 Q1
+TPS7A0215DQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0215PDBVR SOT-23 DBV 5 3000 178.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0215PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A02175PYCHR DSBGA YCH 4 12000 180.0 8.4 0.72 0.72 0.42 2.0 8.0 Q1
+TPS7A02185DQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A02185PDQNR X2SON DQN 4 3000 178.0 8.4 1.13 1.13 0.53 4.0 8.0 Q2
+TPS7A02185PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A02185PDQNR X2SON DQN 4 3000 180.0 9.5 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0218DBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0218PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0218PDBVR SOT-23 DBV 5 3000 178.0 9.0 3.3 3.2 1.4 4.0 8.0 Q3
+TPS7A0218PDBVRG4 SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+Pack Materials-Page 1
+PAGE 35
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 9-Sep-2026
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+TPS7A0218PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0218PYCHR DSBGA YCH 4 12000 180.0 8.4 0.72 0.72 0.42 2.0 8.0 Q1
+TPS7A0220PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0220PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0220PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0222DQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0222PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0222PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0223PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0223PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0225PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0225PDBVR SOT-23 DBV 5 3000 178.0 9.0 3.3 3.2 1.4 4.0 8.0 Q3
+TPS7A0225PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0225PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0225PYCHR DSBGA YCH 4 12000 180.0 8.4 0.72 0.72 0.42 2.0 8.0 Q1
+TPS7A0228DBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0228DBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0228DQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0228PDBVR SOT-23 DBV 5 3000 178.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0228PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0228PYCHR DSBGA YCH 4 12000 180.0 8.4 0.72 0.72 0.42 2.0 8.0 Q1
+TPS7A0230PDBVR SOT-23 DBV 5 3000 178.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0230PDBVRG4 SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0230PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0230PYCHR DSBGA YCH 4 12000 180.0 8.4 0.72 0.72 0.42 2.0 8.0 Q1
+TPS7A0231PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0233DBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0233DQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0233PDBVR SOT-23 DBV 5 3000 178.0 9.0 3.3 3.2 1.4 4.0 8.0 Q3
+TPS7A0233PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0233PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+TPS7A0233PDQNR X2SON DQN 4 3000 180.0 8.4 1.16 1.16 0.5 4.0 8.0 Q2
+TPS7A0233PYCHR DSBGA YCH 4 12000 180.0 8.4 0.72 0.72 0.42 2.0 8.0 Q1
+TPS7A0236PDBVR SOT-23 DBV 5 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+Pack Materials-Page 2
+PAGE 36
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 9-Sep-2026
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+TPS7A0210PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0212PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0212PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0212PYCHR DSBGA YCH 4 12000 182.0 182.0 20.0
+TPS7A0215DQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0215PDBVR SOT-23 DBV 5 3000 208.0 191.0 35.0
+TPS7A0215PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A02175PYCHR DSBGA YCH 4 12000 182.0 182.0 20.0
+TPS7A02185DQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A02185PDQNR X2SON DQN 4 3000 205.0 200.0 33.0
+TPS7A02185PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A02185PDQNR X2SON DQN 4 3000 184.0 184.0 19.0
+TPS7A0218DBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0218PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0218PDBVR SOT-23 DBV 5 3000 180.0 180.0 18.0
+TPS7A0218PDBVRG4 SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0218PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0218PYCHR DSBGA YCH 4 12000 182.0 182.0 20.0
+Pack Materials-Page 3
+PAGE 37
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 9-Sep-2026
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+TPS7A0220PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0220PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0220PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0222DQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0222PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0222PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0223PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0223PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0225PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0225PDBVR SOT-23 DBV 5 3000 180.0 180.0 18.0
+TPS7A0225PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0225PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0225PYCHR DSBGA YCH 4 12000 182.0 182.0 20.0
+TPS7A0228DBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0228DBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0228DQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0228PDBVR SOT-23 DBV 5 3000 208.0 191.0 35.0
+TPS7A0228PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0228PYCHR DSBGA YCH 4 12000 182.0 182.0 20.0
+TPS7A0230PDBVR SOT-23 DBV 5 3000 208.0 191.0 35.0
+TPS7A0230PDBVRG4 SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0230PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0230PYCHR DSBGA YCH 4 12000 182.0 182.0 20.0
+TPS7A0231PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0233DBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0233DQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0233PDBVR SOT-23 DBV 5 3000 180.0 180.0 18.0
+TPS7A0233PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0233PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+TPS7A0233PDQNR X2SON DQN 4 3000 210.0 185.0 35.0
+TPS7A0233PYCHR DSBGA YCH 4 12000 182.0 182.0 20.0
+TPS7A0236PDBVR SOT-23 DBV 5 3000 210.0 185.0 35.0
+Pack Materials-Page 4
+PAGE 38
+
+PAGE 39
+PACKAGE OUTLINE
+DQN0004A X2SON - 0.4 mm max height
+PLASTIC SMALL OUTLINE - NO LEAD
+4215302/E  12/2016
+NOTES:
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+          per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. The package thermal pad must be soldered to the printed circuit board for optimal thermal and mechanical performance.
+4. Features may not exist. Recommend use of pin 1 marking on top of package for orientation purposes.
+5. Shape of exposed side leads may differ.
+6. Number and location of exposed tie bars may vary.
+www.ti.com
+B A
+SEATING PLANE
+C
+0.08
+PIN 1
+INDEX AREA
+0.1 C A B
+0.05 C
+PIN 1 ID
+(OPTIONAL)
+NOTE 4
+EXPOSED
+THERMAL PAD
+1
+2 3
+4
+1
+1.05
+0.95
+1.05
+0.95
+0.4 MAX
+2X 0.65
+0.48+0.12
+-0.1
+3X 0.30
+0.15
+0.3
+0.2
+4X 0.28
+0.15
+0.05
+0.00
+(0.11)
+NOTE 5
+NOTE 6
+NOTE 6
+5
+(0.07) TYP
+(0.05) TYP
+PAGE 40
+EXAMPLE BOARD LAYOUT
+DQN0004A X2SON - 0.4 mm max height
+PLASTIC SMALL OUTLINE - NO LEAD
+4215302/E 12/2016
+NOTES: (continued)
+7. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature
+number SLUA271 (www.ti.com/lit/slua271) .
+8. If any vias are implemented, it is recommended that vias under paste be filled, plugged or tented.
+www.ti.com
+SOLDER MASK
+DEFINED
+SOLDER MASK DETAIL
+0.05 MIN
+ALL AROUND
+SOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+LAND PATTERN EXAMPLE
+SCALE: 40X
+SYMM
+SYMM
+1
+2
+3
+4
+4X (0.21)
+4X (0.36)
+(0.65)
+(0.86)
+(    0.48)
+SEE DETAIL
+4X (0.18)
+(0.22) TYP
+EXPOSED METAL
+CLEARANCE
+4X
+(0.03)
+EXPOSED METAL
+5
+PAGE 41
+EXAMPLE STENCIL DESIGN
+DQN0004A X2SON - 0.4 mm max height
+PLASTIC SMALL OUTLINE - NO LEAD
+4215302/E 12/2016
+NOTES: (continued)
+9. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+design recommendations.
+www.ti.com
+SOLDER PASTE EXAMPLE
+BASED ON 0.075 - 0.1mm THICK STENCIL
+EXPOSED PAD
+88% PRINTED SOLDER COVERAGE BY AREA
+SCALE: 60X
+SYMM
+SYMM
+1
+2
+3
+4
+SOLDER MASK
+EDGE
+4X (0.21)
+4X (0.4)
+(0.65)
+(0.9)
+(    0.45)
+4X (0.03)
+4X (0.235)
+4X (0.22)
+5
+PAGE 42
+www.ti.com
+PACKAGE OUTLINE
+C0.4 MAX
+0.16
+0.10
+0.35
+TYP
+0.35
+TYP
+4X 0.225
+0.185
+B E A
+D
+4224061/A   12/2017
+DSBGA - 0.4 mm max heightYCH0004
+DIE SIZE BALL GRID ARRAY
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing 
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+ 
+BALL A1
+CORNER
+SEATING PLANE
+BALL TYP 0.05 C
+A
+1 2
+0.015 C A B
+SYMM
+SYMM
+B
+SCALE  15.000
+D: Max = 
+E: Max = 
+0.667 mm, Min = 
+0.667 mm, Min = 
+0.607 mm
+0.607 mm
+PAGE 43
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.0325 MIN0.0325 MAX
+4X ( 0.2)
+(0.35) TYP
+(0.35) TYP
+( 0.2)
+SOLDER MASK
+OPENING
+( 0.2)
+METAL
+4224061/A   12/2017
+DSBGA - 0.4 mm max heightYCH0004
+DIE SIZE BALL GRID ARRAY
+NOTES: (continued)
+ 
+3. Final dimensions may vary due to manufacturing tolerance considerations and also routing constraints.
+    See Texas Instruments Literature No. SNVA009 (www.ti.com/lit/snva009).
+ 
+SOLDER MASK DETAILS
+NOT TO SCALE
+SYMM
+SYMM
+1 2
+A
+B
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE: 50X
+NON-SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+SOLDER MASK
+OPENING
+SOLDER MASK
+DEFINED
+(PREFERRED)
+METAL UNDER
+SOLDER MASK
+EXPOSED
+METAL
+PAGE 44
+www.ti.com
+EXAMPLE STENCIL DESIGN
+(0.35) TYP
+(0.35) TYP
+4X ( 0.21) (R0.05) TYP
+4224061/A   12/2017
+DSBGA - 0.4 mm max heightYCH0004
+DIE SIZE BALL GRID ARRAY
+NOTES: (continued)
+ 
+4. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release.
+SYMM
+SYMM
+1 2
+A
+B
+SOLDER PASTE EXAMPLE
+BASED ON 0.075 mm THICK STENCIL
+SCALE: 50X
+METAL
+TYP
+PAGE 45
+www.ti.com
+PACKAGE OUTLINE
+C
+0.22
+0.08 TYP
+0.25
+3.0
+2.6
+2X 0.95
+1.9
+1.45
+0.90
+0.15
+0.00 TYP
+5X 0.5
+0.3
+0.6
+0.3 TYP
+8
+0  TYP
+1.9
+(0.1)
+(0.15)
+4X 0 -15
+4X 4 -15
+A
+3.05
+2.75
+B1.75
+1.45
+(1.1)
+SOT-23 - 1.45 mm max heightDBV0005A
+SMALL OUTLINE TRANSISTOR
+4214839/K   08/2024
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. Refernce JEDEC MO-178.
+4. Body dimensions do not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.25 mm per side.
+5. Support pin may differ or may not be present.
+0.2 C A B
+1
+3
+4
+5
+2
+INDEX AREA
+PIN 1
+ NOTE 5
+GAGE PLANE
+SEATING PLANE
+0.1 C
+SCALE  4.000
+PAGE 46
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.07 MAX
+ARROUND
+0.07 MIN
+ARROUND
+5X (1.1)
+5X (0.6)
+(2.6)
+(1.9)
+2X (0.95)
+(R0.05) TYP
+4214839/K   08/2024
+SOT-23 - 1.45 mm max heightDBV0005A
+SMALL OUTLINE TRANSISTOR
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+SYMM
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:15X
+PKG
+1
+3 4
+5
+2
+SOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+EXPOSED METAL
+METALSOLDER MASK
+OPENING
+NON SOLDER MASK
+DEFINED
+(PREFERRED)
+SOLDER MASK DETAILS
+EXPOSED METAL
+PAGE 47
+www.ti.com
+EXAMPLE STENCIL DESIGN
+(2.6)
+(1.9)
+2X(0.95)
+5X (1.1)
+5X (0.6)
+(R0.05) TYP
+SOT-23 - 1.45 mm max heightDBV0005A
+SMALL OUTLINE TRANSISTOR
+4214839/K   08/2024
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+     design recommendations. 
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE:15X
+SYMM
+PKG
+1
+3 4
+5
+2
+PAGE 48
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

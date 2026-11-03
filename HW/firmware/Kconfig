@@ -1,0 +1,43 @@
+mainmenu "SentiFrame firmware"
+source "Kconfig.zephyr"
+
+menu "SentiFrame application"
+config SF_CHARGING
+    bool "Request charging (also requires a physically approved pack)"
+    default n
+    help
+      False keeps the hardware charge gate low. Safe charger/SYS-path
+      configuration and source monitoring remain active in either state.
+config SF_IMU
+    bool "Enable IMU acquisition and fall detection"
+    default y
+    help
+      False shuts down retained BMI270 sensor state at boot, then disables
+      acquisition, recovery and its wake interrupt. SOS remains available.
+config SF_PACK_APPROVED
+    bool "Enable charging for a physically qualified battery pack"
+    default n
+    help
+      Keep disabled until the exact protected 1S pack and NTC assembly have
+      been qualified for 4.20V / 30mA fast charge, 6mA precharge / 3mA
+      termination, recovery at >=2.30V, and the actual NTC thresholds and
+      hysteresis (nominal COLD=5C, COOL=10C, HOT=45C; COOL also inhibits).
+      This is a build-time setting; no received packet can override it.
+config SF_GYRO
+    bool "Continuously acquire the gyroscope alongside 100Hz acceleration"
+    depends on SF_IMU
+    default n
+    help
+      Default off to reduce current. Raw packets explicitly flag whether
+      gyroscope samples are valid. Rebuild with this enabled for six-axis tests.
+config SF_PPG
+    bool "Enable green-channel raw PPG acquisition"
+    default y
+config SF_STREAM_DIVISOR
+    int "IMU raw telemetry decimation (100Hz / value)"
+    range 1 10
+    default 2
+    help
+      The fall detector and local history always consume every 100Hz sample.
+      Only continuous telemetry is decimated; event history is preserved.
+endmenu

@@ -1,0 +1,8 @@
+#VRML V2.0 utf8
+# Locally authored maximum Murata DFE201612E body envelope, not manufacturer CAD.
+# Source: J(E)TE243A-0006D-01 p1: 2.0+/-0.2 x 1.6+/-0.2, height1.2max mm.
+# Maximum body L/W/H=2.2/1.8/1.2mm; no solder standoff allowance.
+Transform { translation 0 0 0.236220472 children [ Shape {
+ appearance Appearance { material Material { diffuseColor 0.20 0.20 0.22 } }
+ geometry Box { size 0.866141732 0.708661417 0.472440945 }
+} ] }

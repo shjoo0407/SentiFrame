@@ -1,0 +1,20 @@
+description: SentiFrame Rev F GPIO controls and gated battery measurement
+compatible: "sentiframe,control"
+include: base.yaml
+properties:
+  charge-arm-gpios: {type: phandle-array, required: true}
+  ppg-enable-gpios: {type: phandle-array, required: true}
+  led-gpios: {type: phandle-array, required: true}
+  motor-gpios: {type: phandle-array, required: true}
+  battery-enable-gpios: {type: phandle-array, required: true}
+  uart-enable-gpios: {type: phandle-array, required: true}
+  usb-pg-gpios: {type: phandle-array, required: true}
+  suspend-gpios: {type: phandle-array, required: true}
+  imu-int-gpios: {type: phandle-array, required: true}
+  ppg-int-gpios: {type: phandle-array, required: true}
+  button-gpios: {type: phandle-array, required: true}
+  bc-open-gpios: {type: phandle-array, required: true}
+  bc-allow-gpios: {type: phandle-array, required: true}
+  bc-high-gpios: {type: phandle-array, required: true}
+  chg-int-gpios: {type: phandle-array, required: true}
+  io-channels: {type: phandle-array, required: true}

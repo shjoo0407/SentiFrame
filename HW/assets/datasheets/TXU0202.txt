@@ -1,0 +1,1905 @@
+PAGE 1
+TXU0202 Dual-Bit Fixed Direction Voltage-Level Translator with Schmitt-Trigger 
+Inputs and 3-State Outputs
+1 Features
+• Fully configurable dual-rail design allows each port 
+to operate from 1.1 V to 5.5 V
+• Up to 200 Mbps support for 3.3 V to 5.0 V
+• Schmitt-trigger inputs allows for slow and noisy 
+inputs
+• Inputs with integrated static pull-down resistors 
+prevent channels from floating
+• High drive strength (up to 12 mA at 5 V)
+• Low power consumption
+– 2.5 µA maximum (25°C)
+– 6 µA maximum (–40°C to 125°C)
+• VCC isolation and VCC disconnect (Ioff-float) feature
+– If either VCC input is <100 mV or disconnected, 
+all outputs are disabled and become high-
+impedance
+• Ioff supports partial-power-down mode operation
+• Control logic (OE) with VCC(MIN) circuitry allows for 
+control from either A or B port
+• Pinout compatible with TXB family level shifters
+• Available in another variant that supports common 
+applications: TXU0102
+• Operating temperature from –40°C to +125°C
+• Latch-up performance exceeds 100 mA per JESD 
+78, class II
+• ESD protection exceeds JESD 22
+– 2500-V human-body model
+– 1500-V charged-device model
+2 Applications
+• Eliminate slow or noisy input signals
+• Driving indicator LEDs or buzzers
+• Debouncing a mechanical switch
+• General purpose I/O level shifting
+• Push-pull level shifting (UART, SPI, JTAG, and so 
+forth)
+3 Description
+TXU0202 is a 2-bit, dual-supply noninverting fixed 
+direction voltage level translation device. Ax pins 
+are referenced to V CCA logic level, OE pin can be 
+referenced to either VCCA or VCCB logic levels, and Bx 
+pins are referenced to V CCB logic levels. The A port 
+is able to accept input voltages ranging from 1.1 V to 
+5.5 V, while the B port can also accept input voltages 
+from 1.1 V to 5.5 V. Fixed direction data transmission 
+can occur from A to B or B to A when OE is set to 
+high in reference to either supply. When OE is set to 
+low, all output pins are in the high-impedance state. 
+See Device Functional Modes  for a summary of the 
+operation of the control logic.
+Device Information(1) 
+DEVICE NUMBER PACKAGE BODY SIZE (NOM)
+TXU0202
+VSSOP (DCU) (8) 2.30 mm × 2.00 mm
+SON (DTT) (8) 1.95 mm × 1.00 mm
+X2SON (DTM) (8) 1.35 mm × 0.80 mm
+(1) For all available packages, see the orderable addendum at 
+the end of the data sheet.
+OE
+VCCA VCCB
+GND
+B1Y
+B2
+A1
+A2Y
+VCC(MIN)
+TXU0202 Functional Block Diagram
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, 
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+PAGE 2
+Table of Contents
+1 Features............................................................................1
+2 Applications.....................................................................1
+3 Description.......................................................................1
+4 Revision History.............................................................. 2
+5 Related Products.............................................................3
+6 Pin Configuration and Functions—TXU0202 ............... 4
+7 Specifications.................................................................. 5
+7.1 Absolute Maximum Ratings........................................ 5
+7.2 ESD Ratings............................................................... 5
+7.3 Recommended Operating Conditions.........................6
+7.4 Thermal Information....................................................6
+7.5 Electrical Characteristics.............................................7
+7.6 Switching Characteristics, VCCA = 1.2 ± 0.1 V.......... 10
+7.7 Switching Characteristics, VCCA = 1.5 ± 0.1 V.......... 11
+7.8 Switching Characteristics, VCCA = 1.8 ± 0.15 V........ 12
+7.9 Switching Characteristics, VCCA = 2.5 ± 0.2 V.......... 13
+7.10 Switching Characteristics, VCCA = 3.3 ± 0.3 V........ 14
+7.11 Switching Characteristics, VCCA = 5.0 ± 0.5 V........ 15
+7.12 Operating Characteristics....................................... 16
+7.13 Typical Characteristics............................................17
+8 Parameter Measurement Information..........................18
+8.1 Load Circuit and Voltage Waveforms........................18
+9 Detailed Description......................................................20
+9.1 Overview...................................................................20
+9.2 Functional Block Diagram.........................................20
+9.3 Feature Description...................................................21
+9.4 Device Functional Modes..........................................23
+10 Application and Implementation................................24
+10.1 Application Information........................................... 24
+10.2 Typical Application.................................................. 24
+11 Power Supply Recommendations..............................25
+12 Layout...........................................................................26
+12.1 Layout Guidelines................................................... 26
+12.2 Layout Example...................................................... 26
+13 Device and Documentation Support..........................27
+13.1 Device Support....................................................... 27
+13.2 Documentation Support.......................................... 27
+13.3 Receiving Notification of Documentation Updates..27
+13.4 Support Resources................................................. 27
+13.5 Trademarks.............................................................27
+13.6 Electrostatic Discharge Caution..............................27
+13.7 Glossary..................................................................27
+14 Mechanical, Packaging, and Orderable 
+Information.................................................................... 27
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision * (November 2021) to Revision A (March 2022) Page
+• Changed the status of the data sheet from: Advanced Information to: Production Data ...................................1
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+2 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 3
+5 Related Products
+TXU0x02 2-Bit 
+Unidirectional 
+Voltage-Level 
+Translators 
+TXU0x02 are 2-bit, dual-supply noninverting fixed direction voltage level translators. 
+These devices are compatible with the TXB0102 because of the same pinout, which 
+allows for a drop in replacement. The OE pin can be referenced to either VCCA or VCCB 
+logic levels allowing for one of the TXU0x02 devices to be used for fixed direction, high 
+drive applications which the TXB0102 is not recommended to support.
+TXU0102 TXU0102 is a 2-bit, dual-supply noninverting fixed direction voltage level translators with 
+both channels in the same direction commonly used for GPIO translation.
+GND
+OE
+VCCA VCCB
+B1Y
+B2Y
+A1
+A2
+VCC(MIN)
+Figure 5-1. TXU0102 Functional Block Diagram
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 3
+Product Folder Links: TXU0202
+PAGE 4
+6 Pin Configuration and Functions—TXU0202
+1
+2
+3
+4
+8
+7
+6
+5
+B2
+GND
+VCCA
+A2Y
+B1Y
+VCCB
+OE
+A1
+Figure 6-1. DCU Package, 8-Pin VSSOP (Top View) 
+1
+2
+3
+8
+7
+6
+4 5
+B2
+GND
+VCCA
+A2Y
+B1Y
+VCCB
+OE
+A1 Figure 6-2. DTT Package, 8-Pin SON Transparent 
+(Top View) 
+VCCA A1
+A2Y
+GND
+VCCBB2
+B1Y
+OE
+1
+2
+3
+4
+5
+6
+7
+8
+Figure 6-3. DTM Package, 8-Pin X2SON Transparent (Top View) 
+Table 6-1. TXU0202 Pin Functions
+PIN
+TYPE(1) DESCRIPTION
+NAME NO.
+B2 1 I Input B2. Referenced to VCCB.
+GND 2 — Ground.
+VCCA 3 — A-port supply voltage. 1.1 V ≤ VCCA ≤ 5.5 V
+A2Y 4 O Output A2. Referenced to VCCA.
+A1 5 I Input A1. Referenced to VCCA.
+OE 6 I Output Enable. Pull to GND to place all outputs in high-impedance mode. Pull to VCCA or 
+VCCB to enable all outputs.
+VCCB 7 — B-port supply voltage. 1.1 V ≤ VCCB ≤ 5.5 V
+B1Y 8 O Output B1. Referenced to VCCB.
+(1) I = input, O = output.
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+4 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 5
+7 Specifications
+7.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+MIN MAX UNIT
+VCCA Supply voltage A –0.5 6.5 V
+VCCB Supply voltage B –0.5 6.5 V
+VI Input Voltage(2)
+I/O Ports (A Port) –0.5 6.5
+VI/O Ports (B Port) –0.5 6.5
+OE –0.5 6.5
+VO
+Voltage applied to any output in the high-impedance or power-off 
+state(2)
+A Port –0.5 6.5
+V
+B Port –0.5 6.5
+VO Voltage applied to any output in the high or low state(2) (3) A Port –0.5 VCCA + 0.5
+V
+B Port –0.5 VCCB + 0.5
+IIK Input clamp current VI < 0 –20 mA
+IOK Output clamp current VO < 0 –20 mA
+IO Continuous output current –25 25 mA
+Continuous current through VCC or GND –100 100 mA
+Tj Junction Temperature 150 °C
+Tstg Storage temperature –65 150 °C
+(1) Operation outside the Absolute Maximum Ratings may cause permanent device damage. Absolute Maximum Ratings do not imply 
+functional operation of the device at these or any other conditions beyond those indicated under Recommended Operating Conditions. 
+If briefly ooperating outside the Recommended Operating Conditions. but within the Absolute Maximum Ratings, this device may 
+not sustain damage, but it may not be fully functional. Operating the device in this manner may affect device reliability, functionality, 
+performance, and shorten the device lifetime.
+(2) The input voltage and output negative-voltage ratings may be exceeded if the input and output current ratings are observed.
+(3) The output positive-voltage rating may be exceeded up to 6.5 V maximum if the output current rating is observed.
+7.2 ESD Ratings
+VALUE UNIT
+V(ESD) Electrostatic discharge
+Human body model (HBM), per ANSI/ESDA/JEDEC JS-001(1) ±2500
+V
+Charged device model (CDM), per ANSI/ESDA/JEDEC JS-002 (2) ±1500
+(1) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2) JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 5
+Product Folder Links: TXU0202
+PAGE 6
+7.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted) (1) (2) (3)
+MIN MAX UNIT
+VCCA Supply voltage A 1.08 5.5 V
+VCCB Supply voltage B 1.08 5.5 V
+IOH High-level output current
+VCCO = 1.1 V –1.5
+mA
+VCCO = 1.4 V –3
+VCCO = 1.65 V –4.5
+VCCO = 2.3 V –8
+VCCO = 3 V –10
+VCCO = 4.5 V –12
+IOL Low-level output current
+VCCO = 1.1 V 1.5
+mA
+VCCO = 1.4 V 3
+VCCO = 1.65 V 4.5
+VCCO = 2.3 V 8
+VCCO = 3 V 10
+VCCO = 4.5 V 12
+VI Input voltage (3) 0 5.5 V
+VO Output voltage
+Active State 0 VCCO
+V
+Tri-State 0 5.5
+TA Operating free-air temperature –40 125 °C
+(1) VCCI is the VCC associated with the input port.
+(2) VCCO is the VCC associated with the output port.
+(3) All control inputs and data I/Os of this device have weak pulldowns to ensure the line is not floating when undefined external to the 
+device. The input leakage from these weak pulldowns is defined by the II specification indicated under Electrical Characteristics.
+7.4 Thermal Information
+THERMAL METRIC(1)
+TXU0202
+UNITDCU (VSSOP) DTT (SON) DTM (X2SON)
+8 PINS 8 PINS 8 PINS
+RθJA Junction-to-ambient thermal resistance 257.0 TBD 253.6 °C/W
+RθJC(top) Junction-to-case (top) thermal resistance 106.9 TBD 157.5 °C/W
+RθJB Junction-to-board thermal resistance 168.3 TBD 157.8 °C/W
+YJT
+Junction-to-top characterization 
+parameter 47.2 TBD 15.6 °C/W
+YJB
+Junction-to-board characterization 
+parameter 167.3 TBD 157.6 °C/W
+RθJC(bottom)
+Junction-to-case (bottom) thermal 
+resistance N/A TBD N/A °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application 
+report.
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+6 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 7
+7.5 Electrical Characteristics
+over operating free-air temperature range (unless otherwise noted)(1) (2)
+PARAMETER TEST CONDITIONS VCCA VCCB
+Operating free-air temperature (TA)
+UNIT25°C –40°C to 85°C –40°C to 125°C
+MIN TYP MAX MIN TYP MAX MIN TYP MAX
+VT+
+Positive-
+going input-
+threshold 
+voltage
+Data Inputs
+(Ax, Bx)
+(Referenced to VCCI)
+1.1 V 1.1 V 0.44 0.88 0.44 0.88
+V
+1.4 V 1.4 V 0.60 0.98 0.60 0.98
+1.65 V 1.65 V 0.76 1.13 0.76 1.13
+2.3 V 2.3 V 1.08 1.56 1.08 1.56
+3 V 3 V 1.48 1.92 1.48 1.92
+4.5 V 4.5 V 2.19 2.74 2.19 2.74
+5.5 V 5.5 V 2.65 3.33 2.65 3.33
+OE
+(Referenced to VCCA 
+or VCCB)
+1.1 V 1.1 V 0.44 0.88 0.44 0.88
+V
+1.4 V 1.4 V 0.60 0.98 0.60 0.98
+1.65 V 1.65 V 0.76 1.13 0.76 1.13
+2.3 V 2.3 V 1.08 1.56 1.08 1.56
+3 V 3 V 1.48 1.92 1.48 1.92
+4.5 V 4.5 V 2.19 2.74 2.19 2.74
+5.5 V 5.5 V 2.65 3.33 2.65 3.33
+VT-
+Negative-
+going input-
+threshold 
+voltage
+Data Inputs
+(Ax, Bx)
+(Referenced to VCCI)
+1.1 V 1.1 V 0.17 0.48 0.17 0.48
+V
+1.4 V 1.4 V 0.28 0.59 0.28 0.59
+1.65 V 1.65 V 0.35 0.69 0.35 0.69
+2.3 V 2.3 V 0.56 0.97 0.56 0.97
+3 V 3 V 0.89 1.5 0.89 1.5
+4.5 V 4.5 V 1.51 1.97 1.51 1.97
+5.5 V 5.5 V 1.88 2.4 1.88 2.4
+OE
+(Referenced to VCCA 
+or VCCB)
+1.1 V 1.1 V 0.17 0.48 0.17 0.48
+V
+1.4 V 1.4 V 0.28 0.59 0.28 0.59
+1.65 V 1.65 V 0.35 0.69 0.35 0.69
+2.3 V 2.3 V 0.56 0.97 0.56 0.97
+3 V 3 V 0.89 1.5 0.89 1.5
+4.5 V 4.5 V 1.51 1.97 1.51 1.97
+5.5 V 5.5 V 1.88 2.46 1.88 2.46
+ΔVT
+Input-
+threshold 
+hysteresis
+(VT+ – VT-)
+Data Inputs
+(Ax, Bx)
+(Referenced to VCCI)
+1.1 V 1.1 V 0.2 0.4 0.2 0.4
+V
+1.4 V 1.4 V 0.25 0.5 0.25 0.5
+1.65 V 1.65 V 0.3 0.55 0.3 0.55
+2.3 V 2.3 V 0.38 0.65 0.38 0.65
+3 V 3 V 0.46 0.72 0.46 0.72
+4.5 V 4.5 V 0.58 0.93 0.58 0.93
+5.5 V 5.5 V 0.69 1.06 0.69 1.06
+OE
+(Referenced to VCCA 
+or VCCB)
+1.1 V 1.1 V 0.15 0.41 0.15 0.41
+V
+1.4 V 1.4 V 0.2 0.5 0.2 0.5
+1.65 V 1.65 V 0.23 0.55 0.23 0.55
+2.3 V 2.3 V 0.32 0.65 0.32 0.65
+3 V 3 V 0.39 0.72 0.39 0.72
+4.5 V 4.5 V 0.57 0.97 0.57 0.97
+5.5 V 5.5 V 0.69 1.18 0.69 1.18
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 7
+Product Folder Links: TXU0202
+PAGE 8
+7.5 Electrical Characteristics (continued)
+over operating free-air temperature range (unless otherwise noted)(1) (2)
+PARAMETER TEST CONDITIONS VCCA VCCB
+Operating free-air temperature (TA)
+UNIT25°C –40°C to 85°C –40°C to 125°C
+MIN TYP MAX MIN TYP MAX MIN TYP MAX
+VOH
+High-level 
+output 
+voltage (3)
+IOH = –0.1 mA 1.1V – 5.5V 1.1V – 5.5V VCCO 
+– 0.1
+VCCO 
+– 0.1
+V
+IOH = –0.5 mA 1.1 V 1.1 V 0.82 0.82
+IOH = –3 mA 1.4 V 1.4 V 1 1
+IOH = –4.5 mA 1.65 V 1.65 V 1.2 1.2
+IOH = –8 mA 2.3 V 2.3 V 1.7 1.7
+IOH = –10 mA 3 V 3 V 2.2 2.2
+IOH = –12 mA 4.5 V 4.5 V 3.7 3.7
+VOL
+Low-level 
+output 
+voltage (4)
+IOL = 0.1 mA 1.1V – 5.5V 1.1V – 5.5V 0.1 0.1
+V
+IOL = 0.5 mA 1.1 V 1.1 V 0.27 0.27
+IOL = 3 mA 1.4 V 1.4 V 0.35 0.35
+IOL = 4.5 mA 1.65 V 1.65 V 0.45 0.45
+IOL = 8 mA 2.3 V 2.3 V 0.7 0.7
+IOL = 10 mA 3 V 3 V 0.8 0.8
+IOL = 8 mA 4.5 V 4.5 V 0.55 0.55
+IOL = 12 mA 4.5 V 4.5 V 0.8 0.8
+II
+Input leakage 
+current
+OE
+VI = VCC or GND 1.1V – 5.5V 1.1V – 5.5V -0.1 1.5 -0.1 1.5 -0.1 2 µA
+Data Inputs
+(Ax, Bx)
+VI = VCCI or GND
+1.1V – 5.5V 1.1V – 5.5V –0.1 1.5 –0.1 1.5 –2 2 µA
+Ioff
+Partial power 
+down current
+A Port or B Port
+VI or VO = 0 V - 5.5 
+V
+0 V 0 V - 5.5 V –1.5 1.5 –2 2 –2.5 2.5
+µA
+0 V - 5.5 V 0 V –1.5 1.5 –2 2 –2.5 2.5
+Ioff-float
+Floating 
+supply Partial 
+power down 
+current
+A Port or B Port
+VI or VO = GND
+Floating(5) 0 V - 5.5 V –1.5 1.5 –2 2 –2.5 2.5
+µA
+0 V - 5.5 V Floating(5) –1.5 1.5 –2 2 –2.5 2.5
+IOZ
+Tri-state 
+output current
+A or B Port:
+VI = VCCI or GND
+VO = VCCO or GND
+OE = GND
+1.1V – 5.5V 1.1V – 5.5V –0.3 0.3 –1 1 –2 2 µA
+ICCA
+VCCA supply 
+current
+VI = VCCI or GND
+IO = 0
+1.1V – 5.5V 1.1V – 5.5V 1.5 2.5 6
+µA
+0 V 5.5 V –0.3 –1 –1
+5.5 V 0 V 1 1.5 3
+VI = GND
+IO = 0 5.5 V Floating(5) 1.5 7 15
+ICCB
+VCCB supply 
+current
+VI = VCCI or GND
+IO = 0
+1.1V – 5.5V 1.1V – 5.5V 1.5 2.5 6
+µA
+0 V 5.5 V 1 1.5 3
+5.5 V 0 V –0.3 –1 –1
+VI = GND
+IO = 0 Floating(5) 5.5 V 1.5 7 15
+ICCA + 
+ICCB
+Combined 
+supply 
+current
+VI = VCCI or GND
+IO = 0 1.1V – 5.5V 1.1V – 5.5V 2.5 3 6 µA
+Ci
+Control Input 
+Capacitance VI = 3.3 V or GND 3.3 V 3.3 V 2.75 3 3.5 pF
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+8 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 9
+7.5 Electrical Characteristics (continued)
+over operating free-air temperature range (unless otherwise noted)(1) (2)
+PARAMETER TEST CONDITIONS VCCA VCCB
+Operating free-air temperature (TA)
+UNIT25°C –40°C to 85°C –40°C to 125°C
+MIN TYP MAX MIN TYP MAX MIN TYP MAX
+Cio
+Data I/O 
+Capacitance
+OE = GND, VO = 
+1.65V DC +1 MHz 
+-16 dBm sine wave
+3.3 V 3.3 V 3 4 4 pF
+(1) VCCI is the VCC associated with the input port
+(2) VCCO is the VCC associated with the output port
+(3) Tested at VI = VT+(MAX)
+(4) Tested at VI = VT-(MIN)
+(5) Floating is defined as a node that is both not actively driven by an external device and has leakage not exeeding 10nA
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 9
+Product Folder Links: TXU0202
+PAGE 10
+7.6 Switching Characteristics, VCCA = 1.2 ± 0.1 V
+See Figure 8-1 and Table 8-1 for test circuit and loading. See Figure 8-2, Figure 8-3, and Figure 8-4 for measurement waveforms.
+PARAMETER FROM TO Test 
+Conditions
+B-Port Supply Voltage (VCCB)
+UNIT1.2 ± 0.1 V 1.5 ± 0.1 V 1.8 ± 0.15 V 2.5 ± 0.2 V 3.3 ± 0.3 V 5.0 ± 0.5 V
+MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX
+tpd
+Propagation 
+delay
+A B
+-40°C to 85°C 3.3 96 0.5 43 0.5 37 0.5 32 0.5 30 0.5 31
+ns
+-40°C to 125°C 5.7 60 3.0 39 1.4 33 0.5 28 0.5 27 0.5 26
+B A
+-40°C to 85°C 3.3 95 1.9 80 0.5 75 0.5 70 0.5 69 0.5 69
+-40°C to 125°C 5.7 60 4.1 51 2.9 48 1.8 45 1.5 44 1.3 44
+tdis Disable time
+OE A
+-40°C to 85°C 28.8 133 28.5 130 28.4 133 28.8 137 28.4 143 18.7 211
+ns
+-40°C to 125°C 43.3 133 43.3 130 43.7 130 44.7 131 45.4 134 31.8 140
+OE B
+-40°C to 85°C 32.5 150 27.6 117 25.8 110 22.5 104 22.1 112 20.1 181
+-40°C to 125°C 48.3 149 43.2 120 40.8 113 36.8 104 36.5 107 33.8 111
+ten Enable time
+OE A
+-40°C to 85°C 24.1 237 22.1 229 21.4 230 21.3 232 21.7 235 22.7 244
+ns
+-40°C to 125°C 34.9 156 33.3 167 32.0 169 31.7 173 32.0 177 34.2 187
+OE B
+-40°C to 85°C 21.3 237 14.3 152 11.2 140 8.8 130 8.2 130 8.4 132
+-40°C to 125°C 29.8 143 23.0 116 18.6 107 15.4 97 14.5 97 14.8 103
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+10 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 11
+7.7 Switching Characteristics, VCCA = 1.5 ± 0.1 V
+See Figure 8-1 and Table 8-1 for test circuit and loading. See Figure 8-2, Figure 8-3, and Figure 8-4 for measurement waveforms.
+PARAMETER FROM TO Test 
+Conditions
+B-Port Supply Voltage (VCCB)
+UNIT1.2 ± 0.1 V 1.5 ± 0.1 V 1.8 ± 0.15 V 2.5 ± 0.2 V 3.3 ± 0.3 V 5.0 ± 0.5 V
+MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX
+tpd
+Propagation 
+delay
+A B
+-40°C to 85°C 1.9 80 0.5 31 0.5 25 0.5 19 0.5 17 0.5 15
+ns
+-40°C to 125°C 4.1 51 1.6 31 0.5 25 0.5 20 0.5 18 0.5 16
+B A
+-40°C to 85°C 0.5 43 0.5 31 0.5 28 0.5 26 0.5 25 0.5 24
+-40°C to 125°C 3.0 39 1.6 31 0.5 28 0.5 26 0.5 25 0.5 24
+tdis Disable time
+OE A
+-40°C to 85°C 20.0 91 19.0 82 18.8 81 19.2 82 19.6 83 12.2 87
+ns
+-40°C to 125°C 34.9 95 32.6 86 32.8 85 33.4 87 34.2 88 24.6 92
+OE B
+-40°C to 85°C 27.4 127 21.7 91 19.9 82 16.3 71 15.9 71 13.7 70
+-40°C to 125°C 44.4 130 36.7 95 34.7 86 30.2 75 29.8 75 26.6 74
+ten Enable time
+OE A
+-40°C to 85°C 14.9 102 14.4 86 13.5 88 12.7 90 12.6 92 13.2 97
+ns
+-40°C to 125°C 25.5 102 25.2 89 24.1 91 22.8 93 22.8 96 23.5 100
+OE B
+-40°C to 85°C 17.9 175 12.7 80 9.1 69 6.1 57 4.9 53 4.5 54
+-40°C to 125°C 26.6 135 21.0 81 16.8 71 12.5 60 10.8 56 10.4 57
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 11
+Product Folder Links: TXU0202
+PAGE 12
+7.8 Switching Characteristics, VCCA = 1.8 ± 0.15 V
+See Figure 8-1 and Table 8-1 for test circuit and loading. See Figure 8-2, Figure 8-3, and Figure 8-4 for measurement waveforms.
+PARAMETER FROM TO Test 
+Conditions
+B-Port Supply Voltage (VCCB)
+UNIT1.2 ± 0.1 V 1.5 ± 0.1 V 1.8 ± 0.15 V 2.5 ± 0.2 V 3.3 ± 0.3 V 5.0 ± 0.5 V
+MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX
+tpd
+Propagation 
+delay
+A B
+-40°C to 85°C 0.5 75 0.5 28 0.5 22 0.5 17 0.5 14 0.5 12
+ns
+-40°C to 125°C 2.9 48 0.5 28 0.5 23 0.5 17 0.5 15 0.5 13
+B A
+-40°C to 85°C 0.5 37 0.5 25 0.5 22 0.5 19 0.5 19 0.5 18
+-40°C to 125°C 1.4 33 0.5 25 0.5 23 0.5 20 0.5 19 0.5 19
+tdis Disable time
+OE A
+-40°C to 85°C 17.2 79 14.7 67 14.5 65 14.3 65 14.4 66 8.5 68
+ns
+-40°C to 125°C 30.9 83 28.0 71 26.6 69 27.5 70 27.2 71 20.0 73
+OE B
+-40°C to 85°C 25.4 121 18.7 81 16.5 71 12.8 60 12.5 58 9.8 55
+-40°C to 125°C 41.7 123 34.0 86 30.3 76 26.2 64 25.3 62 21.8 59
+ten Enable time
+OE A
+-40°C to 85°C 10.9 88 9.5 66 9.4 63 8.6 65 8.2 66 8.1 69
+ns
+-40°C to 125°C 20.3 87 19.0 69 18.9 67 17.6 68 17.1 70 17.1 73
+OE B
+-40°C to 85°C 16.7 177 10.4 75 8.1 58 4.9 46 3.3 42 2.2 39
+-40°C to 125°C 25.1 135 18.7 77 15.5 60 11.0 49 8.7 44 7.3 42
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+12 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 13
+7.9 Switching Characteristics, VCCA = 2.5 ± 0.2 V
+See Figure 8-1 and Table 8-1 for test circuit and loading. See Figure 8-2, Figure 8-3, and Figure 8-4 for measurement waveforms.
+PARAMETER FROM TO Test 
+Conditions
+B-Port Supply Voltage (VCCB)
+UNIT1.2 ± 0.1 V 1.5 ± 0.1 V 1.8 ± 0.15 V 2.5 ± 0.2 V 3.3 ± 0.3 V 5.0 ± 0.5 V
+MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX
+tpd
+Propagation 
+delay
+A B
+-40°C to 85°C 0.5 70 0.5 26 0.5 20 0.5 14 0.5 12 0.5 9
+ns
+-40°C to 125°C 1.8 45 0.5 26 0.5 20 0.5 14 0.5 12 0.5 10
+B A
+-40°C to 85°C 0.5 32 0.5 19 0.5 17 0.5 14 0.5 13 0.5 13
+-40°C to 125°C 0.5 28 0.5 20 0.5 17 0.5 14 0.5 13 0.5 13
+tdis Disable time
+OE A
+-40°C to 85°C 12.9 65 10.5 51 9.0 51 8.1 43 8.4 44 5.0 45
+ns
+-40°C to 125°C 24.9 68 21.8 55 19.7 50 18.2 47 18.6 48 15.0 49
+OE B
+-40°C to 85°C 23.2 112 16.5 74 14.0 61 9.0 46 9.1 44 6.4 39
+-40°C to 125°C 38.7 115 30.9 79 27.1 66 21.6 51 20.5 48 16.8 43
+ten Enable time
+OE A
+-40°C to 85°C 7.9 80 5.9 50 5.1 44 4.7 39 4.4 40 3.7 41
+ns
+-40°C to 125°C 15.6 74 13.5 53 12.4 47 12.0 42 11.5 43 10.8 44
+OE B
+-40°C to 85°C 16.3 183 9.2 74 6.0 54 4.0 36 2.1 31 0.5 27
+-40°C to 125°C 24.4 139 17.2 76 13.0 57 9.8 38 7.1 33 4.7 29
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 13
+Product Folder Links: TXU0202
+PAGE 14
+7.10 Switching Characteristics, VCCA = 3.3 ± 0.3 V
+See Figure 8-1 and Table 8-1 for test circuit and loading. See Figure 8-2, Figure 8-3, and Figure 8-4 for measurement waveforms.
+PARAMETER FROM TO Test 
+Conditions
+B-Port Supply Voltage (VCCB)
+UNIT1.2 ± 0.1 V 1.5 ± 0.1 V 1.8 ± 0.15 V 2.5 ± 0.2 V 3.3 ± 0.3 V 5.0 ± 0.5 V
+MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX
+tpd
+Propagation 
+delay
+A B
+-40°C to 85°C 0.5 69 0.5 25 0.5 19 0.5 13 0.5 11 0.5 8
+ns
+-40°C to 125°C 1.5 44 0.5 25 0.5 19 0.5 13 0.5 11 0.5 9
+B A
+-40°C to 85°C 0.5 30 0.5 17 0.5 14 0.5 12 0.5 11 0.5 10
+-40°C to 125°C 0.5 27 0.5 18 0.5 15 0.5 12 0.5 11 0.5 10
+tdis Disable time
+OE A
+-40°C to 85°C 12.9 62 10.1 47 8.7 42 6.9 39 6.6 39 6.9 40
+ns
+-40°C to 125°C 24.0 65 20.6 51 18.4 46 15.7 40 15.3 39 15.9 40
+OE B
+-40°C to 85°C 22.7 109 15.7 71 13.2 59 8.5 42 7.6 38 4.7 34
+-40°C to 125°C 37.6 111 29.5 75 25.4 63 19.2 46 18.5 42 14.2 36
+ten Enable time
+OE A
+-40°C to 85°C 6.6 85 4.2 45 3.0 37 2.4 31 2.2 30 1.7 30
+ns
+-40°C to 125°C 13.6 72 10.9 47 9.3 40 8.2 33 8.1 32 7.5 33
+OE B
+-40°C to 85°C 16.3 192 8.9 76 5.4 55 2.6 34 1.8 27 0.5 22
+-40°C to 125°C 24.3 144 16.7 78 12.2 57 8.0 36 6.6 29 3.7 24
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+14 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 15
+7.11 Switching Characteristics, VCCA = 5.0 ± 0.5 V
+See Figure 8-1 and Table 8-1 for test circuit and loading. See Figure 8-2, Figure 8-3, and Figure 8-4 for measurement waveforms.
+PARAMETER FROM TO Test 
+Conditions
+B-Port Supply Voltage (VCCB)
+UNIT1.2 ± 0.1 V 1.5 ± 0.1 V 1.8 ± 0.15 V 2.5 ± 0.2 V 3.3 ± 0.3 V 5.0 ± 0.5 V
+MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX MIN TYP MAX
+tpd
+Propagation 
+delay
+A B
+-40°C to 85°C 0.5 69 0.5 24 0.5 18 0.5 13 0.5 10 0.5 8
+ns
+-40°C to 125°C 1.3 44 0.5 24 0.5 19 0.5 13 0.5 11 0.5 8
+B A
+-40°C to 85°C 0.5 31 0.5 15 0.5 12 0.5 9 0.5 8 0.5 8
+-40°C to 125°C 0.5 26 0.5 16 0.5 13 0.5 10 0.5 9 0.5 8
+tdis Disable time
+OE A
+-40°C to 85°C 10.8 60 7.7 42 5.9 36 4.2 31 3.4 30 2.8 26
+ns
+-40°C to 125°C 20.8 62 17.0 46 14.5 40 11.8 33 10.4 31 9.6 29
+OE B
+-40°C to 85°C 9.7 109 5.9 69 13.2 56 8.4 40 6.9 36 3.7 30
+-40°C to 125°C 37.4 111 29.2 73 24.6 60 18.1 43 16.4 39 12.2 33
+ten Enable time
+OE A
+-40°C to 85°C 6.0 102 2.8 44 1.2 33 0.5 25 0.5 22 0.5 21
+ns
+-40°C to 125°C 12.4 81 8.8 46 6.5 36 4.7 27 4.2 24 4.4 23
+OE B
+-40°C to 85°C 16.7 212 8.8 82 4.8 58 1.6 35 0.5 26 0.5 19
+-40°C to 125°C 24.8 158 16.7 83 11.7 60 6.9 37 4.7 28 3.5 21
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 15
+Product Folder Links: TXU0202
+PAGE 16
+7.12 Operating Characteristics
+TA = 25℃ (1)
+PARAMETER Test Conditions
+Supply Voltage (VCCB = VCCA)
+UNIT1.2 ± 0.1V 1.5 ± 0.1V 1.8 ± 0.15V 2.5 ± 0.2V 3.3 ± 0.3V 5.0 ± 0.5V
+TYP TYP TYP TYP TYP TYP
+CpdA (2)
+A to B: outputs enabled
+A Port
+CL = 0, RL = Open
+f = 10 MHz
+trise = tfall = 1 ns
+2 2 2 2 2 3
+pF
+A to B: outputs disabled 2 2 2 2 2 3
+B to A: outputs enabled 12 12 12 13 13 16
+B to A: outputs disabled 2 2 2 2 2 3
+CpdB  (3)
+A to B: outputs enabled
+B Port
+CL = 0, RL = Open
+f = 10 MHz
+trise = tfall = 1 ns
+12 12 12 13 13 16
+pF
+A to B: outputs disabled 2 2 2 2 2 3
+B to A: outputs enabled 2 2 2 2 2 3
+B to A: outputs disabled 2 2 2 2 2 3
+(1) See the CMOS Power Consumption and Cpd Calculation application report for additional information about how power dissipation 
+capacitance affects power consumption.
+(2) A-Port power dissipation capacitance per transceiver.
+(3) B-Port power dissipation capacitance per transceiver.
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+16 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 17
+7.13 Typical Characteristics
+I
+OH
+ - Output High Current (mA)
+V
+OH
+ - Output High Voltage (V)
+0 3 6 9 12 15 18 21 24
+1.5
+1.75
+2
+2.25
+2.5
+2.75
+3
+3.25
+3.5
+3.75
+4
+4.25
+4.5
+4.75
+5
+V
+CC
+ = 5.0V
+V
+CC
+ = 3.3V
+V
+CC
+ = 2.5V
+Figure 7-1. Typical (TA=25°C) Output High Voltage (VOH) vs 
+Source Current (IOH)
+I
+OH
+ - Output High Current (mA)
+V
+OH
+ - Output High Voltage (V)
+0 0.8 1.6 2.4 3.2 4 4.8 5.6 6.4 7.2 8
+0.75
+0.9
+1.05
+1.2
+1.35
+1.5
+1.65
+1.8
+1.95
+V
+CC
+ = 1.8V
+V
+CC
+ = 1.5V
+V
+CC
+ = 1.2V
+Figure 7-2. Typical (TA=25°C) Output High Voltage (VOH) vs 
+Source Current (IOH)
+I
+OL
+ - Output Low Current (mA)
+V
+OL
+ - Output Low Voltage (V)
+0 3 6 9 12 15 18 21 24
+0
+0.025
+0.05
+0.075
+0.1
+0.125
+0.15
+0.175
+0.2
+0.225
+0.25
+0.275
+0.3
+0.325
+0.35
+V
+CC
+ = 2.5V
+V
+CC
+ = 3.3V
+V
+CC
+ = 5.0V
+Figure 7-3. Typical (TA=25°C) Output Low Voltage (VOL) vs Sink 
+Current (IOL) 
+I
+OL
+ - Output Low Current (mA)
+V
+OL
+ - Output Low Voltage (V)
+0 0.8 1.6 2.4 3.2 4 4.8 5.6 6.4 7.2 8
+0
+0.025
+0.05
+0.075
+0.1
+0.125
+0.15
+0.175
+0.2
+0.225
+0.25
+0.275
+0.3
+0.325
+0.35
+V
+CC
+ = 1.2V
+V
+CC
+ = 1.5V
+V
+CC
+ = 1.8V
+Figure 7-4. Typical (TA=25°C) Output Low Voltage (VOL) vs Sink 
+Current (IOL)
+V
+IN
+ - Input Voltage (V)
+I
+CC
+ - Supply Current (mA)
+0 0.5 1 1.5 2 2.5 3 3.5 4 4.5 5
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+1.6
+1.8
+2
+V
+CC
+ = 2.5 V
+V
+CC
+ = 3.3 V
+V
+CC
+ = 5 V
+Figure 7-5. Typical (TA=25°C) Supply Current (ICC) vs Input 
+Voltage (VIN)
+V
+IN
+ - Input Voltage (V)
+I
+CC
+ - Supply Current (mA)
+0 0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 1.8
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+0.12
+0.14
+0.16
+0.18
+0.2
+0.22
+V
+CC
+ = 1.2 V
+V
+CC
+ = 1.5 V
+V
+CC
+ = 1.8 V
+Figure 7-6. Typical (TA=25°C) Supply Current (ICC) vs Input 
+Voltage (VIN)
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 17
+Product Folder Links: TXU0202
+PAGE 18
+8 Parameter Measurement Information
+8.1 Load Circuit and Voltage Waveforms
+Unless otherwise noted, generators supply all input pulses that have the following characteristics:
+• f = 1 MHz
+• ZO = 50 Ω
+• Δt/ΔV ≤ 1 ns/V
+Output Pin
+Under Test
+CL
+(1) RL
+RL
+S1
+GND
+Open
+2 x VCCO
+Measurement Point
+A. CL includes probe and jig capacitance.
+Figure 8-1. Load Circuit
+Table 8-1. Load Circuit Conditions
+Parameter VCCO RL CL S1 VTP
+tpd Propagation (delay) time 1.1 V – 5.5 V 10 kΩ 5 pF Open N/A
+ten, tdis Enable time, disable time
+1.1 V – 1.6 V 10 kΩ 5 pF 2 × VCCO 0.1 V
+1.65 V – 2.7 V 10 kΩ 5 pF 2 × VCCO 0.15 V
+3.0 V – 5.5 V 10 kΩ 5 pF 2 × VCCO 0.3 V
+ten, tdis Enable time, disable time
+1.1 V – 1.6 V 10 kΩ 5 pF GND 0.1 V
+1.65 V – 2.7 V 10 kΩ 5 pF GND 0.15 V
+3.0 V – 5.5 V 10 kΩ 5 pF GND 0.3 V
+Input A, B
+VCCI
+(1)
+VCCI / 2
+0 V
+Output B, A
+VOH
+(2)
+VOL
+(2)
+tpd tpd
+VCCI / 2
+VCCI / 2 V CCI / 2
+1. VCCI is the supply pin associated with the input port.
+2. VOH and VOL are typical output voltage levels that occur 
+with specified RL, CL, and S1
+Figure 8-2. Propagation Delay
+VCCI
+(1)
+0 V
+100 kHz 
+500 ps/V ± 1 s/V
+VOH
+(2)
+VOL
+(2)
+Ensure Monotonic
+Rising and Falling EdgeOutput B, A
+Input A, B
+1. VCCI is the supply pin associated with the input port.
+2. VOH and VOL are typical output voltage levels that occur 
+with specified RL, CL, and S1
+Figure 8-3. Input Transition Rise and Fall Rate
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+18 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 19
+VCCA
+VCCA / 2
+Output(1)
+tdis
+GND
+VCCA / 2
+VCCO
+(3)
+VOL
+(4)VOL + VTP
+ten
+VCCO / 2
+Output(2)
+VOH
+(4)
+GND
+VOH - VTP
+VCCO / 2
+OE
+1. Output waveform on the condition that input is driven to a valid Logic Low.
+2. Output waveform on the condition that input is driven to a valid Logic High.
+3. VCCO is the supply pin associated with the output port.
+4. VOH and VOL are typical output voltage levels with specified RL, CL, and S1.
+Figure 8-4. Enable Time And Disable Time
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 19
+Product Folder Links: TXU0202
+PAGE 20
+9 Detailed Description
+9.1 Overview
+The TXU0202 is a 4-bit translating transceiver that uses two individually configurable power-supply rails. The 
+device is operational with V CCA and VCCB supplies as low as 1.1 V and as high as 5.5 V. Additionally, the device 
+can be operated with V CCA = V CCB. The A port is designed to track V CCA, and the B port is designed to track 
+VCCB.
+The TXU0202 device is designed for asynchronous communication between data buses, and transmits data with 
+fixed direction from the A bus to the B bus on some channels and from the B bus to the A bus on the remaining 
+channels. The output-enable input (OE) is used to disable the outputs so the buses are effectively isolated. The 
+output-enable pin of the TXU0202 (OE) can be referenced to either VCCA or VCCB. The OE pin can be left floating 
+or externally pulled down to ground to ensure the high-impedance state of the level shifter outputs during power 
+up or power down.
+This device is fully specified for partial-power-down applications using the I off current. The I off protection circuitry 
+ensures that no excessive current is drawn from or sourced into an input or output while the device is powered 
+down.
+The VCC isolation or VCC disconnect feature ensures that if either VCC is less than 100 mV or disconnected 
+with the complementary supply within recommended operating conditions, outputs are disabled and set to the 
+high-impedance state while the supply current is maintained. The I off-float circuitry ensures that no excessive 
+current is drawn from or sourced into an input or output while the supply is floating.
+Glitch-free power supply sequencing allows either supply rail to be powered on or off in any order while providing 
+robust power sequencing performance.
+9.2 Functional Block Diagram
+OE
+VCCA VCCB
+GND
+B1Y
+B2
+A1
+A2Y
+VCC(MIN)
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+20 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 21
+9.3 Feature Description
+9.3.1 CMOS Schmitt-Trigger Inputs with Integrated Pulldowns
+Standard CMOS inputs are high impedance and are typically modeled as a resistor in parallel with the input 
+capacitance given in the Electrical Characteristics. The worst case resistance is calculated with the maximum 
+input voltage, given in the Absolute Maximum Ratings , and the maximum input leakage current, given in the 
+Electrical Characteristics, using ohm's law (R = V ÷ I).
+The Schmitt-trigger input architecture provides hysteresis as defined by ΔVT in the Electrical Characteristics , 
+which makes this device extremely tolerant to slow or noisy inputs. Driving the inputs slowly will increase 
+dynamic current consumption of the device. See Understanding Schmitt Triggers  for additional information 
+regarding Schmitt-trigger inputs.
+9.3.1.1 Inputs with Integrated Static Pull-Down Resistors
+This device has 5 M Ω typical integrated weak pull-downs for each input. This feature allows all inputs to be left 
+floating without the concern for unstable outputs or increased current consumption. This also helps to reduce 
+external component count for applications where not all channels are used or need to be fixed low. If an external 
+pull-up is required, it should be no larger than 1 MΩ to avoid contention with the 5 MΩ internal pull-down.
+9.3.2 Control Logic (OE) with VCC(MIN) Circuitry
+The output-enable input (OE) is used to disable the outputs so the buses are effectively isolated. The 
+output-enable pin of the TXU0x04 has V CC(MIN) circuitry, which allows the OE pin to operate with the lower 
+supply voltage. The Over-Voltage Tolerant Inputs feature allows the OE pin to operate with the higher supply 
+voltage. This combination means that the enable pin can be referenced to either V CCA or V CCB supply. Multiple 
+permutations of each device are possible since the controller can be placed on either the A or B port and can still 
+control the enable pin.
+9.3.3 Balanced High-Drive CMOS Push-Pull Outputs
+A balanced output allows the device to sink and source similar currents. The high drive capability of this device 
+creates fast edges into light loads, so routing and load conditions should be considered to prevent ringing. 
+Additionally, the outputs of this device are capable of driving larger currents than the device can sustain without 
+being damaged. Absolute Maximum Ratings defines the electrical and thermal limits that must be followed at all 
+times.
+9.3.4 VCC Isolation and VCC Disconnect
+The outputs for this device are disabled and enter a high-impedance state when either supply is <100 mV 
+or left floating (disconnected), with the complementary supply within recommended operating conditions. It is 
+recommended that the inputs are kept low before floating (disconnecting) either supply.
+The I CCx(floating) in the Electrical Characteristics  specifies the maximum supply current. The I off(float) in the 
+Electrical Characteristics specifies the maximum leakage into or out of any input or output pin on the device.
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 21
+Product Folder Links: TXU0202
+PAGE 22
+Hi-Z Hi-Z
+Supply  disconnected I CCB maintained
+Ioff(float)Ioff(float)
+OE  
+VCCA VCCB
+B1YA1
+VCC(MIN)
+  Disabled
+VCCBVCCA
+GND
+Figure 9-1. VCC Disconnect Feature
+9.3.5 Over-Voltage Tolerant Inputs
+Input signals to this device can be driven above the supply voltage so long as they remain below the maximum 
+input voltage value specified in the Recommended Operating Conditions.
+9.3.6 Glitch-Free Power Supply Sequencing
+Either supply rail may be powered on or off in any order without producing a glitch on the inputs or outputs (that 
+is, where the output erroneously transitions to VCC when it should be held low or vice versa). Glitches of this 
+nature can be misinterpreted by a peripheral as a valid data bit, which could trigger a false device reset of the 
+peripheral, a false device configuration of the peripheral, or even a false data initialization by the peripheral.
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+22 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 23
+9.3.7 Negative Clamping Diodes
+Figure 9-2 depicts the inputs and outputs to this device that have negative clamping diodes.
+CAUTION
+Voltages beyond the values specified in the Absoulte Maximum Ratings table can cause damage to 
+the device. The input negative-voltage and output voltage ratings may be exceeded if the input and 
+output clamp-current ratings are observed.
+GND 
+Level 
+Shifter
+Input or I/O 
+configured 
+as input
+VCCA
+Device
+-IIK -IOK
+VCCB
+I/O configured 
+as output
+Figure 9-2. Electrical Placement of Clamping Diodes for Each Input and Output
+9.3.8 Fully Configurable Dual-Rail Design
+The V CCA and V CCB pins can be supplied at any voltage from 1.1 V to 5.5 V, making the device suitable for 
+translating between any of the voltage nodes (1.2 V, 1.5 V, 1.8 V, 3.3 V, and 5.0 V).
+9.3.9 Supports High-Speed Translation
+The TXU0202 device can support high data-rate applications. The translated signal data rate can be up to 200 
+Mbps when the signal is translated from 3.3 V to 5.0 V.
+9.4 Device Functional Modes
+Table 9-1. Function Table
+CONTROL INPUTS Port Status
+OPERATION
+OE Input Output
+H L L Unidirectional non-inverting 
+voltage translation
+H H H Unidirectional non-inverting 
+voltage translation
+L X Hi-Z Isolation
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 23
+Product Folder Links: TXU0202
+PAGE 24
+10 Application and Implementation
+Note
+Information in the following applications sections is not part of the TI component specification, 
+and TI does not warrant its accuracy or completeness. TI’s customers are responsible for 
+determining suitability of components for their purposes, as well as validating and testing their design 
+implementation to confirm system functionality.
+10.1 Application Information
+The TXU0202 device can be used in level-translation applications for interfacing devices or systems operating 
+at different interface voltages with one another. The TXU0202 device is ideal for use in applications where a 
+push-pull driver is connected to the data Inputs. The maximum data rate can be up to 200 Mbps when device 
+translates a signal from 3.3 V to 5.0 V.
+10.2 Typical Application
+MCU
+UART
+USB to Serial 
+Chip
+B1Y
+VCCA VCCB
+OE
+A1
+5.0 V 1.8 V
+0.1 µF 0.1 µF
+TXU0202
+GND
+TX RX
+B2A2YRX TX
+Figure 10-1. TXU0202 UART Application
+10.2.1 Design Requirements
+Use the parameters listed in Table 10-1 for this design example.
+Table 10-1. Design Parameters
+DESIGN PARAMETERS EXAMPLE VALUES
+Input voltage range 1.1 V to 5.5 V
+Output voltage range 1.1 V to 5.5 V
+10.2.2 Detailed Design Procedure
+To begin the design process, determine the following:
+• Input voltage range
+– Use the supply voltage of the device that is driving the TXU0202 device to determine the input voltage 
+range. For a valid logic-high, the value must exceed the positive-going input-threshold voltage (VT+) of the 
+input port. For a valid logic low the value must be less than the negative-going input-threshold voltage 
+(VT-) of the input port.
+• Output voltage range
+– Use the supply voltage of the device that the TXU0202 device is driving to determine the output voltage 
+range.
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+24 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 25
+10.2.3 Application Curve
+Figure 10-2. Up Translation at 1 MHz (1.2 V to 5 V) 
+11 Power Supply Recommendations
+Always apply a ground reference to the GND pins first. This device is designed for glitch free power sequencing 
+without any supply sequencing requirements such as ramp order or ramp rate.
+Glitch-Free Power Supply Sequencing  describes how this device was designed with various power supply 
+sequencing methods in mind to help prevent unintended triggering of downstream devices.
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 25
+Product Folder Links: TXU0202
+PAGE 26
+12 Layout
+12.1 Layout Guidelines
+To ensure reliability of the device, following common printed-circuit board layout guidelines are recommended:
+• Use bypass capacitors on the power supply pins and place them as close to the device as possible. A 0.1 µF 
+capacitor is recommended, but transient performance can be improved by having 1 µF and 0.1 µF capacitors 
+in parallel as bypass capacitors.
+• The high drive capability of this device creates fast edges into light loads so routing and load conditions 
+should be considered to prevent ringing.
+12.2 Layout Example
+UART RX 
+to MCU
+Copper TracesVia to VCCB
+Via to VCCA Via to GNDA
+B
+G
+Legend
+TXU0202DTM
+6
+7
+5
+4
+3
+2
+1
+8B2
+VCCA
+A2Y
+B1Y
+VCCB
+OE
+A1
+G
+UART TX 
+from MCU
+4 mil
+8 mil
+0.1µF
+01005
+0.1µF
+01005
+UART TX to 
+Chip
+UART RX 
+from Chip
+GND
+G
+A
+B
+Figure 12-1. Layout Example – TXU0202 
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022 www.ti.com
+26 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TXU0202
+PAGE 27
+13 Device and Documentation Support
+13.1 Device Support
+13.1.1 Regulatory Requirements
+No statutory or regulatory requirements apply to this device.
+There are no special characteristics for this product.
+13.2 Documentation Support
+13.2.1 Related Documentation
+• Texas Instruments, Understanding Schmitt Triggers application report
+• Texas Instruments, CMOS Power Consumption and Cpd Calculation application report
+13.3 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on 
+Subscribe to updates  to register and receive a weekly digest of any product information that has changed. For 
+change details, review the revision history included in any revised document.
+13.4 Support Resources
+TI E2E ™ support forums  are an engineer's go-to source for fast, verified answers and design help — straight 
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do 
+not necessarily reflect TI's views; see TI's Terms of Use.
+13.5 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+13.6 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled 
+with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may 
+be more susceptible to damage because very small parametric changes could cause the device not to meet its published 
+specifications.
+13.7 Glossary
+TI Glossary This glossary lists and explains terms, acronyms, and definitions.
+14 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most 
+current data available for the designated devices. This data is subject to change without notice and revision of 
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+www.ti.com
+TXU0202
+SCES942A – NOVEMBER 2021 – REVISED MARCH 2022
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 27
+Product Folder Links: TXU0202
+PAGE 28
+PACKAGE OPTION ADDENDUM
+www.ti.com 10-Feb-2026
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+TXU0202DCUR Active Production VSSOP (DCU) | 8 3000 | LARGE T&R Yes SN Level-1-260C-UNLIM -40 to 125 2PCT
+TXU0202DCUR.A Active Production VSSOP (DCU) | 8 3000 | LARGE T&R Yes SN Level-1-260C-UNLIM -40 to 125 2PCT
+TXU0202DTMR Active Production X2SON (DTM) | 8 5000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 125 1LP
+TXU0202DTMR.A Active Production X2SON (DTM) | 8 5000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 1LP
+TXU0202DTTR Active Production X1SON (DTT) | 8 5000 | LARGE T&R Yes NIPDAUAG Level-1-260C-UNLIM -40 to 125 1LV
+TXU0202DTTR.A Active Production X1SON (DTT) | 8 5000 | LARGE T&R Yes NIPDAUAG Level-1-260C-UNLIM -40 to 125 1LV
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+Addendum-Page 1
+PAGE 29
+PACKAGE OPTION ADDENDUM
+www.ti.com 10-Feb-2026
+ 
+ OTHER QUALIFIED VERSIONS OF TXU0202 :
+• Automotive : TXU0202-Q1
+ NOTE: Qualified Version Definitions:
+• Automotive - Q100 devices qualified for high-reliability automotive applications targeting zero defects
+Addendum-Page 2
+PAGE 30
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 25-Jul-2025
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+TXU0202DCUR VSSOP DCU 8 3000 178.0 9.0 2.25 3.35 1.05 4.0 8.0 Q3
+TXU0202DTMR X2SON DTM 8 5000 178.0 8.4 0.93 1.49 0.43 2.0 8.0 Q1
+TXU0202DTTR X1SON DTT 8 5000 178.0 8.4 1.17 2.17 0.63 4.0 8.0 Q1
+Pack Materials-Page 1
+PAGE 31
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 25-Jul-2025
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+TXU0202DCUR VSSOP DCU 8 3000 180.0 180.0 18.0
+TXU0202DTMR X2SON DTM 8 5000 205.0 200.0 33.0
+TXU0202DTTR X1SON DTT 8 5000 205.0 200.0 33.0
+Pack Materials-Page 2
+PAGE 32
+www.ti.com
+PACKAGE OUTLINE
+C
+6X 0.5
+2X
+1.5
+8X 0.25
+0.17
+3.2
+3.0 TYP
+SEATING
+PLANE
+0.1
+0.0
+0.12
+GAGE PLANE
+0 -6
+0.9
+0.6
+B 2.4
+2.2
+NOTE 3
+A
+2.1
+1.9
+NOTE 3
+0.35
+0.20
+(0.13) TYP
+VSSOP - 0.9 mm max heightDCU0008A
+SMALL OUTLINE PACKAGE
+4225266/A   09/2014
+1
+4 5
+8
+0.08 C A B
+PIN 1 INDEX AREA
+SEE DETAIL  A
+0.1 C
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm per side. 
+4. Reference JEDEC registration MO-187 variation CA.
+ 
+A  30
+DETAIL A
+TYPICAL
+SCALE  6.000
+PAGE 33
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.05 MAX
+ALL AROUND
+0.05 MIN
+ALL AROUND
+8X (0.85)
+8X (0.3)
+6X (0.5)
+(3.1)
+(R0.05) TYP
+VSSOP - 0.9 mm max heightDCU0008A
+SMALL OUTLINE PACKAGE
+4225266/A   09/2014
+NOTES: (continued)
+ 
+5. Publication IPC-7351 may have alternate designs. 
+6. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE: 25X
+SYMM
+SYMM
+1
+4 5
+8
+SEE SOLDER MASK
+DETAILS
+15.000
+METALSOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+OPENING
+EXPOSED METALEXPOSED METAL
+SOLDER MASK DETAILS
+NON-SOLDER MASK
+DEFINED
+(PREFERRED)
+SOLDER MASK
+DEFINED
+PAGE 34
+www.ti.com
+EXAMPLE STENCIL DESIGN
+8X (0.85)
+8X (0.3)
+6X (0.5)
+(3.1)
+(R0.05) TYP
+VSSOP - 0.9 mm max heightDCU0008A
+SMALL OUTLINE PACKAGE
+4225266/A   09/2014
+NOTES: (continued)
+ 
+7. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+8. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE: 25X
+SYMM
+SYMM
+1
+4 5
+8
+PAGE 35
+www.ti.com
+PACKAGE OUTLINE
+C
+6X 0.25
+0.15
+2X
+1
+4X
+0.5
+0.4 MAX
+0.04
+0.00
+6X 0.27
+0.17
+0.54
+2X 0.27
+0.17
+B 0.85
+0.75
+A
+1.4
+1.3
+(0.102) TYP
+4224755/B   10/2022
+X2SON - 0.4 mm max heightDTM0008A
+PLASTIC SMALL OUTLINE - NO LEAD
+PIN 1 INDEX AREA
+SEATING PLANE
+0.05 C
+1
+3
+4
+7
+0.1 C B A
+0.05 C
+SYMM
+SYMM
+PIN 1 ID
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice.
+3. The package thermal pad(s) must be soldered to the printed circuit board for thermal and mechanical performance.
+2
+5
+6
+8
+SCALE  12.000
+PAGE 36
+www.ti.com
+EXAMPLE BOARD LAYOUT
+( 0.22)
+4X (0.079)
+0.0325 MIN
+ALL AROUND0.0325 MAX
+ALL AROUND
+6X (0.2)
+(0.5)
+(0.78)
+(R0.05) TYP
+6X (0.42)
+(0.27)
+(45 ) TYP
+4X (0.1)
+X2SON - 0.4 mm max heightDTM0008A
+PLASTIC SMALL OUTLINE - NO LEAD
+4224755/B   10/2022
+NOTES: (continued)
+ 
+4. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature 
+    number SLUA271 (www.ti.com/lit/slua271).
+NON SOLDER MASK
+DEFINED
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN 
+SCALE:40X
+SYMM
+SYMM
+1
+3
+4
+7
+5
+8
+SEE SOLDER MASK
+DETAILS
+EXPOSED METAL
+SOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+(PREFERRED)
+SOLDER MASK DETAILS
+SOLDER MASK
+OPENING
+METAL EDGE
+EXPOSED METAL
+PAGE 37
+www.ti.com
+EXAMPLE STENCIL DESIGN
+(0.411)
+4X (0.42)
+6X (0.2)
+(0.5)
+(0.78)
+PINS: 1,3,5,7
+(0.27)
+(R0.05) TYP
+( 0.22)
+(0.2) TYP
+4X (0.079)
+(45 ) TYP
+4X (0.128)
+X2SON - 0.4 mm max heightDTM0008A
+PLASTIC SMALL OUTLINE - NO LEAD
+4224755/B   10/2022
+5. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.
+SYMM
+SYMM
+1
+3
+4
+7
+5
+8
+SOLDER PASTE EXAMPLE
+BASED ON 0.075 mm THICK STENCIL
+SCALE: 40X
+EXPOSED
+METAL
+PAGE 38
+www.ti.com
+PACKAGE OUTLINE
+C
+8X 0.25
+0.15
+6X
+0.5
+7X 0.35
+0.25
+2X
+1.5
+0.5 MAX
+0.04
+0.00
+3X 0.6
+0.4
+0.3
+B 1.05
+0.95
+A
+2.0
+1.9
+(0.05) TYP (0.127) TYP
+4226960/B   08/2021
+X1SON - 0.5 mm max heightDTT0008A
+PLASTIC SMALL OUTLINE - NO LEAD
+PIN 1 INDEX AREA
+SEATING PLANE
+0.08
+1
+4 5
+8
+(OPTIONAL)
+PIN 1 ID 
+0.1 C A B
+0.05 C
+SYMM
+SYMM
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+SCALE  8.500
+PAGE 39
+www.ti.com
+EXAMPLE BOARD LAYOUT
+6X (0.5) (R0.05) TYP
+0.05 MIN
+ALL AROUND
+0.05 MAX
+ALL AROUND
+7X (0.3)
+8X (0.2)
+(0.6)
+(0.35)
+4226960/B   08/2021
+X1SON - 0.5 mm max heightDTT0008A
+PLASTIC SMALL OUTLINE - NO LEAD
+SYMM
+1
+4 5
+8
+SYMM
+LAND PATTERN EXAMPLE
+1:1 RATIO WITH PKG SOLDER PADS
+EXPOSED METAL SHOWN
+SCALE:40X
+NOTES: (continued)
+ 
+3. For more information, see QFN/SON PCB application report in literature No. SLUA271 (www.ti.com/lit/slua271).
+ 
+ 
+METALSOLDER MASK
+OPENING
+SOLDER MASK DETAILS
+NON SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+SOLDER MASK
+OPENING
+METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+(PREFERRED)
+EXPOSED
+METAL
+PAGE 40
+www.ti.com
+EXAMPLE STENCIL DESIGN
+6X (0.5) (R0.05) TYP
+5X (0.3)
+8X (0.2)
+(0.6)
+(0.35)
+4226960/B   08/2021
+X1SON - 0.5 mm max heightDTT0008A
+PLASTIC SMALL OUTLINE - NO LEAD
+NOTES: (continued)
+ 
+4. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+   design recommendations. 
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.075 - 0.1 mm THICK STENCIL
+SCALE:40X
+SYMM
+1
+4 5
+8
+SYMM
+PAGE 41
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

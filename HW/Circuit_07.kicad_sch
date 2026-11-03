@@ -1,0 +1,1303 @@
+(kicad_sch (version 20250114) (generator "eeschema") (uuid 5c102117-c479-5407-8b53-a3a11119c782) (paper "A3") (title_block (title "Battery interface and voltage sensing") (date "2026-10-05") (rev "F-LOCAL-PCBA-PROTOTYPE") (comment 1 "ENGINEERING PROTOTYPE - FACTORY REVIEW AND BENCH TESTS REQUIRED"))
+(lib_symbols
+(symbol "SentiFrame:Battery_Cell"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "BT"
+			(at 2.54 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Battery_Cell"
+			(at 2.54 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 1.524 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 1.524 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Single-cell battery"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "battery cell"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Battery_Cell_0_1"
+			(rectangle
+				(start -2.286 1.778)
+				(end 2.286 1.524)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -1.524 1.016)
+				(end 1.524 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.778) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0.762) (xy 0 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 3.048) (xy 1.778 3.048)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 3.556) (xy 1.27 2.54)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Battery_Cell_1_1"
+			(pin passive line
+				(at 0 5.08 270)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:PACK_3PIN" (pin_names (offset 0.635)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 12.7 0) (effects (font (size 1.27 1.27))))
+(property "Value" "PACK_3PIN" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+(symbol "PACK_3PIN_0_1" (rectangle (start -7.62 7.62) (end 7.62 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "PACK_3PIN_1_1"
+(pin passive line (at -12.7 5.08 0) (length 5.08) (name "PACK+" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0)))))
+(pin passive line (at -12.7 2.54 0) (length 5.08) (name "PACK-" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0)))))
+(pin passive line (at 12.7 5.08 180) (length 5.08) (name "NTC" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0)))))
+(pin passive line (at 12.7 2.54 180) (length 5.08) (name "MOUNT" (effects (font (size 1.0 1.0)))) (number "MP" (effects (font (size 1.0 1.0)))))
+))
+(symbol "SentiFrame:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:TPS22918DBVR" (pin_names (offset 0.635)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 12.7 0) (effects (font (size 1.27 1.27))))
+(property "Value" "TPS22918DBVR" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+(symbol "TPS22918DBVR_0_1" (rectangle (start -15.24 7.62) (end 15.24 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "TPS22918DBVR_1_1"
+(pin power_in line (at -20.32 5.08 0) (length 5.08) (name "VIN" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at -20.32 2.54 0) (length 5.08) (name "GND" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0)))))
+(pin input line (at -20.32 0.0 0) (length 5.08) (name "ON" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0)))))
+(pin passive line (at 20.32 5.08 180) (length 5.08) (name "CT" (effects (font (size 1.0 1.0)))) (number "4" (effects (font (size 1.0 1.0)))))
+(pin passive line (at 20.32 2.54 180) (length 5.08) (name "QOD" (effects (font (size 1.0 1.0)))) (number "5" (effects (font (size 1.0 1.0)))))
+(pin power_out line (at 20.32 0.0 180) (length 5.08) (name "VOUT" (effects (font (size 1.0 1.0)))) (number "6" (effects (font (size 1.0 1.0)))))
+))
+(symbol "SentiFrame:TestPoint"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.762)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "TP"
+			(at 0 6.858 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "test point tp"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Pin* Test*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TestPoint_0_1"
+			(circle
+				(center 0 3.302)
+				(radius 0.762)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "TestPoint_1_1"
+			(pin passive line
+				(at 0 0 90)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:Thermistor_NTC"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "TH"
+			(at -4.445 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Thermistor_NTC"
+			(at 3.175 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Temperature dependent resistor, negative temperature coefficient"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "thermistor NTC resistor sensor RTD"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		
+		(symbol "Thermistor_NTC_0_1"
+			(arc
+				(start -3.175 2.413)
+				(mid -3.0506 2.3165)
+				(end -3.048 2.159)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -3.048 2.794)
+				(mid -2.9736 2.9736)
+				(end -2.794 3.048)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.794 3.048)
+				(mid -2.6144 2.9736)
+				(end -2.54 2.794)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.794 2.54)
+				(mid -2.9736 2.6144)
+				(end -3.048 2.794)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.794 1.905)
+				(mid -2.9736 1.9794)
+				(end -3.048 2.159)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 2.159)
+				(mid -2.6144 1.9794)
+				(end -2.794 1.905)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.159 2.794)
+				(mid -2.434 2.5608)
+				(end -2.794 2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 2.159) (xy -2.54 2.794)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -3.683) (xy -2.54 -1.397) (xy -2.794 -2.159) (xy -2.286 -2.159) (xy -2.54 -1.397) (xy -2.54 -1.651)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 2.54) (xy -1.778 1.524) (xy 1.778 -1.524) (xy 1.778 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 -1.397) (xy -1.778 -3.683) (xy -2.032 -2.921) (xy -1.524 -2.921) (xy -1.778 -3.683)
+					(xy -1.778 -3.429)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -1.016 2.54)
+				(end 1.016 -2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Thermistor_NTC_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+(text "07 / Battery interface and voltage sensing" (at 18 17 0) (effects (font (size 2.8 2.8)) (justify left)) (uuid 0660a159-f2c0-5ed4-ab09-0f88248126a2))
+(symbol (lib_id "SentiFrame:PACK_3PIN") (at 66.04 64.77 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 3a1682bd-5e16-5e4b-ad3f-146c6f6417cd)
+(property "Reference" "J2" (at 66.04 50.15 0) (effects (font (size 1.1 1.1))))
+(property "Value" "JST SH / PACK + GND NTC" (at 66.04 53.75 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:JST_SH_SM03B-SRSS-TB_1x03-1MP_P1.00mm_Horizontal" (at 66.04 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 66.04 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "SM03B-SRSS-TB" (at 66.04 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Pin1 protected pack+, pin2 pack-, pin3 10k NTC. This custom pinout is not a universal battery connector standard." (at 66.04 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 66.04 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 926672ce-93d8-51ee-83be-8f37cf8191c4))
+(pin "2" (uuid 1631c6a4-6de3-5878-b315-b4d8c55ad8bf))
+(pin "3" (uuid 13575739-1ef6-5a6d-9a50-7d05fc07c532))
+(pin "MP" (uuid 883b9b8f-0d4e-5e92-a006-0db52a7b1817))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "J2") (unit 1))))
+)
+(wire (pts (xy 53.34 59.69) (xy 48.26 59.69)) (stroke (width 0) (type default)) (uuid d0b02032-92c3-5d5b-b888-c19517cf018f))
+(global_label "VBAT" (shape bidirectional) (at 48.26 59.69 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 70dc5efc-1d75-501e-8158-4cce65281531))
+(wire (pts (xy 53.34 62.23) (xy 48.26 62.23)) (stroke (width 0) (type default)) (uuid 0ebb7af3-2047-585b-bd7a-7f3b07271168))
+(global_label "GND" (shape bidirectional) (at 48.26 62.23 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid cffec722-9ff2-5d40-a857-3cc9149800a1))
+(wire (pts (xy 78.74 59.69) (xy 83.82 59.69)) (stroke (width 0) (type default)) (uuid 6e1080e5-5d56-5f50-8e63-9309c3605038))
+(global_label "BAT_TS" (shape bidirectional) (at 83.82 59.69 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 41477945-21e2-535b-90c0-fa7cf55b11f2))
+(wire (pts (xy 78.74 62.23) (xy 83.82 62.23)) (stroke (width 0) (type default)) (uuid 250d8edd-500f-547c-a6ca-793607965b64))
+(global_label "GND" (shape bidirectional) (at 83.82 62.23 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 075338c2-738a-5f30-9792-a8e2ee7933eb))
+(symbol (lib_id "SentiFrame:Battery_Cell") (at 177.8 64.77 0) (unit 1) (in_bom yes) (on_board no) (dnp no) (uuid 1c6e3ed5-900b-5dd0-84ad-3c5262e3b7c5)
+(property "Reference" "BT1" (at 191.8 62.77 0) (effects (font (size 1.1 1.1))))
+(property "Value" "1S protected LiPo >=100mAh" (at 191.8 66.77 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 177.8 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 177.8 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "SF-PACK-001 interface specification" (at 177.8 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "4.2V full charge, >=30mA allowed charge, >=200mA pulse discharge. Pack/NTC/polarity must be qualified before battery-powered testing; frame fit and thermal qualification precede wearing." (at 177.8 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "EXTERNAL" (at 177.8 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 2ee32ae8-5e2b-5015-a126-c0464717f4db))
+(pin "2" (uuid fc4fe23d-d8cd-5ba2-9e78-21739a73f121))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "BT1") (unit 1))))
+)
+(wire (pts (xy 177.8 59.69) (xy 177.8 54.61)) (stroke (width 0) (type default)) (uuid 387c2c9b-b030-5c1f-a193-42dd56ad84cb))
+(global_label "VBAT" (shape bidirectional) (at 177.8 54.61 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 64dc69df-be83-5066-a247-73ea65bb8c99))
+(wire (pts (xy 177.8 67.31) (xy 177.8 72.39)) (stroke (width 0) (type default)) (uuid 25fa2410-799c-5a50-8803-338f686e435b))
+(global_label "GND" (shape bidirectional) (at 177.8 72.39 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 584642eb-ce1d-5cc0-b133-03ed302d8639))
+(symbol (lib_id "SentiFrame:Thermistor_NTC") (at 287.02 64.77 0) (unit 1) (in_bom yes) (on_board no) (dnp no) (uuid 7c47ecc3-c70e-57e0-9702-a383c2d4da2c)
+(property "Reference" "TH1" (at 301.02 62.77 0) (effects (font (size 1.1 1.1))))
+(property "Value" "SEMITEC 103AT-2 / external" (at 301.02 66.77 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 287.02 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.semitec-global.com/uploads/2022/01/P12-13-AT-Thermistor.pdf" (at 287.02 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "103AT-2" (at 287.02 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Attach thermally to battery, electrically insulate leads. 10k at25C; B25/85=3435K. Do not substitute a fixed resistor." (at 287.02 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "EXTERNAL" (at 287.02 64.77 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 2822a2a3-fa33-5517-9596-edc4ddd48f3d))
+(pin "2" (uuid 656524ab-f513-5384-9820-25e7f12e61ff))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "TH1") (unit 1))))
+)
+(wire (pts (xy 287.02 60.96) (xy 287.02 55.88)) (stroke (width 0) (type default)) (uuid 99c9fa14-a843-57b6-aa2e-07ea979e007d))
+(global_label "BAT_TS" (shape bidirectional) (at 287.02 55.88 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 86f9be62-86d5-5d38-bb23-1522fcdc3b34))
+(wire (pts (xy 287.02 68.58) (xy 287.02 73.66)) (stroke (width 0) (type default)) (uuid 77af004a-71b9-5fbd-bf76-f730eb610be6))
+(global_label "GND" (shape bidirectional) (at 287.02 73.66 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 2b4abe36-52c8-5aa7-a831-2ebdfb2a266f))
+(symbol (lib_id "SentiFrame:TPS22918DBVR") (at 76.2 143.51 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 99a520c3-afbf-52f4-9cfe-6b96c8948d9d)
+(property "Reference" "U12" (at 76.2 128.89 0) (effects (font (size 1.1 1.1))))
+(property "Value" "TPS22918DBVR / ADC gate" (at 76.2 132.49 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:SOT-23-6" (at 76.2 143.51 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps22918.pdf" (at 76.2 143.51 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "TPS22918DBVR" (at 76.2 143.51 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Disconnects divider from battery when MCU is off; QOD discharges divider. CT open is allowed." (at 76.2 143.51 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 76.2 143.51 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 76bb457f-6a0b-5b19-a680-c4d020c102bc))
+(pin "2" (uuid e3bed508-372d-50ff-9e42-c4cb7373557c))
+(pin "3" (uuid c865d977-f1e8-5175-a8f5-2f6a447ceef1))
+(pin "4" (uuid 0b6de3b2-70d8-59eb-9102-f04edfe1040f))
+(pin "5" (uuid 63df15f9-f937-5000-ac47-cc4ab11428b4))
+(pin "6" (uuid ba2f0c30-b31b-5058-9146-e3f44794afc2))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "U12") (unit 1))))
+)
+(wire (pts (xy 55.88 138.43) (xy 50.8 138.43)) (stroke (width 0) (type default)) (uuid e8f5be08-2a5b-570d-83ad-3aa56452fefa))
+(global_label "VBAT" (shape bidirectional) (at 50.8 138.43 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 2f8d2038-412f-5a28-8ab5-eede53a806e0))
+(wire (pts (xy 55.88 140.97) (xy 50.8 140.97)) (stroke (width 0) (type default)) (uuid 74fd2775-8a69-521b-a80e-05ce644c5e9d))
+(global_label "GND" (shape bidirectional) (at 50.8 140.97 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid deaf583b-c21f-5a5d-8f35-be9b916f139f))
+(wire (pts (xy 55.88 143.51) (xy 50.8 143.51)) (stroke (width 0) (type default)) (uuid 47b0d06f-d106-5a7c-87ec-160d009ac997))
+(global_label "BAT_MEAS_EN" (shape bidirectional) (at 50.8 143.51 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 41f25925-4f13-50a8-8b72-7cbe772629db))
+(no_connect (at 96.52 138.43) (uuid aa87816e-69ac-54b7-ae2f-d2bfba8e331e))
+(wire (pts (xy 96.52 140.97) (xy 101.6 140.97)) (stroke (width 0) (type default)) (uuid 1d2e23ae-2c21-5603-9626-4a2b4d2d9c36))
+(global_label "VBAT_SENSE_PWR" (shape bidirectional) (at 101.6 140.97 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 4112c807-58a1-5f1b-957c-a0e6520fc526))
+(wire (pts (xy 96.52 143.51) (xy 101.6 143.51)) (stroke (width 0) (type default)) (uuid 5e96476b-1acc-5cfd-b7d3-986dacc7ca61))
+(global_label "VBAT_SENSE_PWR" (shape bidirectional) (at 101.6 143.51 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 7fda3943-81cf-5c22-a644-558b54024735))
+(symbol (lib_id "SentiFrame:R") (at 181.61 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 30ea706a-9208-523d-acba-0f91c17ac6cc)
+(property "Reference" "R27" (at 195.61 135.16 0) (effects (font (size 1.1 1.1))))
+(property "Value" "100k 1%" (at 195.61 139.16 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 181.61 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L" (at 181.61 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "RC0402FR-07100KL" (at 181.61 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Yageo RC0402, 1%, 0.0625W, 50V; exact MPN, no automatic substitution." (at 181.61 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 181.61 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid d310f12d-2b61-52b5-948f-f298c5468544))
+(pin "2" (uuid 94cb9fbf-73de-58ae-beb6-7cb1601b16bc))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "R27") (unit 1))))
+)
+(wire (pts (xy 181.61 133.35) (xy 181.61 128.27)) (stroke (width 0) (type default)) (uuid 36e08dcf-5b34-56bf-b4f2-94bc20f1184e))
+(global_label "BAT_MEAS_EN" (shape bidirectional) (at 181.61 128.27 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid fb73eb4f-b22c-52e6-b4b6-25133aa3b0fa))
+(wire (pts (xy 181.61 140.97) (xy 181.61 146.05)) (stroke (width 0) (type default)) (uuid fb6b6096-9f6d-516d-af84-5a2617527c57))
+(global_label "GND" (shape bidirectional) (at 181.61 146.05 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 7bee8f28-8101-5060-9d5b-20b3ac31ba87))
+(symbol (lib_id "SentiFrame:R") (at 251.46 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid babfd486-e6ca-5256-9246-0560168f6536)
+(property "Reference" "R28" (at 265.46 135.16 0) (effects (font (size 1.1 1.1))))
+(property "Value" "100k 1%" (at 265.46 139.16 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 251.46 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L" (at 251.46 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "RC0402FR-07100KL" (at 251.46 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Yageo RC0402, 1%, 0.0625W, 50V; exact MPN, no automatic substitution." (at 251.46 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 251.46 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid b5c34bbc-467b-508a-99a9-9473e17d527b))
+(pin "2" (uuid 5117a6de-9dc7-51ee-8a1f-a50741286c99))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "R28") (unit 1))))
+)
+(wire (pts (xy 251.46 133.35) (xy 251.46 128.27)) (stroke (width 0) (type default)) (uuid 22552548-ef3c-563e-b84a-3dbc1a86cabe))
+(global_label "VBAT_SENSE_PWR" (shape bidirectional) (at 251.46 128.27 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid c289fdae-11b1-5854-969c-fea4b99d4317))
+(wire (pts (xy 251.46 140.97) (xy 251.46 146.05)) (stroke (width 0) (type default)) (uuid 0e75d14d-d06e-5834-abf1-403c8ae70abd))
+(global_label "BAT_ADC" (shape bidirectional) (at 251.46 146.05 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid a2f005c2-b278-5dc9-9a6d-2003382a9750))
+(symbol (lib_id "SentiFrame:R") (at 325.12 137.16 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 40e7cc89-367c-53ed-8671-b1f56cb9fd3c)
+(property "Reference" "R29" (at 339.12 135.16 0) (effects (font (size 1.1 1.1))))
+(property "Value" "47k 1%" (at 339.12 139.16 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 325.12 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L" (at 325.12 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "RC0402FR-0747KL" (at 325.12 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Yageo RC0402, 1%, 0.0625W, 50V; exact MPN, no automatic substitution." (at 325.12 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 325.12 137.16 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 836c7f5d-7442-5abd-85c4-9f5980dd06db))
+(pin "2" (uuid 0c17328c-4df3-53e3-aedf-e6485172121b))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "R29") (unit 1))))
+)
+(wire (pts (xy 325.12 133.35) (xy 325.12 128.27)) (stroke (width 0) (type default)) (uuid a6988e46-f8ed-5bf3-b2de-b0dfab6492dd))
+(global_label "BAT_ADC" (shape bidirectional) (at 325.12 128.27 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid da9dda43-64b3-5956-965b-e03a352562ad))
+(wire (pts (xy 325.12 140.97) (xy 325.12 146.05)) (stroke (width 0) (type default)) (uuid 3735ed7e-a703-51c1-9959-0ee5d90a1de3))
+(global_label "GND" (shape bidirectional) (at 325.12 146.05 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 65480bef-9eaf-5a2c-8686-1a9f9a6369bf))
+(symbol (lib_id "SentiFrame:C") (at 41.91 210.82 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid bbae146b-2d35-5960-94b1-8100b93006ec)
+(property "Reference" "C31" (at 55.91 208.82 0) (effects (font (size 1.1 1.1))))
+(property "Value" "100nF 16V X7R" (at 55.91 212.82 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0402_1005Metric" (at 41.91 210.82 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1C104K050BC" (at 41.91 210.82 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "C1005X7R1C104K050BC" (at 41.91 210.82 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "TDK 0402, tolerance +/-10%; DC-bias review in docs/pcba-capacitance.json." (at 41.91 210.82 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 41.91 210.82 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 027290e9-1422-5553-aa8a-b579b531b886))
+(pin "2" (uuid e30d81b6-2637-546d-bd36-33ca63e1c185))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "C31") (unit 1))))
+)
+(wire (pts (xy 41.91 207.01) (xy 41.91 201.93)) (stroke (width 0) (type default)) (uuid eb29dff2-cc69-5666-a9dd-2d1bc5c17c9f))
+(global_label "VBAT" (shape bidirectional) (at 41.91 201.93 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 4dd71893-114c-5d7a-a842-4a8677f85534))
+(wire (pts (xy 41.91 214.63) (xy 41.91 219.71)) (stroke (width 0) (type default)) (uuid 6d135490-576d-5c5f-97f9-98c4223fed9e))
+(global_label "GND" (shape bidirectional) (at 41.91 219.71 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid c1e553a0-f80e-5ef1-b7e7-ef0e830b28c1))
+(symbol (lib_id "SentiFrame:C") (at 105.41 210.82 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 16a445ca-d0f1-549e-86c2-052c68d72cd6)
+(property "Reference" "C32" (at 119.41 208.82 0) (effects (font (size 1.1 1.1))))
+(property "Value" "10nF 50V X7R" (at 119.41 212.82 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0402_1005Metric" (at 105.41 210.82 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1005X7R1H103K050BB" (at 105.41 210.82 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "C1005X7R1H103K050BB" (at 105.41 210.82 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Wait >=5ms after enabling measurement; SAADC AIN5, then switch off. TDK 0402, tolerance +/-10%; DC-bias review in docs/pcba-capacitance.json." (at 105.41 210.82 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 105.41 210.82 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 34905c75-a3fb-5f86-b67c-0ef95357ebdf))
+(pin "2" (uuid 9e30bea0-fdb3-53f1-a192-a5193cc743ba))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "C32") (unit 1))))
+)
+(wire (pts (xy 105.41 207.01) (xy 105.41 201.93)) (stroke (width 0) (type default)) (uuid e4ac656c-4b91-5914-b4e1-51381d85653d))
+(global_label "BAT_ADC" (shape bidirectional) (at 105.41 201.93 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid a84a5555-3bab-52d0-9860-da2ca1c3eab6))
+(wire (pts (xy 105.41 214.63) (xy 105.41 219.71)) (stroke (width 0) (type default)) (uuid 5d202014-ae0f-58d6-962d-dbe2259123ec))
+(global_label "GND" (shape bidirectional) (at 105.41 219.71 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid eab599e1-c96b-5d27-9905-88215e1872d6))
+(symbol (lib_id "SentiFrame:TestPoint") (at 162.56 200.66 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid 5b1cc1f8-8594-53ce-bb42-a722c7e8c0f2)
+(property "Reference" "TP6" (at 162.56 186.04 0) (effects (font (size 1.1 1.1))))
+(property "Value" "VBAT" (at 162.56 189.64 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 162.56 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 162.56 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 162.56 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "" (at 162.56 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 162.56 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid d0f911ab-79d2-56e9-bdff-3da18741791b))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "TP6") (unit 1))))
+)
+(wire (pts (xy 162.56 200.66) (xy 162.56 205.74)) (stroke (width 0) (type default)) (uuid d4f5252b-6eb0-55cc-8fab-be65f531394d))
+(global_label "VBAT" (shape bidirectional) (at 162.56 205.74 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 591197bc-27b9-55cb-bada-d6e272a33fdb))
+(symbol (lib_id "SentiFrame:TestPoint") (at 236.22 200.66 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid 9df02141-266b-56e0-8d75-9046371074e7)
+(property "Reference" "TP7" (at 236.22 186.04 0) (effects (font (size 1.1 1.1))))
+(property "Value" "SYS" (at 236.22 189.64 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 236.22 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 236.22 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 236.22 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "" (at 236.22 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 236.22 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 46260da0-4102-5cfc-b783-4ad84ef0dd22))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "TP7") (unit 1))))
+)
+(wire (pts (xy 236.22 200.66) (xy 236.22 205.74)) (stroke (width 0) (type default)) (uuid e8c235aa-7866-5373-8c5f-21ed0e11b7cc))
+(global_label "SYS" (shape bidirectional) (at 236.22 205.74 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid c4973622-98c0-56f8-9a33-7836e5e1fbd0))
+(symbol (lib_id "SentiFrame:TestPoint") (at 309.88 200.66 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid 905c8517-93b7-5c59-bec0-2805d9a5e2ea)
+(property "Reference" "TP8" (at 309.88 186.04 0) (effects (font (size 1.1 1.1))))
+(property "Value" "I2C_SDA" (at 309.88 189.64 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 309.88 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 309.88 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 309.88 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "" (at 309.88 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 309.88 200.66 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 86f7fab8-3201-5e37-8c7f-44f3e867e1d2))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "TP8") (unit 1))))
+)
+(wire (pts (xy 309.88 200.66) (xy 309.88 205.74)) (stroke (width 0) (type default)) (uuid a997e34e-7115-55b5-acc1-906aad5cc426))
+(global_label "I2C_SDA" (shape bidirectional) (at 309.88 205.74 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 6d43f381-4cd0-5674-849b-927890ddf594))
+(symbol (lib_id "SentiFrame:TestPoint") (at 162.56 236.22 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid 548baa56-2ab8-52c9-8fb5-c5c89128e711)
+(property "Reference" "TP9" (at 162.56 221.6 0) (effects (font (size 1.1 1.1))))
+(property "Value" "I2C_SCL" (at 162.56 225.2 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 162.56 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 162.56 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 162.56 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "" (at 162.56 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 162.56 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 55a94a48-b691-5c3f-8554-1998f3031a06))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "TP9") (unit 1))))
+)
+(wire (pts (xy 162.56 236.22) (xy 162.56 241.3)) (stroke (width 0) (type default)) (uuid cb816be5-6f0e-53ed-844d-8d7ff7a4c279))
+(global_label "I2C_SCL" (shape bidirectional) (at 162.56 241.3 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid f4a952c7-6098-5f60-8eda-c484f65665cd))
+(symbol (lib_id "SentiFrame:TestPoint") (at 236.22 236.22 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid 3cbc4c90-1ed7-57e9-b5c3-cfe6771c8eb3)
+(property "Reference" "TP10" (at 236.22 221.6 0) (effects (font (size 1.1 1.1))))
+(property "Value" "BAT_ADC" (at 236.22 225.2 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 236.22 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 236.22 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 236.22 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "" (at 236.22 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 236.22 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid d24ce27c-e394-5a92-876e-94abac89e1bd))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "TP10") (unit 1))))
+)
+(wire (pts (xy 236.22 236.22) (xy 236.22 241.3)) (stroke (width 0) (type default)) (uuid 96909027-6d47-51ad-b556-bf3e1f74767b))
+(global_label "BAT_ADC" (shape bidirectional) (at 236.22 241.3 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 623684e2-0441-5804-a1c2-b0acddbf338a))
+(symbol (lib_id "SentiFrame:TestPoint") (at 309.88 236.22 0) (unit 1) (in_bom no) (on_board yes) (dnp no) (uuid f008d848-a434-57d9-9b49-0b571f6d62f6)
+(property "Reference" "TP11" (at 309.88 221.6 0) (effects (font (size 1.1 1.1))))
+(property "Value" "USB5V" (at 309.88 225.2 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 309.88 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 309.88 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 309.88 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "" (at 309.88 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 309.88 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 0617f6bc-0f73-5dfb-95ee-722cfc085648))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "TP11") (unit 1))))
+)
+(wire (pts (xy 309.88 236.22) (xy 309.88 241.3)) (stroke (width 0) (type default)) (uuid 535ee609-0048-54dd-a04e-dd2a55397b32))
+(global_label "USB5V" (shape bidirectional) (at 309.88 241.3 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid a65b1fe2-37de-5b9d-af1e-223503a3eb90))
+(symbol (lib_id "SentiFrame:PWR_FLAG") (at 359.41 72.39 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid d63057a1-871b-5f99-b8de-bd8a1cb38999)
+(property "Reference" "#FLG04" (at 359.41 57.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Value" "PWR_FLAG" (at 359.41 61.49 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Footprint" "" (at 359.41 72.39 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 359.41 72.39 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 359.41 72.39 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Power source declaration; not a purchased component." (at 359.41 72.39 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "EXTERNAL" (at 359.41 72.39 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 4402e8f7-607e-5662-91bc-db8949773805))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/5c102117-c479-5407-8b53-a3a11119c782" (reference "#FLG04") (unit 1))))
+)
+(wire (pts (xy 359.41 72.39) (xy 359.41 77.47)) (stroke (width 0) (type default)) (uuid 40550c4f-cc84-5c8c-9bdb-a6b7f3f286c0))
+(global_label "VBAT" (shape bidirectional) (at 359.41 77.47 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid d7d96d4b-7382-5979-8f34-2b55248e6bf6))
+(text "J2 custom pack pinout: 1=protected pack+, 2=pack-, 3=10k battery NTC. VERIFY supplied pack wiring." (at 18 255.0 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid 535301b3-5cc0-5ba4-8fcf-a72377d32815))
+(text "ADC: Vbat *47/147, AIN5=P1.12. Turn U12 on, wait>=5ms, sample, turn off." (at 18 259.2 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid 349e8d9e-2a89-5d42-8bea-62d38abaf18d))
+(text "The protected cell and NTC are external components; pack certification and frame fit are not verified." (at 18 263.4 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid f22e3845-b71b-5a50-96c2-c1a6d372e77e))
+(text "Prototype PCB routed and checked separately; physical bench validation is pending." (at 18 267.6 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid 5e7d7a9b-9c01-592e-8116-eb41932111a7))
+(embedded_fonts no))

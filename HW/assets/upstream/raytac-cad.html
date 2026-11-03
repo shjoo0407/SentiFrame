@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<!--手機解析度-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--各頁獨立資訊-->
+
+<title>Support-Raytac Corporation</title>
+<meta name="description" content="Raytac Corporation">
+
+<!--open graph protocol-->
+<meta property="og:title" content="Support-Raytac Corporation">
+<meta property="og:image" content="https://www.raytac.com/upload/base_fb_img/d76e4f635c47270cf8c4960da41cee70.png">
+<meta property="og:description" content="Raytac Corporation">
+<meta property="og:site_name" content="Raytac Corporation">
+<meta property="og:url" content="https://www.raytac.com/document/index.php?index_m_id=12">
+<meta property="og:type" content="website">
+
+<!--bread script-->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+	  {
+		"@type": "ListItem",
+		"position": 1,
+		"item": {
+		  "@id": "https://www.raytac.com/",
+		  "name": "Home"
+			}
+	  },
+	  {
+		"@type": "ListItem",
+		"position": 2,
+		"item": {
+		  "@id": "https://www.raytac.com/document/",
+		  "name": "Support"
+			}
+	  },
+	  {
+		"@type": "ListItem",
+		"position": 3,
+		"item": {
+		  "@id": "https://www.raytac.com/document/index.php?index_m_id=12",
+		  "name": "Footprint & Design Guide"
+			}
+	  }
+	    ]
+}
+</script>
+<!--css-->
+<link rel="stylesheet" type="text/css" href="../css/master.css">
+<link rel="stylesheet" type="text/css" href="../css/document.css">
+<!--favor icon-->
+<link rel="shortcut icon" href="../images/touch-icon/touch-icon-iphone.png" />
+
+<!--touch_icon-->
+<link rel="apple-touch-icon" href="../images/touch-icon/touch-icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="../images/touch-icon/touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="../images/touch-icon/touch-icon-iphone-retina.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="../images/touch-icon/touch-icon-ipad-retina.png" />
+
+<!--ga-->
+<!-- 240829 Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WK22F5YR6F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WK22F5YR6F');
+  gtag('config', 'UA-57983287-1');
+  gtag('config', 'AW-966940994');
+</script>
+
+
+<!-- Google tag (gtag.js) - Google Ads: 966940994 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-966940994"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-966940994'); </script>
+<!-- Event snippet for 聯絡人 conversion page --> <script> gtag('event', 'conversion', {'send_to': 'AW-966940994/5KHeCJvyqKcDEMKyic0D'}); </script>
+
+
+
+<!-- Google tag (gtag.js) - Google Ads: 966940994 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-966940994"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-966940994'); </script>
+<!-- Event snippet for 提交待開發客戶表單 conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> <script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-966940994/X2_MCJiY86YDEMKyic0D', 'event_callback': callback }); return false; } </script>
+
+<script src="../database/function/jquery-1.8.3.min.js"></script>
+<script async src="../database/function/ui/jquery.blockUI.js"></script>
+<script async src="../database/function/ui/jquery.form.js"></script> 
+<script src="../database/function/ajax_function.js"></script> 
+<script async src="../database/function/script.js"></script>
+<script>
+function open_layer_detail(div_name,width,height){
+	if(width==''){
+		width=0;
+	}
+	if(height==''){
+		height=0;
+	}
+	$.blockUI({
+	message:$('#'+div_name),
+		css:{ 
+		cursor:'default',
+		width: width + 'px',
+		height:height+ 'px',
+		padding:'0px',
+		top:($(window).height()-height)/2 + 'px',
+		left:($(window).width()-width)/2 + 'px'
+		}
+	});		
+}
+function open_loading_status(loading_name){
+	width=$('#'+loading_name).css('width').replace("px","");
+	height=$('#'+loading_name).css('height').replace("px","");
+	$.blockUI({
+	message:$('#'+loading_name),
+		css:{ 
+		cursor:'default',
+		border:'',
+		backgroundColor:'',
+		width: width + 'px',
+		height:height+ 'px',
+		padding:'0px',
+		top:($(window).height()-height)/2 + 'px',
+		left:($(window).width()-width)/2 + 'px'
+		}
+	});
+}
+function close_layer_detail(){
+	$.unblockUI();
+}
+function close_top_layer_detail(){
+	top.$.unblockUI();
+}
+//建立執行的div
+$(function(){
+	$('body').prepend("<span id='iframe_string'></span>");
+	$('body').prepend('<div id="waiting_action" style="display:none;text-align:center;position: absolute;z-index: 99998;color:#FFF;font-size:12px;border:0px;"><img src="../database/function/loading_type/loading_big.gif" hspace="2" align="absmiddle"/><br><img src="../database/function/loading_type/loading_text.png" hspace="2" align="absmiddle"/></div>');
+});
+//end
+</script><script type="text/javascript" src="../Scripts/jqueryui/jquery.ui.core.min.js"></script>
+
+<script>
+	var isMobile = false;
+	var isTablet =false;
+	var isAndroidOS =false;
+	var isiOS =false;
+	var isSafari =false;
+</script>
+
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="outerWrap b-box"><!--outerWrap-->
+    <header><!--header-->
+        <div class="wrap b-box clearfix"><!--wrap-->
+            <div class="logo"><a href="https://www.raytac.com/" title="Raytac Corporation">Raytac Corporation</a></div>
+            <div class="rightBox"><!-- rightBox -->
+                <nav class="menuBox"><!--menuBox-->
+                    <ul class="menu cleafix" itemscope itemtype="http://www.schema.org/SiteNavigationElement"><!--menu-->
+                        <li itemprop="name"><a itemprop="url" href="../about/">About</a></li>
+                        <li itemprop="name"><a itemprop="url" href="../product/">Products</a></li>
+                        <li itemprop="name"><a itemprop="url" href="../news/">News&Blog</a></li>
+                        <li itemprop="name"><a itemprop="url" href="../document/">Support</a></li>
+                        <li itemprop="name"><a itemprop="url" href="../contact/">Contact</a></li>
+                        <li itemprop="name"><a itemprop="url" href="../distributor/index.php?index_m1_id=48">Partners</a></li>
+                    </ul><!--menu end-->
+                    <div class="moveBg"></div>
+                </nav><!--menuBox end-->
+                <div class="rightGroup"><!-- rightGroup -->
+                    <div class="searchBox"><!-- searchBox -->
+                        <div class="inner"><!-- inner -->
+                            <input name="keyword_pc" type="text" class="b-box" id="keyword_pc" placeholder="Search" value="">
+                            <a class="fa fa-search" onclick="if($('#keyword_pc').val()==''){ alert('Please enter key words');}else{location.href=encodeURI('../product/index.php?keyword=' + $('#keyword_pc').val());}"></a>
+                        </div><!-- inner end -->
+                    </div><!-- searchBox end -->
+                    <script>
+                    $(function(){
+                        //電腦板搜尋商品 enter
+                        $('#keyword_pc').keydown(function(event){
+                             if(event.which == 13){
+                                 if($('#keyword_pc').val()==''){ alert('Please enter key words...');}
+                                 else{ location.href=encodeURI('../product/index.php?keyword=' + $('#keyword_pc').val());}}
+                            });
+                        });
+                    </script>
+                    <div class="language">
+                        <a href="javascript:;" class="main"><img src="../images/icon_language.png" alt=""></a>
+                        <ul>
+                            <li><a href="https://www.raytac.com/">EN</a></li>
+                            <li><a href="https://www.raytac.com//tw">繁中</a></li>
+                        </ul>
+                    </div>
+                </div><!-- rightGroup end -->
+            </div><!-- rightBox end -->
+        </div><!--wrap end-->
+    </header><!--header end-->
+
+	    <!--banner-->
+    <div class="bannerArea b-box"><!--bannnerArea-->
+       	<div class="wrap b-box"><!--wrap-->
+            <div class="bannerBox"><!--bannerBox-->
+                <ul id="banner">
+	<li><img src="../upload/banner_ins_list/f3cffb8067b279a3bb4ea107b516873b.jpg" alt="Raytac Corporation"></li>
+	    </ul>
+	            </div><!--bannerBox end-->
+        </div><!--wrap end-->
+    </div><!--bannerArea end-->
+    	<script>
+        $(function(){
+            $('ul.menu').find('a[href="../document/"]').addClass('current');
+        });
+    </script>    
+    <!--main-->
+    <div class="mainArea"><!--mainArea-->
+        <div class="wrap b-box"><!--wrap-->
+
+            <div class="title01"><!-- title01 -->
+                <em>Passion Mission Action</em>
+                <h2>Support</h2>
+            </div><!-- title01 end -->
+
+            <div class="contentBox clearfix"><!--contentBox-->
+                <div class="classBox"><!-- classBox -->
+	<ul class="classLink clearfix">
+            	<li><a href="index.php?index_m_id=14"  id="class_current_14">Others</a></li>
+            	<li><a href="index.php?index_m_id=11"  id="class_current_11">MDBT40 Series spec</a></li>
+            	<li><a href="index.php?index_m_id=19"  id="class_current_19">MDBT42Q Series spec</a></li>
+            	<li><a href="index.php?index_m_id=10"  id="class_current_10">MDBT42 Series spec</a></li>
+            	<li><a href="index.php?index_m_id=22"  id="class_current_22">MDBT42V Series spec</a></li>
+            	<li><a href="index.php?index_m_id=17"  id="class_current_17">MDBT50Q Series spec</a></li>
+            	<li><a href="index.php?index_m_id=15"  id="class_current_15">MDBT50Q-RX Series spec</a></li>
+            	<li><a href="index.php?index_m_id=7"  id="class_current_7">MDBT50 Series spec</a></li>
+            	<li><a href="index.php?index_m_id=20"  id="class_current_20">MDBT42T Series spec</a></li>
+            	<li><a href="index.php?index_m_id=21"  id="class_current_21">MDBT42TV Series spec</a></li>
+            	<li><a href="index.php?index_m_id=25"  id="class_current_25">MDBT53 Series spec</a></li>
+            	<li><a href="index.php?index_m_id=24"  id="class_current_24">MDBT53V Series spec</a></li>
+            	<li><a href="index.php?index_m_id=26"  id="class_current_26">MDBT50Q-CX Series spec</a></li>
+            	<li><a href="index.php?index_m_id=27"  id="class_current_27">AN7002Q Series spec</a></li>
+            	<li><a href="index.php?index_m_id=28"  id="class_current_28">AN54LQ Series spec</a></li>
+            	<li><a href="index.php?index_m_id=29"  id="class_current_29">AN54LV Series spec</a></li>
+            	<li><a href="index.php?index_m_id=16"  id="class_current_16">Tool</a></li>
+            	<li><a href="index.php?index_m_id=13"  id="class_current_13">RoHS & REACH Report</a></li>
+            	<li><a href="index.php?index_m_id=12"  class="current" id="class_current_12">Footprint & Design Guide</a></li>
+            	<li><a href="index.php?index_m_id=23"  id="class_current_23">Reliability Test Report</a></li>
+                <li><a href="../document/"  id="class_current_0">All</a></li>
+    </ul>
+</div><!-- classBox end-->
+                <ul class="documentList"><!--documentList-->
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=103');">AN54LV-15 & AN54LV-P15 & AN54LV-U15 & AN54LV-K15 Footprint & Design Guide (260904)</a></h3>
+    		<p>Model name：AN54LV-15 / AN54LV-P15 / AN54LV-U15 / AN54LV-K15 / AN54LV-AT / AN54LV-PAT</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=103');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=98');">AN54LQ-15 & AN54LQ-P15 & AN54LQ-U15 Footprint & Design Guide (250919)</a></h3>
+    		<p>Model name：AN54LQ-15(AN54L15Q) / AN54LQ-P15(AN54L15Q-P) / AN54LQ-U15(AN54L15Q-U)</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=98');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=92');">AN7002Q & AN7002Q-P & AN7002Q-U Footprint & Design Guide (250722)</a></h3>
+    		<p>Model name：AN7002Q / AN7002Q-P / AN7002Q-U</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=92');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=75');">MDBT53V & MDBT53V-P Footprint & Design Guide (240527)</a></h3>
+    		<p>Model name：MDBT53V-1M / MDBT53V-P1M</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=75');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=74');">MDBT53 & MDBT53-P & MDBT53-U Footprint & Design Guide (241021)</a></h3>
+    		<p>Model name：MDBT53-1M / MDBT53-P1M / MDBT53-U1M</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=74');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=61');">MDBT42TV & MDBT42TV-P Footprint & Design Guide (230804)</a></h3>
+    		<p>Model name：MDBT42TV-192K / MDBT42TV-P192K / MDBT42TV-AT / MDBT42TV-PAT</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=61');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=60');">MDBT50 & MDBT50-P Footprint & Design Guide (221129)</a></h3>
+    		<p>Model name：(nRF52820) MDBT50-256R  / MDBT50-P256R；(nRF52833) MDBT50-512K / MDBT50-P512K</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=60');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=54');">MDBT42T & MDBT42T-P Footprint & Design Guide (230804)</a></h3>
+    		<p>Model name：MDBT42T-192K / MDBT42T-P192K / MDBT42T-AT / MDBT42T-PAT</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=54');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=30');">MDBT50Q & MDBT50Q-P & MDBT50Q-U Footprint_Design Guide (230606)</a></h3>
+    		<p>Model name： (nRF52840) MDBT50Q-1M / MDBT50Q-P1M / MDBT50Q-U1M；(nRF52833) MDBT50Q-512K / MDBT50Q-P512K / MDBT50Q-U512K / MDBT50Q-ATMS / MDBT50Q-PATMS / MDBT50Q-UATMS</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=30');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=21');">MDBT42V & MDBT42V-P Footprint_Design Guide (230718)</a></h3>
+    		<p>Model name：MDBT42V-512KV2 / MDBT42V-P512KV2 / MDBT42V-AT / MDBT42V-PAT</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=21');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=20');">MDBT42 & MDBT42-P Footprint_Design Guide (230717)</a></h3>
+    		<p>Model name：MDBT42-512KV2 / MDBT42-P512KV2</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=20');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=19');">MDBT42Q & MDBT42Q-P & MDBT42Q-U Footprint_Design Guide (230616)</a></h3>
+    		<p>Model name：(nRF52832) MDBT42Q-512KV2 / MDBT42Q-P512KV2 / MDBT42Q-U512KV2 / MDBT42Q-ATＭ / MDBT42Q-PATＭ；(nRF52810) MDBT42Q-192KV2 / MDBT42Q-P192KV2 / MDBT42Q-AT / MDBT42Q-PAT；(nRF52811) MDBT42Q-192KL / MDBT42Q-P192KL</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=19');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+	<li>
+    	<div class="left">
+    		<h3><a onclick="window.open('../document/act.php?act=1&index_id=22');">MDBT40 & MDBT40-P Footprint_Design Guide (221201)</a></h3>
+    		<p>Model name：MDBT40-256V3 / MDBT40-P256V3 / MDBT40-256RV3 / MDBT40-P256RV3</p>
+    	</div>
+    	<div class="right">
+    		<a onclick="window.open('../document/act.php?act=1&index_id=22');">
+	    		<svg class="icon-download">
+	    		    <use xlink:href="#icon-download"></use>
+	    		</svg>
+    		</a>
+    	</div>
+    </li>
+</ul>
+            </div><!--contentBox end-->
+            
+    	</div><!--wrap end-->
+    </div><!--mainArea end-->
+    <!--footer-->
+    <footer class="clearfix"><!--footer-->
+        <div class="wrap b-box clearfix"><!--wrap-->
+            <div class="left"><!-- left -->
+                <div class="downLogo">
+                    <a href="https://www.raytac.com/" title="Raytac Corporation">
+                        <img src="../images/logo.png" alt="Raytac Corporation">
+                    </a>
+                </div>
+                <div class="downTxt"><!-- downTxt -->
+                    <h2>Raytac Corporation</h2>
+                    <h5 class="info">
+<ul>
+    <li>
+        <div class="tt">Add:</div>
+        <div class="text">8F., No. 788-1, Zhongzheng Rd., Zhonghe Dist.,<br>New Taipei City 235, 
+
+Taiwan</div>
+    </li>
+    <li>
+        <div class="tt">Tel:</div>
+        <div class="text"><a href="tel: +886-2-32340208">+886-2-32340208 </a>    Fax: +886-2-32340547</div>
+    </li>
+    <li>
+        <div class="tt">Email:</div>
+        <div class="text"><a href="mailto:sales@raytac.com">sales@raytac.com</a></div>
+    </li>
+</ul></h5>                </div><!-- downTxt end -->
+            </div><!-- left end -->
+            <div class="right"><!-- right -->
+                <!--social分享-->
+                <div class="social"><!--social-->
+                                                            <a href="https://www.facebook.com/raytaccorporation/?ref=bookmarks" target="_blank"><img src="../images/icon_fb.png" alt=""></a>
+                                                            <a href="https://www.linkedin.com/company/raytac/?viewAsMember=true" target="_blank"><img src="../images/icon_linkedin.png" alt=""></a>
+                                                            <a href="https://www.instagram.com/raytaccorp/" target="_blank"><img src="../images/icon_ig.png" alt=""></a>
+                                                            <a href="https://plus.google.com/+RaytacCorporation" target="_blank"><img src="../images/icon_googleplus.png" alt=""></a>
+                                                            <a href="https://raytaccorp.tumblr.com/" target="_blank"><img src="../images/icon_tumblr.png" alt=""></a>
+                                                            <a href="https://twitter.com/raytaccorp" target="_blank"><img src="../images/icon_twitter.png" alt=""></a>
+                                    </div><!--social end-->
+                <div class="searchBoxFooter"><!-- searchBoxFooter -->
+                    <div class="inner"><!-- inner -->
+                        <input name="keyword_pc_foot" type="text" class="b-box" id="keyword_pc_foot" placeholder="Search" value="">
+                        <a class="fa fa-search" onclick="if($('#keyword_pc_foot').val()==''){ alert('Please enter key words');}else{location.href=encodeURI('../product/index.php?keyword=' + $('#keyword_pc_foot').val());}"></a>
+                    </div><!-- inner end -->
+                </div><!-- searchBoxFooter end -->
+                <script>
+                $(function(){
+                    //電腦板搜尋商品 enter
+                    $('#keyword_pc_foot').keydown(function(event){
+                         if(event.which == 13){
+                             if($('#keyword_pc_foot').val()==''){ alert('Please enter key words...');}
+                             else{ location.href=encodeURI('../product/index.php?keyword=' + $('#keyword_pc_foot').val());}}
+                        });
+                    });
+                </script>
+                <div class="copyright">
+                    Copyright © 2018 Raytac Corporation
+                    <!--↓靜態-ibest-->
+                    <div class="translateIbest"><!--translate&ibest-->
+                        <div class="design clearfix">
+                            <span>
+                                <style>.ibestlink{font-size:9pt;color:#666;text-decoration:none}ul.ibestTab{display:none;padding:0;margin:0;list-style:none}ul.ibestContent{padding:0;margin:0;list-style:none}ul.ibestContent li{display:none!important}ul.ibestContent li:first-child{display:block!important}</style>
+<div class="outerLink"><!--outerLink-->
+	
+	<!--tab-->
+	<ul class="ibestTab">
+		<li>網頁設計案例</li>
+		<li>愛貝斯</li>
+	</ul>
+	
+	<!--tabContent-->
+	<ul class="ibestContent">
+		<li>
+			<a href="https://www.ibest.tw" class="ibestlink" target="_blank" title="網頁設計">網頁設計</a>‧
+			<a href="https://www.ibest.com.tw" class="ibestlink" target="_blank" title="iBest">iBest</a>
+		</li>
+			</ul>
+
+</div><!--outerLink end-->                            </span>
+                        </div>
+                    </div><!--translate&ibest end-->
+                </div>
+            </div><!-- right end -->
+        </div><!--wrap end-->        
+    </footer><!--footer end-->
+    <a href="https://www.raytac.com/contact/" class="fixedContact"></a>
+</div><!--outerWrap end-->
+
+<!--mobile menu 手機板選單-->
+<div class="m_menu b-box clearfix"><!--m_menu-->
+    
+    <div class="controlBox clearfix"><!--controlBox-->    
+        <a class="main"><span></span></a>     
+        <div class="m_logo"><a href="https://www.raytac.com/"><img src="../images/logo.png"></a></div>
+    </div><!--controlBox end-->
+    
+    <div class="hideBox"><!--hideBox-->     
+        <div class="innerBox">
+        <!--手機板搜尋商品-->
+        <div class="searchBox_m"><!--searchBox-->
+            <div class="inner"><!-- inner -->
+                <input name="keyword_mobile" type="text" class="b-box" id="keyword_mobile" placeholder="Search" value="">
+                <a class="fa fa-search" onclick="if($('#keyword_mobile').val()==''){ alert('Please enter key words');}else{location.href=encodeURI('../product/index.php?keyword=' + $('#keyword_mobile').val());}"></a>
+            </div><!-- inner end -->
+        </div><!--searchBox end-->
+        
+        <script>
+        $(function(){
+            //手機板搜尋商品 enter
+            $('#keyword_mobile').keydown(function(event){
+                 if(event.which == 13){
+                     if($('#keyword_mobile').val()==''){ alert('Please enter key words...');}
+                     else{ location.href=encodeURI('../product/index.php?keyword=' + $('#keyword_mobile').val());}}
+                });
+            });
+        </script>
+        
+        <p class="sp">CONTACT</p>
+        <div class="mfun"><!--mfun-->
+                        <a href="https://maps.google.com.tw/?q=25.0008205,121.4853675" class="marker" target="_blank"><i class="fa fa-map-marker"></i></a>
+                                       
+                        <a href="tel:886-2-32340208"><i class="fa fa-phone"></i></a>
+                       
+                        <a href="../contact" class="contactLink" data-mail="sales@raytac.com"><i class="fa fa-envelope"></i></a>
+                    </div><!--mfun end-->       
+        <p class="sp sp_menu">MENU</p>
+        </div>
+    </div><!--hideBox end-->
+</div><!--m_menu end-->
+
+<!--general Js-->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
+	<symbol id="icon-download" viewBox="0 0 30.947 35.934">
+		<path d="M0,25.594c0.222-0.573,0.582-0.988,1.24-1.024
+			c0.791-0.043,1.395,0.542,1.397,1.356c0.004,2.309,0.001,4.617,0.001,6.926c0,0.132,0,0.264,0,0.42c8.557,0,17.088,0,25.671,0
+			c0-0.126,0-0.254,0-0.383c0-2.235,0-4.471,0-6.706c0-0.907,0.339-1.43,1.034-1.593c0.669-0.157,1.227,0.192,1.604,1.005
+			c0,3.104,0,6.209,0,9.313c-0.181,0.504-0.527,0.842-1.027,1.027c-9.631,0-19.262,0-28.894,0C0.524,35.752,0.182,35.41,0,34.907
+			C0,31.803,0,28.698,0,25.594z"/>
+		<path d="M15.767,0c0.761,0.289,1.069,0.839,1.034,1.649
+			c-0.037,0.866-0.006,1.734-0.009,2.602c-0.003,0.823-0.55,1.401-1.318,1.401s-1.315-0.578-1.318-1.401
+			c-0.003-0.868,0.028-1.736-0.009-2.602C14.111,0.839,14.419,0.289,15.18,0C15.376,0,15.571,0,15.767,0z"/>
+		<path d="M16.913,23.971c0.076-0.109,0.137-0.233,0.229-0.326
+			c1.687-1.701,3.378-3.397,5.066-5.098c0.409-0.411,0.871-0.622,1.455-0.438c0.901,0.284,1.219,1.393,0.604,2.11
+			c-0.071,0.083-0.151,0.16-0.229,0.238c-2.496,2.499-4.993,4.998-7.49,7.496c-0.733,0.733-1.431,0.738-2.158,0.011
+			c-2.523-2.524-5.042-5.053-7.568-7.573c-0.401-0.4-0.56-0.862-0.415-1.398c0.135-0.5,0.493-0.808,0.998-0.918
+			c0.514-0.112,0.926,0.083,1.286,0.445c1.543,1.551,3.092,3.096,4.636,4.646c0.25,0.25,0.491,0.51,0.828,0.744
+			c0-0.123,0-0.245,0-0.368c0-4.607,0-9.215,0-13.823c0-0.789,0.483-1.369,1.181-1.428c0.804-0.068,1.451,0.516,1.455,1.335
+			c0.007,1.503,0.002,3.007,0.002,4.51c0,3.117,0,6.233,0,9.35c0,0.134,0,0.268,0,0.402C16.833,23.915,16.873,23.943,16.913,23.971z"
+			/>
+	</symbol>
+</svg>
+<script type="text/javascript" src="../Scripts/jsManage.js"></script>
+
+<!--fancyBox-->
+<link rel="stylesheet" href="../Scripts/fancybox/dist/jquery.fancybox.css">
+<script src="../Scripts/fancybox/dist/jquery.fancybox.min.js"></script>
+<script>
+	$(function() {
+		$('.titan-lb').fancybox({
+			thumbs : {
+				showOnStart : true
+			},
+			hash     : true
+		});
+	})
+</script>
+
+<!-- slick -->
+<link rel="stylesheet" href="../Scripts/slick-slider/slick-theme.css">
+<link rel="stylesheet" href="../Scripts/slick-slider/slick.css">
+<script src="../Scripts/slick-slider/slick.min.js"></script>
+<script>
+    $(function() {
+        $('#banner').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            cssEase: 'ease-in-out'
+        });
+    });
+</script>
+
+<!--footable-->
+<link rel="stylesheet" type="text/css" href="../Scripts/footable/css/footable.core.css">
+<script src="../Scripts/footable/footable.js"></script>
+<script>
+	$('table.responsive').footable();
+</script>
+
+<!--customBox-->
+<link rel="stylesheet" href="../Scripts/custombox/custombox.css" type="text/css">
+<script src="../Scripts/custombox/custombox.js"></script>
+<script src="../Scripts/custombox/legacy.js"></script>
+<!--fb-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>	    
+<!--customer Js-->
+</body>
+</html>

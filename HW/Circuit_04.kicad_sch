@@ -1,0 +1,1115 @@
+(kicad_sch (version 20250114) (generator "eeschema") (uuid 3e5bee2f-f6d8-5072-bf15-2bbbdba84b78) (paper "A3") (title_block (title "Charger and system 2.0V rail") (date "2026-10-05") (rev "F-LOCAL-PCBA-PROTOTYPE") (comment 1 "ENGINEERING PROTOTYPE - FACTORY REVIEW AND BENCH TESTS REQUIRED"))
+(lib_symbols
+(symbol "SentiFrame:BQ25186DLHR" (pin_names (offset 0.635)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 13.97 0) (effects (font (size 1.27 1.27))))
+(property "Value" "BQ25186DLHR" (at 0 11.43 0) (effects (font (size 1.27 1.27))))
+(symbol "BQ25186DLHR_0_1" (rectangle (start -15.24 8.89) (end 15.24 -8.89) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "BQ25186DLHR_1_1"
+(pin power_out line (at -20.32 6.3500000000000005 0) (length 5.08) (name "SYS" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0)))))
+(pin passive line (at -20.32 3.8100000000000005 0) (length 5.08) (name "BAT" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0)))))
+(pin open_collector line (at -20.32 1.2700000000000005 0) (length 5.08) (name "~{PG}/GPO" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0)))))
+(pin input line (at -20.32 -1.2699999999999996 0) (length 5.08) (name "~{CE}" (effects (font (size 1.0 1.0)))) (number "4" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at -20.32 -3.8099999999999987 0) (length 5.08) (name "GND" (effects (font (size 1.0 1.0)))) (number "5" (effects (font (size 1.0 1.0)))))
+(pin input line (at -20.32 -6.35 0) (length 5.08) (name "TS/MR" (effects (font (size 1.0 1.0)))) (number "6" (effects (font (size 1.0 1.0)))))
+(pin bidirectional line (at 20.32 6.3500000000000005 180) (length 5.08) (name "SDA" (effects (font (size 1.0 1.0)))) (number "7" (effects (font (size 1.0 1.0)))))
+(pin input line (at 20.32 3.8100000000000005 180) (length 5.08) (name "SCL" (effects (font (size 1.0 1.0)))) (number "8" (effects (font (size 1.0 1.0)))))
+(pin open_collector line (at 20.32 1.2700000000000005 180) (length 5.08) (name "~{INT}" (effects (font (size 1.0 1.0)))) (number "9" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at 20.32 -1.2699999999999996 180) (length 5.08) (name "IN" (effects (font (size 1.0 1.0)))) (number "10" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at 20.32 -3.8099999999999987 180) (length 5.08) (name "EP_GND" (effects (font (size 1.0 1.0)))) (number "11" (effects (font (size 1.0 1.0)))))
+))
+(symbol "SentiFrame:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:L"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "L"
+			(at -1.27 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "L"
+			(at 1.905 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "inductor choke coil reactor magnetic"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "L_0_1"
+			(arc
+				(start 0 2.54)
+				(mid 0.6323 1.905)
+				(end 0 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 1.27)
+				(mid 0.6323 0.635)
+				(end 0 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 0)
+				(mid 0.6323 -0.635)
+				(end 0 -1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 -1.27)
+				(mid 0.6323 -1.905)
+				(end 0 -2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "L_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:Q_NMOS_GSD" (pin_names (offset 0.635)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 12.7 0) (effects (font (size 1.27 1.27))))
+(property "Value" "Q_NMOS_GSD" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+(symbol "Q_NMOS_GSD_0_1" (rectangle (start -15.24 7.62) (end 15.24 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "Q_NMOS_GSD_1_1"
+(pin input line (at -20.32 5.08 0) (length 5.08) (name "G" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0)))))
+(pin passive line (at -20.32 2.54 0) (length 5.08) (name "S" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0)))))
+(pin passive line (at 20.32 5.08 180) (length 5.08) (name "D" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0)))))
+))
+(symbol "SentiFrame:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:SW_Push"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "SW"
+			(at 1.27 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 0 -1.524 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "switch normally-open pushbutton push-button"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "SW_Push_0_1"
+			(circle
+				(center -2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.27) (xy 0 3.048)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 1.27) (xy -2.54 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:TPS62840DLCR" (pin_names (offset 0.635)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 12.7 0) (effects (font (size 1.27 1.27))))
+(property "Value" "TPS62840DLCR" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+(symbol "TPS62840DLCR_0_1" (rectangle (start -15.24 7.62) (end 15.24 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "TPS62840DLCR_1_1"
+(pin power_in line (at -20.32 5.08 0) (length 5.08) (name "GND" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at -20.32 2.54 0) (length 5.08) (name "VIN" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0)))))
+(pin input line (at -20.32 0.0 0) (length 5.08) (name "MODE" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0)))))
+(pin input line (at -20.32 -2.54 0) (length 5.08) (name "EN" (effects (font (size 1.0 1.0)))) (number "4" (effects (font (size 1.0 1.0)))))
+(pin input line (at 20.32 5.08 180) (length 5.08) (name "VSET" (effects (font (size 1.0 1.0)))) (number "5" (effects (font (size 1.0 1.0)))))
+(pin input line (at 20.32 2.54 180) (length 5.08) (name "STOP" (effects (font (size 1.0 1.0)))) (number "6" (effects (font (size 1.0 1.0)))))
+(pin power_out line (at 20.32 0.0 180) (length 5.08) (name "SW" (effects (font (size 1.0 1.0)))) (number "7" (effects (font (size 1.0 1.0)))))
+(pin input line (at 20.32 -2.54 180) (length 5.08) (name "VOS" (effects (font (size 1.0 1.0)))) (number "8" (effects (font (size 1.0 1.0)))))
+))
+)
+(text "04 / Charger and system 2.0V rail" (at 18 17 0) (effects (font (size 2.8 2.8)) (justify left)) (uuid 3300c196-2bdc-5c34-b2b4-8d19b1770d91))
+(symbol (lib_id "SentiFrame:BQ25186DLHR") (at 77.47 68.58 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e10c8ecc-20cd-5194-acef-71b7cacb61db)
+(property "Reference" "U7" (at 77.47 52.69 0) (effects (font (size 1.1 1.1))))
+(property "Value" "BQ25186DLHR / 0x6A" (at 77.47 56.29 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm" (at 77.47 68.58 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25186.pdf" (at 77.47 68.58 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "BQ25186DLHR" (at 77.47 68.58 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "/CE pulled to SYS, Q2 pulls it low only when CHG_ARM is asserted. Configure before charging." (at 77.47 68.58 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 77.47 68.58 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 2665d646-e506-5c68-ac8d-0cfd0f3162ba))
+(pin "2" (uuid fc1b638a-3ce1-5fd0-8700-502cecc8702e))
+(pin "3" (uuid 95d20cf7-84c6-5c5f-9227-5b13762856dc))
+(pin "4" (uuid 6dcca03d-a48d-5401-bdaa-3429c14418ce))
+(pin "5" (uuid f16de34b-8b1e-5992-8f1e-37c5724dc81c))
+(pin "6" (uuid 7dbda8c3-5f18-5d07-9396-a8430d82bd51))
+(pin "7" (uuid 769e8da0-eb6c-5ec0-81f0-26f9895f0df1))
+(pin "8" (uuid f40001a5-97a2-5151-8333-820e7cace2bd))
+(pin "9" (uuid 70cbba2c-18d6-50ff-a3f5-9ed322853dff))
+(pin "10" (uuid b0b42184-7c19-5ee3-bd35-0262210a3d67))
+(pin "11" (uuid 43c6391e-0ad1-5fea-9163-a84d7d358dd1))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "U7") (unit 1))))
+)
+(wire (pts (xy 57.15 62.23) (xy 52.07 62.23)) (stroke (width 0) (type default)) (uuid 59dff2da-bf37-534d-a639-cfd6cdd1d12f))
+(global_label "SYS" (shape bidirectional) (at 52.07 62.23 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 7d234f75-eab2-5b73-a2b3-32544ef0aeaf))
+(wire (pts (xy 57.15 64.77) (xy 52.07 64.77)) (stroke (width 0) (type default)) (uuid 6b3527c9-8a72-50af-98d2-11af7c37f9fc))
+(global_label "VBAT" (shape bidirectional) (at 52.07 64.77 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 8476d17f-f326-5187-87f6-f6925f2060e6))
+(wire (pts (xy 57.15 67.31) (xy 52.07 67.31)) (stroke (width 0) (type default)) (uuid d6559e98-5b17-588a-b2c4-ecec54cccad4))
+(global_label "USB_PG_N" (shape bidirectional) (at 52.07 67.31 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 55e3b3f0-0702-5aef-9f63-20f8c2950cb0))
+(wire (pts (xy 57.15 69.85) (xy 52.07 69.85)) (stroke (width 0) (type default)) (uuid 4382d569-d932-59f4-9c5a-ab14eb47de3a))
+(global_label "CHG_CE_N" (shape bidirectional) (at 52.07 69.85 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid a70e5ca5-6af0-5b13-8611-c9dd8c151e41))
+(wire (pts (xy 57.15 72.39) (xy 52.07 72.39)) (stroke (width 0) (type default)) (uuid 33557dc1-6bd1-563e-8435-c4723488e5cf))
+(global_label "GND" (shape bidirectional) (at 52.07 72.39 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 76dc79e2-c739-551b-9b76-0d34392a7631))
+(wire (pts (xy 57.15 74.93) (xy 52.07 74.93)) (stroke (width 0) (type default)) (uuid 8e938711-a2de-56e1-a933-184a0f2f58be))
+(global_label "BAT_TS" (shape bidirectional) (at 52.07 74.93 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid f81cb4e0-ae16-556d-b095-e3b321318db6))
+(wire (pts (xy 97.79 62.23) (xy 102.87 62.23)) (stroke (width 0) (type default)) (uuid 516e21c6-5d62-5f5b-b5c7-6d66f56fe4e6))
+(global_label "I2C_SDA" (shape bidirectional) (at 102.87 62.23 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 271ce293-acfa-5ee5-8d49-491dce07bafe))
+(wire (pts (xy 97.79 64.77) (xy 102.87 64.77)) (stroke (width 0) (type default)) (uuid c085d86e-fe57-550c-85df-6c68f522dc9a))
+(global_label "I2C_SCL" (shape bidirectional) (at 102.87 64.77 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid da560217-9537-5269-a946-92bf406a0d03))
+(wire (pts (xy 97.79 67.31) (xy 102.87 67.31)) (stroke (width 0) (type default)) (uuid 3d1cfbab-6606-5205-93da-de3bbc065284))
+(global_label "CHG_INT_N" (shape bidirectional) (at 102.87 67.31 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 81c412f3-1abf-5ce0-97a2-5498e7e2b9a2))
+(wire (pts (xy 97.79 69.85) (xy 102.87 69.85)) (stroke (width 0) (type default)) (uuid 740bbaf9-ac74-5576-89a4-59355715405a))
+(global_label "USB5V" (shape bidirectional) (at 102.87 69.85 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 43155822-e214-5aaf-9aef-c9dc89e78f16))
+(wire (pts (xy 97.79 72.39) (xy 102.87 72.39)) (stroke (width 0) (type default)) (uuid 7be5f391-1ca2-581e-9a9e-afe97be6bbdc))
+(global_label "GND" (shape bidirectional) (at 102.87 72.39 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 2c494cf4-0fe8-5808-bf53-533e1bf4e135))
+(symbol (lib_id "SentiFrame:TPS62840DLCR") (at 240.03 67.31 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 25dd8fb1-07e8-5a07-8efc-a90e5b0f305a)
+(property "Reference" "U8" (at 240.03 52.69 0) (effects (font (size 1.1 1.1))))
+(property "Value" "TPS62840DLCR / 2.0V" (at 240.03 56.29 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:Texas_VSON-HR-8_1.5x2mm_P0.5mm" (at 240.03 67.31 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps62840.pdf" (at 240.03 67.31 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "TPS62840DLCR" (at 240.03 67.31 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "VSET via R32=1.74k 1% to GND sets 2.0V (DLC Table 1). MODE=GND power-save. STOP=GND. VOS senses after L2." (at 240.03 67.31 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 240.03 67.31 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 59152aaa-95d5-5cf4-99fc-807ec4b2bbcb))
+(pin "2" (uuid 602d3667-568b-58e8-bf6c-d33535cc3476))
+(pin "3" (uuid 711e3d74-4698-5050-987e-be9b6b30a848))
+(pin "4" (uuid 92d41630-24c0-5017-a746-cb66d98b3bb0))
+(pin "5" (uuid 10363cc0-8826-5570-8474-694090d61218))
+(pin "6" (uuid 78e6018c-d66b-51ca-8c71-47aa91d67fe9))
+(pin "7" (uuid 65f1a566-296a-5805-a7e9-920068c2cf00))
+(pin "8" (uuid f9cccffc-2ccc-53d3-9c9c-01cd42e8896c))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "U8") (unit 1))))
+)
+(wire (pts (xy 219.71 62.23) (xy 214.63 62.23)) (stroke (width 0) (type default)) (uuid b19c1e57-7862-5c8d-8e61-a539ede346e4))
+(global_label "GND" (shape bidirectional) (at 214.63 62.23 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 60f4c95f-d06e-55e1-9973-4b0e30c949b0))
+(wire (pts (xy 219.71 64.77) (xy 214.63 64.77)) (stroke (width 0) (type default)) (uuid e354b731-1fb0-5964-add2-ed097718993e))
+(global_label "SYS" (shape bidirectional) (at 214.63 64.77 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid ed7c4475-3751-59a8-9d3a-49dd5dd56769))
+(wire (pts (xy 219.71 67.31) (xy 214.63 67.31)) (stroke (width 0) (type default)) (uuid 22daa1eb-7c41-55c6-9f4e-36cc4945831a))
+(global_label "GND" (shape bidirectional) (at 214.63 67.31 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 995303d7-67a2-58a5-be5d-e1a016ce0823))
+(wire (pts (xy 219.71 69.85) (xy 214.63 69.85)) (stroke (width 0) (type default)) (uuid 7ac4278e-07a4-54a2-86ab-6891cd0d6220))
+(global_label "SYS" (shape bidirectional) (at 214.63 69.85 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 2d285755-efdd-5453-b323-e13c1c0afb21))
+(wire (pts (xy 260.35 62.23) (xy 265.43 62.23)) (stroke (width 0) (type default)) (uuid d8a05eab-7068-56d2-84e6-313b039d535a))
+(global_label "BUCK_VSET" (shape bidirectional) (at 265.43 62.23 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 270dfd8c-2567-5d11-865f-c803105cad53))
+(wire (pts (xy 260.35 64.77) (xy 265.43 64.77)) (stroke (width 0) (type default)) (uuid 02c5287f-f260-53ee-932f-37d940059319))
+(global_label "GND" (shape bidirectional) (at 265.43 64.77 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 22ef4343-7297-5081-a483-84ff7dd33d7a))
+(wire (pts (xy 260.35 67.31) (xy 265.43 67.31)) (stroke (width 0) (type default)) (uuid 2c2fe65a-d798-5b89-8df2-5dd15f3542b3))
+(global_label "BUCK_SW" (shape bidirectional) (at 265.43 67.31 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 52fdb142-6c9e-5100-b606-d3312379d7de))
+(wire (pts (xy 260.35 69.85) (xy 265.43 69.85)) (stroke (width 0) (type default)) (uuid 0fbb67b9-b621-5702-b88a-3e96c55fd811))
+(global_label "VDD2V0" (shape bidirectional) (at 265.43 69.85 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 12cdf83a-18c8-59b4-ade2-674b4e7e969c))
+(symbol (lib_id "SentiFrame:L") (at 344.17 63.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 13c85108-bc50-51db-95cc-7e234a1f31f8)
+(property "Reference" "L2" (at 358.17 61.5 0) (effects (font (size 1.1 1.1))))
+(property "Value" "2.2uH DFE201612E" (at 358.17 65.5 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:L_DFE201612E_DS" (at 344.17 63.5 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps62840.pdf" (at 344.17 63.5 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "DFE201612E-2R2M=P2" (at 344.17 63.5 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "TI reference inductor; 2.4A Isat. Land from Murata J(E)TE243A-0006D-01 p5." (at 344.17 63.5 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 344.17 63.5 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid bcf91dc6-ee08-58cd-b31e-4740d1556dfa))
+(pin "2" (uuid 6a51be87-c3e3-53ba-a0b3-60e7c41cc786))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "L2") (unit 1))))
+)
+(wire (pts (xy 344.17 59.69) (xy 344.17 54.61)) (stroke (width 0) (type default)) (uuid f3cc9501-5348-5dc1-be13-9a4e76a1f9a2))
+(global_label "BUCK_SW" (shape bidirectional) (at 344.17 54.61 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid de56f460-6cd5-5ff7-b22f-905fbaf7ba82))
+(wire (pts (xy 344.17 67.31) (xy 344.17 72.39)) (stroke (width 0) (type default)) (uuid bcb3b64a-08da-5580-a0c6-f229168dba0f))
+(global_label "VDD2V0" (shape bidirectional) (at 344.17 72.39 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 2f37f193-d5d9-5273-9675-02102941f015))
+(symbol (lib_id "SentiFrame:C") (at 41.91 128.27 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 312ea728-a6a0-5502-8b72-259498294388)
+(property "Reference" "C15" (at 55.91 126.27 0) (effects (font (size 1.1 1.1))))
+(property "Value" "4.7uF 25V X5R" (at 55.91 130.27 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0603_1608Metric" (at 41.91 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X5R1E475K080AC" (at 41.91 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "C1608X5R1E475K080AC" (at 41.91 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "BQ IN effective capacitance >=1uF. TDK 0603, tolerance +/-10%; DC-bias review in docs/pcba-capacitance.json." (at 41.91 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 41.91 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid a259bfea-9b9c-5682-a31e-924cd8596d06))
+(pin "2" (uuid da4a53c4-451a-51ab-879f-f9ae1fe01f15))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "C15") (unit 1))))
+)
+(wire (pts (xy 41.91 124.46) (xy 41.91 119.38)) (stroke (width 0) (type default)) (uuid cfec8db8-3b8d-5e2b-972b-90f0c19cf344))
+(global_label "USB5V" (shape bidirectional) (at 41.91 119.38 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 44ef24cb-611d-55dc-b6e5-b0c9b1b3511f))
+(wire (pts (xy 41.91 132.08) (xy 41.91 137.16)) (stroke (width 0) (type default)) (uuid 1e9a0f75-a504-5cb8-8f44-69866afad290))
+(global_label "GND" (shape bidirectional) (at 41.91 137.16 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid a872b18c-a8d5-5466-9c17-aa7c8246246c))
+(symbol (lib_id "SentiFrame:C") (at 104.14 128.27 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 57e7b457-5c16-529b-952a-8ccc76054f08)
+(property "Reference" "C16" (at 118.14 126.27 0) (effects (font (size 1.1 1.1))))
+(property "Value" "22uF 25V X5R" (at 118.14 130.27 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0805_2012Metric" (at 104.14 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X5R1E226M125AC" (at 104.14 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "C2012X5R1E226M125AC" (at 104.14 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "TDK 0805, tolerance +/-20%; DC-bias review in docs/pcba-capacitance.json." (at 104.14 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 104.14 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid ba22e730-5a11-5164-81e6-9c23ef394912))
+(pin "2" (uuid 2a8015c4-1b33-558b-938b-82154fe2c029))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "C16") (unit 1))))
+)
+(wire (pts (xy 104.14 124.46) (xy 104.14 119.38)) (stroke (width 0) (type default)) (uuid b10d1336-f2a7-5ed6-a4ee-9668970849fe))
+(global_label "SYS" (shape bidirectional) (at 104.14 119.38 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid c468388c-5ce1-58c1-8e30-e8d98ae127cb))
+(wire (pts (xy 104.14 132.08) (xy 104.14 137.16)) (stroke (width 0) (type default)) (uuid d3de37c0-14ee-59fe-b114-4edc89802f39))
+(global_label "GND" (shape bidirectional) (at 104.14 137.16 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 54eb7c04-c413-5ce1-bdf5-1c360dc33401))
+(symbol (lib_id "SentiFrame:C") (at 166.37 128.27 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 46f78836-55d0-54cb-a0fb-026fb8de4955)
+(property "Reference" "C17" (at 180.37 126.27 0) (effects (font (size 1.1 1.1))))
+(property "Value" "4.7uF 25V X5R" (at 180.37 130.27 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0603_1608Metric" (at 166.37 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X5R1E475K080AC" (at 166.37 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "C1608X5R1E475K080AC" (at 166.37 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "TDK 0603, tolerance +/-10%; DC-bias review in docs/pcba-capacitance.json." (at 166.37 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 166.37 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 04a3c255-d75f-56e5-b928-ae7bad150dbe))
+(pin "2" (uuid fe8c168a-0391-53ed-880d-0ff104e5e9ed))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "C17") (unit 1))))
+)
+(wire (pts (xy 166.37 124.46) (xy 166.37 119.38)) (stroke (width 0) (type default)) (uuid e01b9b23-35c2-5e5c-8bc1-7285f5d599d2))
+(global_label "VBAT" (shape bidirectional) (at 166.37 119.38 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 6471cb8c-3ac9-5433-8efc-27a59b66d49d))
+(wire (pts (xy 166.37 132.08) (xy 166.37 137.16)) (stroke (width 0) (type default)) (uuid 24590aa0-9b41-57c1-a629-d87eb6462da9))
+(global_label "GND" (shape bidirectional) (at 166.37 137.16 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid f5b5aca9-6a73-5f69-a739-f509237259b0))
+(symbol (lib_id "SentiFrame:C") (at 240.03 128.27 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5e1bbb86-c484-5631-a486-dd5e519ce13b)
+(property "Reference" "C18" (at 254.03 126.27 0) (effects (font (size 1.1 1.1))))
+(property "Value" "10uF 25V X5R" (at 254.03 130.27 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0805_2012Metric" (at 240.03 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X5R1E106K125AB" (at 240.03 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "C2012X5R1E106K125AB" (at 240.03 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "TDK 0805, tolerance +/-10%; DC-bias review in docs/pcba-capacitance.json." (at 240.03 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 240.03 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 38b90ef1-53e2-5d9e-9060-8538b0215dd3))
+(pin "2" (uuid 0d9c439d-094a-50da-88ba-d76e4a71ccac))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "C18") (unit 1))))
+)
+(wire (pts (xy 240.03 124.46) (xy 240.03 119.38)) (stroke (width 0) (type default)) (uuid 3bcabdeb-a7fa-5de3-af20-31207fe33d57))
+(global_label "SYS" (shape bidirectional) (at 240.03 119.38 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 707295b9-c4e9-555a-b83e-26fe049287b7))
+(wire (pts (xy 240.03 132.08) (xy 240.03 137.16)) (stroke (width 0) (type default)) (uuid 199e58b8-7bb1-5675-a608-a0d23f445267))
+(global_label "GND" (shape bidirectional) (at 240.03 137.16 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid f02bc8c8-d8ec-52a1-9a7d-b68472df16f9))
+(symbol (lib_id "SentiFrame:C") (at 313.69 128.27 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid d6f432fb-24b6-5f42-b3e5-a7258574f1eb)
+(property "Reference" "C19" (at 327.69 126.27 0) (effects (font (size 1.1 1.1))))
+(property "Value" "22uF 25V X5R" (at 327.69 130.27 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0805_2012Metric" (at 313.69 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X5R1E226M125AC" (at 313.69 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "C2012X5R1E226M125AC" (at 313.69 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "TDK 0805, tolerance +/-20%; DC-bias review in docs/pcba-capacitance.json." (at 313.69 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 313.69 128.27 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 242c9038-4e61-5662-8e0d-96b593de8d08))
+(pin "2" (uuid 4278f5c9-e866-5589-9fac-61d51a3031d0))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "C19") (unit 1))))
+)
+(wire (pts (xy 313.69 124.46) (xy 313.69 119.38)) (stroke (width 0) (type default)) (uuid c724ee7d-18c8-52fc-86c9-81dcf3554a3c))
+(global_label "VDD2V0" (shape bidirectional) (at 313.69 119.38 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid a7ee38f7-6d95-5053-a1ca-20bb9df41641))
+(wire (pts (xy 313.69 132.08) (xy 313.69 137.16)) (stroke (width 0) (type default)) (uuid 89fbf486-217e-5322-85ab-97e0b6e23a4b))
+(global_label "GND" (shape bidirectional) (at 313.69 137.16 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 5bb1374a-6a44-57f4-aa58-faae5d2ff956))
+(symbol (lib_id "SentiFrame:Q_NMOS_GSD") (at 69.85 190.5 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 6e2473a2-f562-5c37-9b47-115d918937f0)
+(property "Reference" "Q2" (at 69.85 175.88 0) (effects (font (size 1.1 1.1))))
+(property "Value" "DMN1019USN-7" (at 69.85 179.48 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:SC-59" (at 69.85 190.5 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN1019USN.pdf" (at 69.85 190.5 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "DMN1019USN-7" (at 69.85 190.5 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Avoid routing the SYS-level /CE pull-up into an MCU pin." (at 69.85 190.5 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 69.85 190.5 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 01873267-e93f-531f-be28-20d6fe530995))
+(pin "2" (uuid b3568b7d-1f66-5e1f-b429-22eb4a4cb488))
+(pin "3" (uuid c61e1edc-0196-55a4-8ea9-493dcb70fe50))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "Q2") (unit 1))))
+)
+(wire (pts (xy 49.53 185.42) (xy 44.45 185.42)) (stroke (width 0) (type default)) (uuid b7f81410-1740-59d4-be6a-92767db6b902))
+(global_label "CHG_ARM" (shape bidirectional) (at 44.45 185.42 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 8db903c0-5999-5ba2-a6aa-4a85089491bf))
+(wire (pts (xy 49.53 187.96) (xy 44.45 187.96)) (stroke (width 0) (type default)) (uuid 2099fa38-4dac-5065-884c-796a3ebd4934))
+(global_label "GND" (shape bidirectional) (at 44.45 187.96 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 825948e3-11a7-5bb8-9bfd-ac1b5e10a9d7))
+(wire (pts (xy 90.17 185.42) (xy 95.25 185.42)) (stroke (width 0) (type default)) (uuid 68ff8652-6f75-5ce1-a6bd-6f343b222f73))
+(global_label "CHG_CE_N" (shape bidirectional) (at 95.25 185.42 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 6e505f35-9a94-5b03-922a-c48db2b11a03))
+(symbol (lib_id "SentiFrame:R") (at 166.37 185.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 6a2b3dd1-5a63-578c-ab60-988f89366571)
+(property "Reference" "R12" (at 180.37 183.42 0) (effects (font (size 1.1 1.1))))
+(property "Value" "100k 1%" (at 180.37 187.42 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 166.37 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L" (at 166.37 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "RC0402FR-07100KL" (at 166.37 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "External pull-up overrides internal approx 5Mohm pull-down; charging disabled at reset. Yageo RC0402, 1%, 0.0625W, 50V; exact MPN, no automatic substitution." (at 166.37 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 166.37 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 486052b8-f9c6-58dd-8a01-ec2178c6437b))
+(pin "2" (uuid 222a24af-3efa-57ae-83e7-47403d145a1c))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "R12") (unit 1))))
+)
+(wire (pts (xy 166.37 181.61) (xy 166.37 176.53)) (stroke (width 0) (type default)) (uuid 71201b26-f434-5acf-b10a-8d2a915f3e9c))
+(global_label "SYS" (shape bidirectional) (at 166.37 176.53 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 47893d24-7a33-559f-bb6c-2dd2cf7d67a9))
+(wire (pts (xy 166.37 189.23) (xy 166.37 194.31)) (stroke (width 0) (type default)) (uuid db46318a-79b4-5611-88d9-8873822d4c38))
+(global_label "CHG_CE_N" (shape bidirectional) (at 166.37 194.31 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid bf041964-49ce-5762-82c1-a96eb99e91bb))
+(symbol (lib_id "SentiFrame:R") (at 232.41 185.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 2f598fbf-7a52-5adf-84c2-9f749555064f)
+(property "Reference" "R15" (at 246.41 183.42 0) (effects (font (size 1.1 1.1))))
+(property "Value" "100k 1%" (at 246.41 187.42 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 232.41 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L" (at 232.41 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "RC0402FR-07100KL" (at 232.41 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Yageo RC0402, 1%, 0.0625W, 50V; exact MPN, no automatic substitution." (at 232.41 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 232.41 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid a11aabef-929c-5c62-a134-bb1dc084dc6f))
+(pin "2" (uuid 1a01aacc-aeb0-52cb-9ae4-72e0ff0ad5c7))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "R15") (unit 1))))
+)
+(wire (pts (xy 232.41 181.61) (xy 232.41 176.53)) (stroke (width 0) (type default)) (uuid b22e1a8a-6483-5c2a-9012-8a39964bf937))
+(global_label "CHG_ARM" (shape bidirectional) (at 232.41 176.53 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 03bb44e9-72ab-501c-ab2f-dacc386ff820))
+(wire (pts (xy 232.41 189.23) (xy 232.41 194.31)) (stroke (width 0) (type default)) (uuid 51531f63-8826-5b0b-a378-872b804da4c2))
+(global_label "GND" (shape bidirectional) (at 232.41 194.31 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 19da2d4f-a688-5840-a801-be6b069f15ca))
+(symbol (lib_id "SentiFrame:R") (at 298.45 185.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ed1f69a3-6655-5977-a508-cdc53c435ff2)
+(property "Reference" "R16" (at 312.45 183.42 0) (effects (font (size 1.1 1.1))))
+(property "Value" "10k 1%" (at 312.45 187.42 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 298.45 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L" (at 298.45 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "RC0402FR-0710KL" (at 298.45 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Yageo RC0402, 1%, 0.0625W, 50V; exact MPN, no automatic substitution." (at 298.45 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 298.45 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 96b434f2-6581-5867-bf57-a9eeea4029ff))
+(pin "2" (uuid a2a82672-390a-51c3-a833-6c6977cf04b3))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "R16") (unit 1))))
+)
+(wire (pts (xy 298.45 181.61) (xy 298.45 176.53)) (stroke (width 0) (type default)) (uuid 245f0f0e-9c00-5b69-879a-99a2b770902c))
+(global_label "VDD2V0" (shape bidirectional) (at 298.45 176.53 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 78a45bec-1323-58aa-95e0-c1c7e8cc6cb0))
+(wire (pts (xy 298.45 189.23) (xy 298.45 194.31)) (stroke (width 0) (type default)) (uuid d7fb4a78-2ce8-5a19-a5ac-e898595ceff5))
+(global_label "USB_PG_N" (shape bidirectional) (at 298.45 194.31 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 37da3698-9e1e-55f7-ba62-f93ff767b056))
+(symbol (lib_id "SentiFrame:R") (at 364.49 185.42 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ac2f6745-69b5-50b4-b4ff-177284e1ed1c)
+(property "Reference" "R17" (at 378.49 183.42 0) (effects (font (size 1.1 1.1))))
+(property "Value" "10k 1%" (at 378.49 187.42 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 364.49 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L" (at 364.49 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "RC0402FR-0710KL" (at 364.49 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Yageo RC0402, 1%, 0.0625W, 50V; exact MPN, no automatic substitution." (at 364.49 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 364.49 185.42 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid cce2c276-d007-538a-b446-54965ff8535f))
+(pin "2" (uuid ce65591c-3811-5b47-a741-69b9d61d4875))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "R17") (unit 1))))
+)
+(wire (pts (xy 364.49 181.61) (xy 364.49 176.53)) (stroke (width 0) (type default)) (uuid af1eacfd-b09d-533a-9445-d6284289c716))
+(global_label "VDD2V0" (shape bidirectional) (at 364.49 176.53 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 7cf5aafe-08ab-5f69-b9f1-9e065a52b050))
+(wire (pts (xy 364.49 189.23) (xy 364.49 194.31)) (stroke (width 0) (type default)) (uuid 4710ddc9-d5cc-5bfd-8d42-2ae92dd821c1))
+(global_label "CHG_INT_N" (shape bidirectional) (at 364.49 194.31 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 32569417-aa6d-5bec-8211-bd1f1add7f67))
+(symbol (lib_id "SentiFrame:SW_Push") (at 90.17 236.22 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid d0accccd-1872-5d88-b773-acad39402542)
+(property "Reference" "SW2" (at 90.17 221.6 0) (effects (font (size 1.1 1.1))))
+(property "Value" "B3U-1000P / POWER" (at 90.17 225.2 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:SW_SPST_B3U-1000P" (at 90.17 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://components.omron.com/us-en/system/files/2023-01/datasheet_pdf/A162-E1.pdf" (at 90.17 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "B3U-1000P" (at 90.17 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Short/long manual reset / ship wake button. Separate from SOS. Never disable TS protection." (at 90.17 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 90.17 236.22 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid b16a9705-8d20-5f59-b0f4-8d2ac0f0a5d5))
+(pin "2" (uuid b8180131-b637-5f82-92f7-2cd3874d87fb))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "SW2") (unit 1))))
+)
+(wire (pts (xy 85.09 236.22) (xy 80.01 236.22)) (stroke (width 0) (type default)) (uuid f47aa82d-b8cf-5024-a3ce-7d83eee43470))
+(global_label "BAT_TS" (shape bidirectional) (at 80.01 236.22 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid 73e5b0b8-f192-552b-bd20-a5efe0e3d775))
+(wire (pts (xy 95.25 236.22) (xy 100.33 236.22)) (stroke (width 0) (type default)) (uuid 0ef4abf9-4c9d-5164-a827-199e3a4fb1fa))
+(global_label "GND" (shape bidirectional) (at 100.33 236.22 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 9012bf95-f794-5437-b61b-27b2c2431129))
+(symbol (lib_id "SentiFrame:PWR_FLAG") (at 233.68 232.41 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid e2e36958-71f4-597a-8b3a-3ef7708fd629)
+(property "Reference" "#FLG02" (at 233.68 217.91 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Value" "PWR_FLAG" (at 233.68 221.51 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Footprint" "" (at 233.68 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 233.68 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 233.68 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Power source declaration; not a purchased component." (at 233.68 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "EXTERNAL" (at 233.68 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid d9645309-3d28-5027-a719-2810f6e12369))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "#FLG02") (unit 1))))
+)
+(wire (pts (xy 233.68 232.41) (xy 233.68 237.49)) (stroke (width 0) (type default)) (uuid d6c57ec6-8029-5b39-a901-d29283d2354a))
+(global_label "GND" (shape bidirectional) (at 233.68 237.49 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 95a52460-6bd4-5bd7-a066-fc88393e1123))
+(symbol (lib_id "SentiFrame:PWR_FLAG") (at 298.45 232.41 0) (unit 1) (in_bom no) (on_board no) (dnp no) (uuid c2941e9b-7ef0-5824-ab5f-c772c0f8eb8c)
+(property "Reference" "#FLG03" (at 298.45 217.91 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Value" "PWR_FLAG" (at 298.45 221.51 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Footprint" "" (at 298.45 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 298.45 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 298.45 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Power source declaration; not a purchased component." (at 298.45 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "EXTERNAL" (at 298.45 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 12b66764-0482-5040-9c7d-2dbabacfb24f))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "#FLG03") (unit 1))))
+)
+(wire (pts (xy 298.45 232.41) (xy 298.45 237.49)) (stroke (width 0) (type default)) (uuid 9b7a5444-fc38-591b-a772-26a6ef3cd600))
+(global_label "VDD2V0" (shape bidirectional) (at 298.45 237.49 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid e582e957-fe14-5571-81fb-27e75edb7715))
+(symbol (lib_id "SentiFrame:R") (at 364.49 232.41 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 8a002c15-f301-5cbe-a411-9fa730ea620a)
+(property "Reference" "R32" (at 378.49 230.41 0) (effects (font (size 1.1 1.1))))
+(property "Value" "1.74k 1%" (at 378.49 234.41 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 364.49 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L" (at 364.49 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "RC0402FR-071K74L" (at 364.49 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "TPS62840DLC Table 1: 1.67k to 1.81k selects 2.0V. Place at pin5; parasitic capacitance <=100pF. Yageo RC0402, 1%, 0.0625W, 50V; exact MPN, no automatic substitution." (at 364.49 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Assembly" "MAIN" (at 364.49 232.41 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 467aaf5d-3f37-5408-ae9e-67d7f4b66e05))
+(pin "2" (uuid 6b38de98-9df0-598a-a4d0-3a6768187970))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/3e5bee2f-f6d8-5072-bf15-2bbbdba84b78" (reference "R32") (unit 1))))
+)
+(wire (pts (xy 364.49 228.6) (xy 364.49 223.52)) (stroke (width 0) (type default)) (uuid 41fd02d2-d749-5969-8710-539786ae79fa))
+(global_label "BUCK_VSET" (shape bidirectional) (at 364.49 223.52 0) (effects (font (size 0.95 0.95)) (justify right)) (uuid e57d6c73-6ec3-5bfb-8382-49dc2700c3d8))
+(wire (pts (xy 364.49 236.22) (xy 364.49 241.3)) (stroke (width 0) (type default)) (uuid fd67da1d-2116-51c1-b41b-f0c957edc19d))
+(global_label "GND" (shape bidirectional) (at 364.49 241.3 180) (effects (font (size 0.95 0.95)) (justify left)) (uuid 9885495f-dca4-5cb0-9a30-993b9ed12a46))
+(text "Reset defaults: Q2 off /CE high (charge disabled). Configure 4.20V /30mA/NTC HOT45C+COLD5C before CHG_ARM." (at 18 255.0 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid fccc859c-e1bf-56aa-98f1-0a952999c165))
+(text "Retain TS protection and charger watchdog. Set USB input limit50mA unless host/source permits more." (at 18 259.2 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid bc24c64d-f73a-50a7-9403-853922ceb68c))
+(text "SYS is about battery voltage or charger-regulated4.5V: never connect directly to MCU/IMU." (at 18 263.4 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid c86f5745-0407-55a6-baef-5ede34e59bf3))
+(text "VSET via R32=1.74k to GND selects 2.0V. MODE/STOP=GND; VOS is AFTER L2." (at 18 267.6 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid c41d3e02-c68d-5c16-a86b-4fea86b26992))
+(embedded_fonts no))
