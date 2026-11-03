@@ -1,0 +1,1234 @@
+(kicad_sch (version 20250114) (generator "eeschema") (uuid b5cebfde-95bd-41b7-b586-cf227eac006e) (paper "A3") (title_block (title "Charging and power") (date "2026-09-17") (rev "CATALOG-0.1") (comment 1 "UNWIRED - NOT FOR FABRICATION"))
+(lib_symbols
+(symbol "SentiFrame:BQ25186DLHR" (pin_names (offset 0.635)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 13.97 0) (effects (font (size 1.27 1.27))))
+(property "Value" "BQ25186DLHR" (at 0 11.43 0) (effects (font (size 1.27 1.27))))
+(symbol "BQ25186DLHR_0_1" (rectangle (start -15.24 8.89) (end 15.24 -8.89) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "BQ25186DLHR_1_1"
+(pin power_out line (at -20.32 6.3500000000000005 0) (length 5.08) (name "SYS" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0)))))
+(pin passive line (at -20.32 3.8100000000000005 0) (length 5.08) (name "BAT" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0)))))
+(pin open_collector line (at -20.32 1.2700000000000005 0) (length 5.08) (name "~{PG}/GPO" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0)))))
+(pin input line (at -20.32 -1.2699999999999996 0) (length 5.08) (name "~{CE}" (effects (font (size 1.0 1.0)))) (number "4" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at -20.32 -3.8099999999999987 0) (length 5.08) (name "GND" (effects (font (size 1.0 1.0)))) (number "5" (effects (font (size 1.0 1.0)))))
+(pin input line (at -20.32 -6.35 0) (length 5.08) (name "TS/MR" (effects (font (size 1.0 1.0)))) (number "6" (effects (font (size 1.0 1.0)))))
+(pin bidirectional line (at 20.32 6.3500000000000005 180) (length 5.08) (name "SDA" (effects (font (size 1.0 1.0)))) (number "7" (effects (font (size 1.0 1.0)))))
+(pin input line (at 20.32 3.8100000000000005 180) (length 5.08) (name "SCL" (effects (font (size 1.0 1.0)))) (number "8" (effects (font (size 1.0 1.0)))))
+(pin open_collector line (at 20.32 1.2700000000000005 180) (length 5.08) (name "~{INT}" (effects (font (size 1.0 1.0)))) (number "9" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at 20.32 -1.2699999999999996 180) (length 5.08) (name "IN" (effects (font (size 1.0 1.0)))) (number "10" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at 20.32 -3.8099999999999987 180) (length 5.08) (name "EP_GND" (effects (font (size 1.0 1.0)))) (number "11" (effects (font (size 1.0 1.0)))))
+))
+(symbol "SentiFrame:Battery_Cell"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "BT"
+			(at 2.54 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Battery_Cell"
+			(at 2.54 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 1.524 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 1.524 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Single-cell battery"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "battery cell"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Battery_Cell_0_1"
+			(rectangle
+				(start -2.286 1.778)
+				(end 2.286 1.524)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -1.524 1.016)
+				(end 1.524 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.778) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0.762) (xy 0 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.762 3.048) (xy 1.778 3.048)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 3.556) (xy 1.27 2.54)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Battery_Cell_1_1"
+			(pin passive line
+				(at 0 5.08 270)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -2.54 90)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:L"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "L"
+			(at -1.27 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "L"
+			(at 1.905 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "inductor choke coil reactor magnetic"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "L_0_1"
+			(arc
+				(start 0 2.54)
+				(mid 0.6323 1.905)
+				(end 0 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 1.27)
+				(mid 0.6323 0.635)
+				(end 0 0)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 0)
+				(mid 0.6323 -0.635)
+				(end 0 -1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 0 -1.27)
+				(mid 0.6323 -1.905)
+				(end 0 -2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "L_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:TPS62840DLCR" (pin_names (offset 0.635)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 12.7 0) (effects (font (size 1.27 1.27))))
+(property "Value" "TPS62840DLCR" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+(symbol "TPS62840DLCR_0_1" (rectangle (start -15.24 7.62) (end 15.24 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "TPS62840DLCR_1_1"
+(pin power_in line (at -20.32 5.08 0) (length 5.08) (name "GND" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at -20.32 2.54 0) (length 5.08) (name "VIN" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0)))))
+(pin input line (at -20.32 0.0 0) (length 5.08) (name "MODE" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0)))))
+(pin input line (at -20.32 -2.54 0) (length 5.08) (name "EN" (effects (font (size 1.0 1.0)))) (number "4" (effects (font (size 1.0 1.0)))))
+(pin input line (at 20.32 5.08 180) (length 5.08) (name "VSET" (effects (font (size 1.0 1.0)))) (number "5" (effects (font (size 1.0 1.0)))))
+(pin input line (at 20.32 2.54 180) (length 5.08) (name "STOP" (effects (font (size 1.0 1.0)))) (number "6" (effects (font (size 1.0 1.0)))))
+(pin power_out line (at 20.32 0.0 180) (length 5.08) (name "SW" (effects (font (size 1.0 1.0)))) (number "7" (effects (font (size 1.0 1.0)))))
+(pin input line (at 20.32 -2.54 180) (length 5.08) (name "VOS" (effects (font (size 1.0 1.0)))) (number "8" (effects (font (size 1.0 1.0)))))
+))
+(symbol "SentiFrame:Thermistor_NTC"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "TH"
+			(at -4.445 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Thermistor_NTC"
+			(at 3.175 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Temperature dependent resistor, negative temperature coefficient"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "thermistor NTC resistor sensor RTD"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_* RV_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Thermistor_NTC_0_1"
+			(arc
+				(start -3.175 2.413)
+				(mid -3.0506 2.3165)
+				(end -3.048 2.159)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -3.048 2.794)
+				(mid -2.9736 2.9736)
+				(end -2.794 3.048)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.794 3.048)
+				(mid -2.6144 2.9736)
+				(end -2.54 2.794)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.794 2.54)
+				(mid -2.9736 2.6144)
+				(end -3.048 2.794)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.794 1.905)
+				(mid -2.9736 1.9794)
+				(end -3.048 2.159)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 2.159)
+				(mid -2.6144 1.9794)
+				(end -2.794 1.905)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.159 2.794)
+				(mid -2.434 2.5608)
+				(end -2.794 2.54)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 2.159) (xy -2.54 2.794)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -3.683) (xy -2.54 -1.397) (xy -2.794 -2.159) (xy -2.286 -2.159) (xy -2.54 -1.397) (xy -2.54 -1.651)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 2.54) (xy -1.778 1.524) (xy 1.778 -1.524) (xy 1.778 -2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 -1.397) (xy -1.778 -3.683) (xy -2.032 -2.921) (xy -1.524 -2.921) (xy -1.778 -3.683)
+					(xy -1.778 -3.429)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -1.016 2.54)
+				(end 1.016 -2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Thermistor_NTC_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+(text "04 / Charging and power" (at 20 17 0) (effects (font (size 3 3)) (justify left)) (uuid b9bccfe7-dfa2-4d06-9ab0-697c7c15e6f9))
+(symbol (lib_id "SentiFrame:BQ25186DLHR") (at 74.93 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid dabe2a61-25f4-451c-9961-0fbaadefc390)
+(property "Reference" "U7" (at 74.93 50.150000000000006 0) (effects (font (size 1.1 1.1))))
+(property "Value" "BQ25186DLHR | charger" (at 74.93 53.650000000000006 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm" (at 74.93 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25186.pdf" (at 74.93 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "BQ25186DLHR" (at 74.93 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "PINOUT + LAND CHECKED" (at 74.93 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Battery power path. EP11 to GND. Set charge current to selected battery limits." (at 74.93 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/BQ25186.pdf" (at 74.93 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 65599883-73d2-42af-a046-c16750994891))
+(pin "2" (uuid a24923ae-4da3-4ffa-9b0e-8e915bfc58c3))
+(pin "3" (uuid cafd9911-eba3-427b-aec3-272a06849f43))
+(pin "4" (uuid 3128db89-0e89-41d4-8f57-429f98a4b96c))
+(pin "5" (uuid af43a457-4aad-4e22-be58-8b92735371b2))
+(pin "6" (uuid 1e5ac848-f460-4ea3-92a0-39ef952d2b37))
+(pin "7" (uuid 95151ea0-ecbf-40f3-b604-ee5280b5f3d1))
+(pin "8" (uuid e524b44f-16e8-4c70-a2dd-232f8e04195b))
+(pin "9" (uuid d4298749-1a4d-4220-a1d7-a72919694ced))
+(pin "10" (uuid 3fc97798-f012-4c54-aa67-f77818d054df))
+(pin "11" (uuid a908f389-d18f-4f1a-b113-2b23cf96adb2))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "U7") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:TPS62840DLCR") (at 209.55 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 1a363e5f-be65-4917-a664-500e27c3c9f7)
+(property "Reference" "U8" (at 209.55 51.42000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Value" "TPS62840DLCR | buck" (at 209.55 54.92000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:Texas_VSON-HR-8_1.5x2mm_P0.5mm" (at 209.55 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps62840.pdf" (at 209.55 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "TPS62840DLCR" (at 209.55 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "PINOUT + LAND CHECKED" (at 209.55 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "DLC8 package has no EP pad. VSET resistor and rail voltage not selected." (at 209.55 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/TPS62840.pdf" (at 209.55 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 9c32981c-ee66-4094-8ad1-5a3323249c7b))
+(pin "2" (uuid 8f73a6f3-94c0-4991-9d40-59701376a1cb))
+(pin "3" (uuid b252c4d4-dbec-4e20-8dc9-2651a14d26af))
+(pin "4" (uuid ebce021a-589a-4d56-8a44-f1dff5269b6a))
+(pin "5" (uuid 908f5562-1811-4bba-9669-9d3f1a261859))
+(pin "6" (uuid 194c87db-24d5-4abd-b839-d4e74889c7b0))
+(pin "7" (uuid 5ba31f97-25a0-46a4-a394-e3df6a194664))
+(pin "8" (uuid 4221ea92-a14c-47a7-8cb3-a83c68f08dcd))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "U8") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:Battery_Cell") (at 330.2 59.69 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 64d6f2a5-4ded-4d41-8b48-41cd6eba9fbb)
+(property "Reference" "BT1" (at 330.2 45.19 0) (effects (font (size 1.1 1.1))))
+(property "Value" "1S LiPo 100-150mAh / TBD" (at 330.2 48.69 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 330.2 59.69 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 330.2 59.69 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 330.2 59.69 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "SELECT MPN" (at 330.2 59.69 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Protected cell; verify dimensions, polarity, NTC and charge current. 24h is a target, not measured." (at 330.2 59.69 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 330.2 59.69 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid d7264946-1c7a-4865-b04c-9680d7463bb4))
+(pin "2" (uuid 16204834-d97a-45f4-bc72-81b77ac9c563))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "BT1") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:Thermistor_NTC") (at 330.2 102.87 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 56c095c1-e4fa-467f-9ce3-cf71d24d3312)
+(property "Reference" "TH1" (at 330.2 88.37 0) (effects (font (size 1.1 1.1))))
+(property "Value" "Battery NTC / TBD" (at 330.2 91.87 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 330.2 102.87 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25186.pdf" (at 330.2 102.87 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 330.2 102.87 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "SELECT MPN" (at 330.2 102.87 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Choose chemistry, temperature limits and NTC curve with BQ25186 TS network." (at 330.2 102.87 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/BQ25186.pdf" (at 330.2 102.87 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 9669e724-7d48-4541-b41e-f4d08a8e6379))
+(pin "2" (uuid 92684029-9319-4535-883c-6e17fb331ff8))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "TH1") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 39.37 135.89 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 3e48488f-44cd-427d-a774-b7728574c57d)
+(property "Reference" "C15" (at 39.37 121.38999999999999 0) (effects (font (size 1.1 1.1))))
+(property "Value" "1uF / IN" (at 39.37 124.88999999999999 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0402_1005Metric" (at 39.37 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25186.pdf" (at 39.37 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 39.37 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 39.37 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Minimum effective capacitance and voltage ratings must be checked under DC bias." (at 39.37 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/BQ25186.pdf" (at 39.37 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid c9f5b5a4-ffd6-4e8f-829f-572efa5f5ac3))
+(pin "2" (uuid 673a4358-fa53-4ec4-b008-d2f0b31c81c8))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "C15") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 101.6 135.89 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 64676d08-e426-421b-abee-f74709777f27)
+(property "Reference" "C16" (at 101.6 121.38999999999999 0) (effects (font (size 1.1 1.1))))
+(property "Value" "10uF / SYS" (at 101.6 124.88999999999999 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0603_1608Metric" (at 101.6 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25186.pdf" (at 101.6 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 101.6 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 101.6 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Minimum effective capacitance and voltage ratings must be checked under DC bias." (at 101.6 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/BQ25186.pdf" (at 101.6 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 654b22ec-dd86-4976-96cd-541b0e175910))
+(pin "2" (uuid a1a1c32f-faf5-48a8-8d02-5881fc171729))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "C16") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 162.56 135.89 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 364a3bda-b837-44e5-920b-c1a653abb562)
+(property "Reference" "C17" (at 162.56 121.38999999999999 0) (effects (font (size 1.1 1.1))))
+(property "Value" "1uF / BAT" (at 162.56 124.88999999999999 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0402_1005Metric" (at 162.56 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25186.pdf" (at 162.56 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 162.56 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 162.56 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Minimum effective capacitance and voltage ratings must be checked under DC bias." (at 162.56 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/BQ25186.pdf" (at 162.56 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 6ec308c5-0b95-443d-8cf8-f43ab1bd1bb9))
+(pin "2" (uuid 82750aa2-76bf-4961-b025-13768531717d))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "C17") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 223.52 135.89 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5f691710-5894-4e90-a940-46f85622b336)
+(property "Reference" "C18" (at 223.52 121.38999999999999 0) (effects (font (size 1.1 1.1))))
+(property "Value" "4.7uF / VIN" (at 223.52 124.88999999999999 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0603_1608Metric" (at 223.52 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps62840.pdf" (at 223.52 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 223.52 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 223.52 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Minimum effective capacitance and voltage ratings must be checked under DC bias." (at 223.52 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/TPS62840.pdf" (at 223.52 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 5c1c78f3-3a49-4024-80c3-71906fad0530))
+(pin "2" (uuid 8ca5c0b9-0b8a-494d-9ed1-0246a0dcbeae))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "C18") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 284.48 135.89 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 30b6ee0f-c0d0-4338-b47a-a4bdacbc58b4)
+(property "Reference" "C19" (at 284.48 121.38999999999999 0) (effects (font (size 1.1 1.1))))
+(property "Value" "10uF / OUT" (at 284.48 124.88999999999999 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0603_1608Metric" (at 284.48 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps62840.pdf" (at 284.48 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 284.48 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 284.48 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Minimum effective capacitance and voltage ratings must be checked under DC bias." (at 284.48 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/TPS62840.pdf" (at 284.48 135.89 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid d9d02ee2-0a5c-4ee5-9c4c-86f037b643d9))
+(pin "2" (uuid 0e57f0af-bff4-4a4e-b510-ed3146f0fea3))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "C19") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:L") (at 59.69 184.15 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid aa9ec185-ecbb-43c3-be0f-6c2e08c2e2c1)
+(property "Reference" "L2" (at 59.69 169.65 0) (effects (font (size 1.1 1.1))))
+(property "Value" "2.2uH / power / TBD" (at 59.69 173.15 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 59.69 184.15 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps62840.pdf" (at 59.69 184.15 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 59.69 184.15 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "SELECT MPN" (at 59.69 184.15 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Converter power inductor: choose saturation/ripple current, DCR and footprint from final load." (at 59.69 184.15 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/TPS62840.pdf" (at 59.69 184.15 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid ac7751df-0ea6-4be4-9a87-a276ca841638))
+(pin "2" (uuid 7d339057-d7b0-4441-a609-1e6539e67bc4))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "L2") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 39.37 226.06 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 2b01f1f4-b361-49c7-80eb-5697c7a02206)
+(property "Reference" "R12" (at 39.37 211.56 0) (effects (font (size 1.1 1.1))))
+(property "Value" "VSET / TBD" (at 39.37 215.06 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 39.37 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 39.37 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 39.37 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 39.37 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Provisional network. ADC divider duty cycle, leakage and rail limits to be designed." (at 39.37 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 39.37 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 8b6ce1a4-69e7-40e9-944d-3178777a8116))
+(pin "2" (uuid 7de73787-4c55-4866-ac9e-5dead5b31639))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "R12") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 97.79 226.06 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 363ea195-fa59-45bf-979b-7d0d38a96256)
+(property "Reference" "R13" (at 97.79 211.56 0) (effects (font (size 1.1 1.1))))
+(property "Value" "10k / INT pull-up" (at 97.79 215.06 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 97.79 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 97.79 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 97.79 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 97.79 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Provisional network. ADC divider duty cycle, leakage and rail limits to be designed." (at 97.79 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 97.79 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 17436c02-8931-4d53-b376-fc90f7002218))
+(pin "2" (uuid 5da211d3-a621-4a05-9c22-917e51308196))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "R13") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 156.21 226.06 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid a32db994-e4d8-4f63-a6bb-e55305a01217)
+(property "Reference" "R14" (at 156.21 211.56 0) (effects (font (size 1.1 1.1))))
+(property "Value" "10k / PG pull-up" (at 156.21 215.06 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 156.21 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 156.21 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 156.21 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 156.21 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Provisional network. ADC divider duty cycle, leakage and rail limits to be designed." (at 156.21 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 156.21 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid a5f30039-68a1-456b-b771-f6f6c061ee1a))
+(pin "2" (uuid dd383004-2a0b-4e6c-aae2-7b2b8bf86d1c))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "R14") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 214.63 226.06 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5271a458-6359-4696-9ca2-2e53494b9e8e)
+(property "Reference" "R15" (at 214.63 211.56 0) (effects (font (size 1.1 1.1))))
+(property "Value" "NTC bias / TBD" (at 214.63 215.06 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 214.63 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 214.63 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 214.63 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 214.63 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Provisional network. ADC divider duty cycle, leakage and rail limits to be designed." (at 214.63 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 214.63 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 17fa7e7e-e3c5-42ec-a7ba-5a8dc8567336))
+(pin "2" (uuid 56cf94b6-f783-4fcf-a1c7-396b4a919152))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "R15") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 271.78 226.06 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 13e8660a-291b-4be6-b7e9-46055bb2c7bb)
+(property "Reference" "R16" (at 271.78 211.56 0) (effects (font (size 1.1 1.1))))
+(property "Value" "ADC upper / TBD" (at 271.78 215.06 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 271.78 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 271.78 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 271.78 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 271.78 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Provisional network. ADC divider duty cycle, leakage and rail limits to be designed." (at 271.78 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 271.78 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 6586e669-c4a1-4296-b567-148d03d82564))
+(pin "2" (uuid 9bde55bb-f136-4820-8076-7dc75d1c8920))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "R16") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 330.2 226.06 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 01982c05-dab6-4967-8cb8-aee46a074c38)
+(property "Reference" "R17" (at 330.2 211.56 0) (effects (font (size 1.1 1.1))))
+(property "Value" "ADC lower / TBD" (at 330.2 215.06 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 330.2 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 330.2 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 330.2 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 330.2 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Provisional network. ADC divider duty cycle, leakage and rail limits to be designed." (at 330.2 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 330.2 226.06 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 8de398d5-0925-464b-bc61-39fbe2698774))
+(pin "2" (uuid 1ccc24b6-a3e2-4956-a852-71eeac1dd4a0))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/b5cebfde-95bd-41b7-b586-cf227eac006e" (reference "R17") (unit 1))))
+)
+(text "24h battery life is a design target, not verified by this component catalog." (at 20 251.0 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid bf6a89c9-8876-4816-b2e2-ae8aa411dd31))
+(text "MCU rail voltage, PPG VLED source and USB isolation must be decided before wiring." (at 20 255.1 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid dbc6611a-5680-49e4-ada5-321680b43dc9))
+(text "BQ25186 input may create SYS near USB voltage: never connect SYS directly to low-voltage ICs." (at 20 259.2 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid bd1e8a0c-bca1-42b9-b9ce-299971e5e9c6))
+(text "Use protected 1S cell; select NTC/charge current from the actual battery datasheet." (at 20 263.3 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid b2fa299a-f8f3-45a1-a467-908ba00775b1))
+(text "Capacitor values are nominal; validate effective capacitance and inductor saturation." (at 20 267.4 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid 36f57b25-310c-4dda-9b0d-88a25873091e))
+(embedded_fonts no))

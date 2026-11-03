@@ -1,0 +1,1727 @@
+
+PAGE 1
+Version: 1.1
+Issued Date: 2026/07/08
+Data Sheet
+(規格書)
+產品名稱 (Product) Bluetooth Low Energy Module 
+解決方案 (Solution) Nordic nRF54L15 WLCSP Package 
+產品型號 (Model No.) AN54LV-15 (Chip Antenna) 
+產品料號 (Part No.) See 4.3 Order code 
+ Working distance (in Meters) 
+Operating 
+Temperature Model 125 Kbps 1 Mbps 2 Mbps 
+AN54LV-15 over 500 over 350 over 200 -40 ~ 105℃ 
+AN54LV-P15 over 450 over 350 over 200 -40 ~ 105℃ 
+AN54LV-U15 over 550 over 400 over 200 -40 ~ 85℃ 
+AN54LV-K15 over 450 over 350 over 200 -40 ~ 105℃ 
+Working range is tested in open space
+
+
+PAGE 2
+ 
+ 
+2 
+Index
+1. Overall introduction ...................................................................................................... 4 
+1.1. Application ............................................................................................................ 4 
+1.2. Features ............................................................................................................... 5 
+ 
+2. Product dimension ........................................................................................................ 6 
+2.1. PCB dimensions & Pin indication ......................................................................... 6 
+2.2. Recommended layout of solder pad ..................................................................... 7 
+2.3. RF layout suggestion (AKA, antenna keep-out area) ........................................... 9 
+2.4. Footprint & design guide ...................................................................................... 11 
+2.5. Pin assignment ................................................................................................... 12 
+ 
+3. Main chip solution ....................................................................................................... 17 
+ 
+4. Shipment packaging information ............................................................................... 18 
+4.1. Marking on metal shield ...................................................................................... 19 
+4.2. Packaging info .................................................................................................... 20 
+4.2.1. Tray packaging ........................................................................................ 20 
+4.2.2. Tape & Reel packaging ............................................................................ 22 
+4.3. Order code .......................................................................................................... 23 
+ 
+5. Specification ................................................................................................................ 24 
+5.1. Recommended operating conditions .................................................................. 24 
+5.2. Radio specifications ............................................................................................ 24 
+5.2.1. General radio characteristics ................................................................... 24 
+5.2.2. Radio current consumption (Transmitter) ................................................. 25 
+5.2.3. Radio current consumption (Receiver) ..................................................... 25 
+5.2.4. Transmitter specification .......................................................................... 25 
+5.2.5. Receiver operation ................................................................................... 26 
+5.2.6. RX selectivity ........................................................................................... 27 
+5.2.7. RX intermodulation .................................................................................. 28 
+5.2.8. Radio timing parameters .......................................................................... 29 
+5.2.9. RSSI specifications .................................................................................. 29 
+5.3. GPIO electrical specification ............................................................................... 30 
+5.4. Absolute maximum ratings ................................................................................. 31 
+ 
+6. Block diagram .............................................................................................................. 32 
+ 
+7. Antenna ........................................................................................................................ 33 
+ 
+8. Reference circuit ......................................................................................................... 34 
+
+
+PAGE 3
+ 
+ 
+3 
+9. Certification ................................................................................................................. 35 
+9.2. FCC Certificate (USA) ........................................................................................ 36 
+9.3. TELEC Certificate (Japan) .................................................................................. 39 
+9.4. NCC Certificate (Taiwan) .................................................................................... 40 
+9.5. CE Test Report (EU) ........................................................................................... 44 
+9.6. IC Certificate (Canada) ....................................................................................... 52 
+9.7. SRRC Certificate (China) .................................................................................... 53 
+9.8. KC Certificate (South Korea) .............................................................................. 55 
+9.9. WPC Certificate (India) ....................................................................................... 56 
+9.10. EU and UKCA Declarations of Conformity .......................................................... 58 
+9.11. RoHS & REACH report ....................................................................................... 58 
+9.12. End-product label ............................................................................................... 58 
+9.12.1. FCC (USA) ............................................................................................... 59 
+9.12.2. TELEC (Japan) ........................................................................................ 59 
+9.12.3. NCC (Taiwan) ........................................................................................... 59 
+9.12.4. IC (Canada) ............................................................................................. 60 
+9.13. Compliance and Certification .............................................................................. 61 
+9.13.1. List of Applicable FCC Rules ................................................................... 61 
+9.13.2. RF Exposure Considerations ................................................................... 61 
+9.13.3. Antennas .................................................................................................. 62 
+9.13.4. Information on Test Modes and Additional Testing Requirements ............ 63 
+9.13.5. Additional Testing, Part 15 Subpart B Disclaimer ..................................... 63 
+9.13.6. Note EMI Considerations ......................................................................... 63 
+9.13.7. How to Make Changes ............................................................................. 64 
+ 
+10. Notes and Cautions ..................................................................................................... 65 
+ 
+11. Useful links .................................................................................................................. 66 
+ 
+Full list of Raytac’s Wi-Fi modules .................................................................................... 67 
+ 
+Full list of Raytac’s Bluetooth modules ............................................................................ 68 
+ 
+Release Note ....................................................................................................................... 73 
+
+
+PAGE 4
+ 
+ 
+4 
+1. Overall introduction
+Raytac’s AN54LV family is a Bluetooth® 6.0 stack (Bluetooth low energy or BLE) modules 
+designed based on Nordic nRF54L15 SoC solution, which incorporates: GPIO,  
+QSPI (emulated), SPI, UART, I2C, I2S, PDM, PWM, ADC and NFC interfaces for 
+connecting peripherals and sensors.
+Product Character:  
+1. MCU (Microcontroller Unit) featuring a 128 MHz Arm Cortex-M33 processor.
+2. Embedded 1524 KB NVM and up to 256 KB RAM.
+3. An integrated RISC-V coprocessor.
+4. The multiprotocol 2.4 GHz radio modes are supported based on customer preference.
+5. Compact size with (L) 8.4 x (W) 6.4 x (H) 1.5mm
+6. Wide supply voltage range 1.7V to 3.6V.
+7. Operation temperature from -40℃ to 105℃.
+8. Up to 32 GPIOs.
+1.1. Application
+‧IoT
+‧Smart home sensors and actuators
+‧Industrial sensors and actuators
+‧Gateways and hubs
+‧Advanced computer peripherals and I/O devices
+‧Keyboard
+‧Mouse
+‧Stylus
+‧Interactive entertainment devices
+‧Remote controls
+‧Gaming controllers
+‧Safety and security
+‧Access control
+‧Asset tracking
+‧Wearable health and fitness monitoring
+‧Lighting control
+
+
+PAGE 5
+ 
+ 
+5 
+1.2. Features
+‧Multi-protocol 2.4GHz radio
+‧128MHz Arm Cortex-M33 with Thumb-2 (16/32-bit instruction set)
+‧1524KB flash programmed memory and 256KB RAM
+‧128-bit AES / ECB / CCM / AAR co-processor
+‧Up to +8 dBm configurable output power
+‧RSSI (1dB resolution)
+Peripherals
+‧128 MHz RISC-V coprocessor which is a fast, lightweight peripheral processor (FLPR)
+‧Timer counter
+‧7 x 32-bit
+‧2 x 24-bit RTC
+‧Fully featured serial interface with EasyDMA support including:
+‧One high-speed SPIM up to 32 MHz, four SPI to 8 MHz
+‧One high-speed UARTE up to 4 Mbps, four UART to 1 Mbps 
+  ‧I2C up to 400 kHz 
+‧Three pulse width modulator (PWM) units with EasyDMA
+‧I2S two channel Inter-IC sound interface
+‧ADC with up to eight programmable gain channels.
+‧Pulse density modulation (PDM) interface
+‧Near field communication (NFC)
+‧Quadrature decoders(QDEC)
+‧Temperature sensor
+
+
+PAGE 6
+ 
+ 
+6 
+2. Product dimension
+2.1. PCB dimensions & Pin indication
+‧AN54LV-15
+
+
+PAGE 7
+ 
+ 
+7 
+2.2. Recommended layout of solder pad
+Graphs are all in Top View, Unit in mm.
+
+
+PAGE 8
+ 
+ 
+8 
+
+
+PAGE 9
+ 
+ 
+9 
+2.3. RF layout suggestion (AKA, antenna keep-out area)
+Please ensure that no ground pad overlaps the “No Ground-Pad Area”, as shown in the 
+images below. This is important to maintain antenna performance and to prevent potential 
+short circuits within the module.
+You are welcome to send us your design files for review at sales@raytac.com or to your 
+Raytac contact with email subject titled: “Layout Review – Raytac Model No. – Your 
+company name”.
+
+
+PAGE 10
+ 
+ 
+10 
+
+
+PAGE 11
+ 
+ 
+11 
+2.4. Footprint & design guide
+Please visit “Support” page of our website to download. The package includes footprint, 
+2D/3D drawing, and reflow graph/solder profile.
+
+
+PAGE 12
+ 
+ 
+12 
+2.5. Pin assignment
+Pin No. Name Pin function Description 
+(1) GND Ground The pad must be connected to a solid ground plane 
+(2) P0.04 
+Digital I/O General-purpose digital I/O 
+Digital I/O GRTC CLKOUT32K 
+(3) P0.03 
+Digital I/O General-purpose digital I/O 
+Digital I/O GRTC PWM 
+(4) P0.01 Digital I/O General-purpose digital I/O 
+(5) P0.00 Digital I/O General-purpose digital I/O 
+(6) 
+P2.10 Digital I/O General-purpose digital I/O 
+ Digital I/O FLPR.10 
+TRACEDATA 
+[3] 
+Digital I/O Trace data 
+ Digital I/O SPIM CSN 
+ Digital I/O SPIS CSN 
+ Digital I/O UARTE RTS 
+(7) P0.02 Digital I/O General-purpose digital I/O 
+(8) 
+P2.08 Digital I/O General-purpose digital I/O 
+ Digital I/O FLPR.8 
+TRACEDATA 
+[1] 
+Digital I/O Trace data 
+ Digital I/O SPIM SDO 
+ Digital I/O SPIS SDO 
+ Digital I/O UARTE TXD 
+(9) SWDIO Digital I/O Serial Wire debug I/O for debug and programming 
+(10) P2.05 
+Digital I/O General-purpose digital I/O 
+Digital I/O SPIM CSN 
+Digital I/O SPIS CSN 
+Digital I/O UARTE RTS 
+Digital I/O FLPR.5 
+Digital I/O QSPI CSN 
+(11) SWDCLK Digital input Serial Wire debug clock input for debug and programming 
+    
+    
+
+
+PAGE 13
+ 
+ 
+13 
+Pin No. Name Pin function Description 
+(12) P2.00 
+Digital I/O General-purpose digital I/O 
+Digital I/O SPIM DCX 
+Digital I/O UARTE RXD 
+Digital I/O FLPR.4 
+Digital I/O QSPI D3 
+(13) 
+P2.09 Digital I/O General-purpose digital I/O 
+ Digital I/O FLPR.9 
+TRACEDATA 
+[2] 
+Digital I/O Trace data 
+ Digital I/O SPIM SDI 
+ Digital I/O SPIS SDI 
+ Digital I/O UARTE CTS 
+(14) P2.04 
+Digital I/O General-purpose digital I/O 
+Digital I/O SPIM SDI 
+Digital I/O SPIS SDI 
+Digital I/O UARTE CTS 
+Digital I/O FLPR.2 
+Digital I/O QSPI D1 
+(15) GND Ground The pad must be connected to a solid ground plane 
+(16) 
+P2.06 Digital I/O General-purpose digital I/O 
+ Digital I/O FLPR.6 
+ Digital I/O SPIM SCK 
+ Digital I/O SPIS SCK 
+TRACECLK Digital I/O Trace clock 
+(17) P2.01 
+Digital I/O General-purpose digital I/O 
+Digital I/O SPIM SCK 
+Digital I/O SPIS SCK 
+Digital I/O FLPR.0 
+Digital I/O QSPI SCK 
+    
+    
+    
+    
+
+
+PAGE 14
+ 
+ 
+14 
+Pin No. Name Pin function Description 
+(18) 
+P2.07 Digital I/O General-purpose digital I/O 
+ Digital I/O FLPR.7 
+TRACEDATA 
+[0] 
+Digital I/O Trace data 
+SWO Digital I/O Serial wire output (SWO) 
+ Digital I/O SPIM DCX 
+ Digital I/O UARTE RXD 
+(19) 
+P1.08 Digital I/O General-purpose digital I/O 
+ Digital I/O GRTC CLKOUTFAST 
+EXTREF Analog input External reference for SAADC 
+(20) VDD_NRF Power Power-supply pin 
+(21) 
+P1.07 Digital I/O General-purpose digital I/O  
+AIN3 Analog input SAADC input 
+ASI [1] Digital I/O TAMPC active shield 1 input 
+(22) 
+P1.06 Digital I/O General-purpose digital I/O  
+AIN2 Analog input SAADC input 
+ASO [1] Digital I/O TAMPC active shield 1 output 
+(23) 
+P1.05 Digital I/O General-purpose digital I/O  
+AIN1 Analog input SAADC input 
+ASI [0] Digital I/O TAMPC active shield 0 input 
+RADIO [6] Digital I/O RADIO DFEGPIO 
+(24) P2.02 
+Digital I/O General-purpose digital I/O 
+Digital I/O SPIM SDO 
+Digital I/O SPIS SDO 
+Digital I/O UARTE TXD 
+Digital I/O FLPR.1 
+Digital I/O QSPI D0 
+(25) 
+P1.04 Digital I/O General-purpose digital I/O 
+AIN0 Analog input SAADC input 
+ASO [0] Digital I/O TAMPC active shield 0 output 
+(26) P2.03 
+Digital I/O General-purpose digital I/O 
+Digital I/O FLPR.3 
+Digital I/O QSPI D2 
+
+
+PAGE 15
+ 
+ 
+15 
+Pin No. Name Pin function Description 
+(27) 
+P1.03 Digital I/O General-purpose digital I/O 
+NFC2 NFC input NFC antenna connection 
+(28) DCC Power DC/DC converter output pin 
+(29) 
+P1.02 Digital I/O General-purpose digital I/O 
+NFC1 NFC input NFC antenna connection 
+(30) DECD Digital I/O 0.9 V regulator supply decoupling 
+(31) GND Ground The pad must be connected to a solid ground plane 
+(32) 
+P1.01 Digital I/O General-purpose digital I/O 
+XL2 Analog input Connection to 32.768kHz crystal (LFXO) 
+(33) 
+P1.00 Digital I/O General-purpose digital I/O 
+XL1 Analog input Connection to 32.768kHz crystal (LFXO) 
+(34) P1.15 Digital I/O General-purpose digital I/O 
+(35) 
+P1.13 Digital I/O General-purpose digital I/O  
+AIN6 Analog input SAADC input 
+RADIO [4] Digital I/O RADIO DFEGPIO 
+(36) 
+P1.14 Digital I/O General-purpose digital I/O  
+AIN7 Analog input SAADC input 
+RADIO [5] Digital I/O RADIO DFEGPIO 
+(37) 
+P1.12 Digital I/O General-purpose digital I/O 
+AIN5 Analog input SAADC input 
+ASI [3] Digital I/O TAMPC active shield 3 input 
+RADIO [3] Digital I/O RADIO DFEGPIO 
+(38) 
+P1.09 Digital I/O General-purpose digital I/O 
+ASO [2] Digital I/O TAMPC active shield 2 output 
+RADIO [0] Digital I/O RADIO DFEGPIO 
+(39) 
+P1.11 Digital I/O General-purpose digital I/O 
+AIN4 Analog input SAADC input 
+ASO [3] Digital I/O TAMPC active shield 3 output 
+RADIO [2] Digital I/O RADIO DFEGPIO 
+(40) GND Ground The pad must be connected to a solid ground plane 
+    
+    
+
+
+PAGE 16
+ 
+ 
+16 
+Pin No. Name Pin function Description 
+(41) 
+P1.10 Digital I/O General-purpose digital I/O 
+ASI [2] Digital I/O TAMPC active shield 2 input 
+RADIO [1] Digital I/O RADIO DFEGPIO 
+(42) GND Ground The pad must be connected to a solid ground plane 
+(43) NRESET Reset Configurable as system RESET pin 
+(44) GND Ground The pad must be connected to a solid ground plane 
+(45) GND Ground The pad must be connected to a solid ground plane 
+(46~55) GND Ground 
+The pad must be connected to a solid ground plane 
+(Only for AN54LV-15 Model) 
+
+
+PAGE 17
+ 
+ 
+17 
+3. Main chip solution
+RF IC Crystal Frequency 
+Nordic NRF54L15 / WLCSP 32MHz 
+      The 32MHz crystal is already integrated inside the module.  
+The crystal load capacitance has already been optimized in the module design. 
+. 
+
+
+PAGE 18
+ 
+ 
+18 
+4. Shipment packaging information
+Model Antenna Photo 
+AN54LV-15 Chip/Ceramic 
+ 
+AN54LV-P15 PCB/Printed 
+ 
+AN54LV-U15 U.FL/Connector 
+ 
+AN54LV-K15 Antenna Pin 
+ 
+ - Unit weight of module: 
+      AN54LV-15 : 0.18 g (±0.02 g)  ; AN54LV-P15 : 0.15 g (±0.02 g) ; 
+      AN54LV-U15 : 0.19 g (±0.02 g) ; AN54LV- K15 : 0.15g (±0.02 g) ;
+ - Packaging type: Tray or Tape & Reel.
+ Tray 
+(PET / APET) 
+Tape & Reel 
+( 13”) 
+Tape & Reel 
+( 7”) 
+MPQ 
+(Min. Package Q’ty) 
+160 pcs  
+per tray 
+1,760 pcs  
+per reel 
+640 pcs  
+per reel 
+Carton Contents 
+(per carton) 3,200 pcs 1,760 pcs 640 pcs 
+Carton Dimension 
+(L) x (W) x (H) cm 
+ 
+ 
+ 
+37 x 21 x 13 37 x 36 x 6 37 x 36 x 6 
+Gross Weight about 2.2 kgs about 1.2 kgs about 1 kgs 
+
+
+PAGE 19
+ 
+ 
+19 
+4.1. Marking on metal shield
+Label context on metal shield is as below:
+
+
+PAGE 20
+ 
+ 
+20 
+4.2. Packaging info
+4.2.1. Tray packaging
+Anti-static trays are specifically designed for mass production and are fully compatible with 
+standard SMT automated assembly lines. To optimize manufacturing efficiency, standard 
+PET or APET anti-static materials are utilized, both ensuring excellent mechanical stability 
+and ESD protection.
+Both tray variants share identical physical dimensions and structural designs, differing only in 
+the text marking printed on the surface for material identification.
+Figure 1: Tray specification with PET marking
+
+
+PAGE 21
+ 
+ 
+21 
+Figure 2: Tray specification with APET marking
+
+
+PAGE 22
+ 
+ 
+22 
+4.2.2. Tape & Reel packaging
+
+
+PAGE 23
+ 
+ 
+23 
+4.3. Order code
+Each model has two options of packaging. Please use following part no. when placing order 
+to us.
+Model Tray Tape & Reel 
+AN54LV-15 
+(PET) MD-240A8-007 
+(APET) MD-240A8-007A 
+(13”) MD-240A8-007R 
+(7”)  MD-240A8-007R7 
+AN54LV-P15 
+(PET) MD-240A8-008 
+(APET) MD-240A8-008A 
+(13”) MD-240A8-008R 
+(7”)  MD-240A8-008R7 
+AN54LV-U15 
+(PET) MD-240A8-021 
+(APET) MD-240A8-021A 
+(13”) MD-240A8-021R 
+(7”)  MD-240A8-021R7 
+AN54LV-K15 
+(PET) MD-240A8-022 
+(APET) MD-240A8-022A 
+(13”) MD-240A8-022R 
+(7”)  MD-240A8-022R7 
+ Tray 
+(PET / APET) 
+Tape & Reel 
+( 13”) 
+Tape & Reel 
+( 7”) 
+MPQ 
+(Min. Package Q’ty) 
+160 pcs  
+per tray 
+1,760 pcs  
+per reel 
+640 pcs  
+per reel 
+Carton Contents 
+(per carton) 3,200 pcs 1,760 pcs 640 pcs 
+Carton Dimension 
+(L) x (W) x (H) cm 
+ 
+ 
+ 
+37 x 21 x 13 37 x 36 x 6 37 x 36 x 6 
+Gross Weight about 2.2 kgs about 1.2 kgs about 1 kgs 
+
+
+PAGE 24
+ 
+ 
+24 
+5. Specification
+Any technical spec shall refer to Nordic’s official documents as final reference. Contents 
+below are from “nRF54L15 Product Specification v1.0”, please click to download full spec.
+5.1. Recommended operating conditions
+Symbol Parameter Min. Nom. Max. Units 
+VDD VDD supply voltage 1.7  3.6 V 
+VDDEXT VDD supply voltage under extended operating temperature 1.7  3.4 V 
+VDDPOR VDD supply voltage needed during power-on reset 1.75   V 
+TA Operating temperature -40 25 85 °C 
+TAEXT Extended operating temperature 85  105 °C 
+TRST Recommended storage temperature   40 °C 
+RHRST Recommended storage relative humidity   90 % 
+The operating conditions are the physical parameters that the device can operate within.
+5.2. Radio specifications
+5.2.1. General radio characteristics
+Symbol Parameter Min. Typ. Max. Units 
+fop Operating frequencies 2400  2500 MHz 
+fPLL,CH,SP Channel spacing  1.0  MHz 
+fDELTA,1M Frequency deviation @ 1 Mbps  ± 160  kHz 
+fDELTA,BLE,1M Frequency deviation @ Bluetooth LE 1 Mbps  ±250  kHz 
+fDELTA,2M Frequency deviation @ 2 Mbps  ±320  kHz 
+fDELTA,BLE,2M Frequency deviation @ Bluetooth LE 2 Mbps  ±500  kHz 
+fDELTA,4M Frequency deviation @ 4 Mbps  ±1000  kHz 
+fskBPS On-the-air data rate 125  4000 kbps 
+fchip, IEEE 802.15.4 Chip rate in IEEE 802.15.4 mode  2000  kchip/s 
+
+
+PAGE 25
+ 
+ 
+25 
+5.2.2. Radio current consumption (Transmitter)
+Symbol Description Min. Typ. Max. Units 
+ITX,MaxdBm,QFN TX only run current for QFN package,  
+PRF at maximum power setting 
+ 9.1  mA 
+ITX,MaxdBm,csp TX only run current for CSP package,  
+PRF at maximum power setting 
+ 9.7  mA 
+ITX,0dBM TX only run current, PRF = 0 dBm  3.7  mA 
+ITX,MINUS4dBM TX only run current, PRF = -4 dBm  2.8  mA 
+ITX,MINUS8dBM TX only run current, PRF = -8 dBm  2.2  mA 
+ITX,MINUS12dBM TX only run current PRF = -12 dBm  1.9  mA 
+ITX,MINUS16dBM TX only run current PRF = -16 dBm  1.7  mA 
+ITX,MINUS40dBM TX only run current PRF = -40 dBm  1.2  mA 
+5.2.3. Radio current consumption (Receiver)
+Symbol Description Min. Typ. Max. Units 
+IRX,1M RX only run current, 1 Mbps/1 Mbps Bluetooth LE mode  2.1  mA 
+IRX,2M RX only run current, 2 Mbps/2 Mbps Bluetooth LE mode  2.1  mA 
+ISTART,RX,1M RX start-up current, 1 Mbps/1 Mbps Bluetooth LE mode  1.6  mA 
+5.2.4. Transmitter specification
+Symbol Description Min. Typ. Max. Units 
+PRF,QFN Maximum output power for QFN package  7  dBm 
+PRF,CSP Maximum output power for CSP package  8  dBm 
+PRFCR RF power accuracy -2  2 dB 
+PRF1,BLE1M,2MHz Adjacent Channel Transmit Power 2 MHz  
+(1 Mbps Bluetooth LE mode) 
+ -48  dBc 
+PRF1,BLE1M,3MHz Adjacent Channel Transmit Power 3 MHz  
+(1 Mbps Bluetooth LE mode) 
+ -54  dBc 
+PRF1,BLE2M,4MHz Adjacent Channel Transmit Power 4 MHz  
+(2 Mbps Bluetooth LE mode) 
+ -51  dBc 
+PRF1,BLE2M,6MHz Adjacent Channel Transmit Power 6 MHz  
+(2 Mbps Bluetooth LE mode) 
+ -56  dBc 
+Evm Error vector magnitude in IEEE 802.15.4 mode  2  %rms 
+Pharm2nd, IEEE 802.15.4 2nd harmonics in IEEE 802.15.4 mode  -63  dBm 
+Pharm3rd, IEEE 802.15.4 3rd harmonics in IEEE 802.15.4 mode  -68  dBm 
+
+
+PAGE 26
+ 
+ 
+26 
+5.2.5. Receiver operation
+Symbol Description Min. Typ. Max. Units 
+PRX,MAX Maximum received signal strength at < 0.1% PER  0  dBm 
+PSENS,IT,1M Sensitivity, 1 Mbps nRF mode ideal transmitter 4  -93  dBm 
+PSENS,IT,2M Sensitivity, 2 Mbps nRF mode ideal transmitter 4  -90  dBm 
+PSENS,IT,4M Sensitivity, 4 Mbps nRF mode ideal transmitter 4  -90  dBm 
+PSENS,IT,SP,1M,BLE Sensitivity, 1 Mbps Bluetooth LE ideal transmitter,  
+packet length ≤ 37 bytes BER = 1E-35 
+ -966  dBm 
+PSENS,IT,LP,IM,BLE Sensitivity, 1 Mbps Bluetooth LE ideal transmitter,  
+packet length ≥ 128 bytes BER = 1E-4 
+ -95  dBm 
+PSENS,IT,SP,2M,BLE Sensitivity, 2 Mbps Bluetooth LE ideal transmitter, 
+packet length ≤ 37 bytes 
+ -94  dBm 
+PSENS,IT,BLE LE125k Sensitivity, 125 kbps Bluetooth LE mode  -104  dBm 
+PSENS,IT,BLE LE500k Sensitivity, 500 kbps Bluetooth LE mode  -99  dBm 
+PSENS,IEEE 802.15.4 Sensitivity in IEEE 802.15.4 mode  -102  dBm 
+4  Typical sensitivity applies when RXADDRESS.ADDRO is used for receiver address. When  RXADDRESS.ADDR[1 ... 7]  
+are used for receiver address, the typical sensitivity for this mode is degraded by 3 dB.  
+5  As defined in the Bluetooth Core Specification v4.0 Volume 6: Core System Package (Low Energy Controller Volume).  
+6  QFN package sensitivity is degraded by approximately 1 dB compared to the provided value.
+
+
+PAGE 27
+ 
+ 
+27 
+5.2.6. RX selectivity
+Symbol Description Min. Typ. Max. Units 
+C/I1M,co-channel 1 Mbps mode, co-channel interference  9  dB 
+C/I1M,-1MHz 1 Mbps mode, Adjacent (-1 MHz) interference  -4  dB 
+C/I1M,+1MHz 1 Mbps mode, Adjacent (+1 MHz) interference  -9  dB 
+C/I1M,-2MHz 1 Mbps mode, Adjacent (-2 MHz) interference  -28  dB 
+C/I1M,+2MHz 1 Mbps mode, Adjacent (+2 MHz) interference  -40  dB 
+C/I1M,-3MHz 1 Mbps mode, Adjacent (-3 MHz) interference  -39  dB 
+C/I1M,+3MHz 1 Mbps mode, Adjacent (+3 MHz) interference  -43  dB 
+C/I1M,±6MHz 1 Mbps mode, Adjacent (≥6 MHz) interference  -48  dB 
+C/I1MBLE,co-channel 1 Mbps Bluetooth LE mode, co-channel interference  6  dB 
+C/I1MBLE,-1MHz 1 Mbps Bluetooth LE mode, Adjacent (-1 MHz) interference  -2  dB 
+C/I1MBLE,+1MHz 1 Mbps Bluetooth LE mode, Adjacent (+1 MHz) interference  -6  dB 
+C/I1MBLE,-2MHz 1 Mbps Bluetooth LE mode, Adjacent (-2 MHz) interference  -29  dB 
+C/I1MBLE,+2MHz 1 Mbps Bluetooth LE mode, Adjacent (+2 MHz) interference  -43  dB 
+C/I1MBLE,>3MHz 1 Mbps Bluetooth LE mode, Adjacent (≥3 MHz) interference  -46  dB 
+C/I1MBLE,image Image frequency interference  -29  dB 
+C/I1MBLE,image,1MHz Adjacent (1 MHz) interference to in-band image frequency  -39  dB 
+C/I2M,co-channel 2 Mbps mode, co-channel interference  10  dB 
+C/I2M,-2MHz 2 Mbps mode, Adjacent (-2 MHz) interference  -5  dB 
+C/I2M,+2MHz 2 Mbps mode, Adjacent (+2 MHz) interference  -9  dB 
+C/I2M,-4MHz 2 Mbps mode, Adjacent (-4 MHz) interference  -27  dB 
+C/I2M,+4MHz 2 Mbps mode, Adjacent (+4 MHz) interference  -42  dB 
+C/I2M,-6MHz 2 Mbps mode, Adjacent (-6 MHz) interference  -38  dB 
+C/I2M,+6MHz 2 Mbps mode, Adjacent (+6 MHz) interference  -45  dB 
+C/I2M,≥12MHz 2 Mbps mode, Adjacent (≥12 MHz) interference  -50  dB 
+C/I2MBLE,co-channel 2 Mbps Bluetooth LE mode, co-channel interference  6  dB 
+C/I2MBLE,-2MHz 2 Mbps Bluetooth LE mode, Adjacent (-2 MHz) interference  -2  dB 
+C/I2MBLE,+2MHz 2 Mbps Bluetooth LE mode, Adjacent (+2 MHz) interference  -6  dB 
+C/I2MBLE,-4MHz 2 Mbps Bluetooth LE mode, Adjacent (-4 MHz) interference  -29  dB 
+C/I2MBLE,+4MHz 2 Mbps Bluetooth LE mode, Adjacent (+4 MHz) interference  -44  dB 
+C/I2MBLE,≥6MHz 2 Mbps Bluetooth LE mode, Adjacent (≥6 MHz) interference  -46  dB 
+C/I4M,co-channel 4 Mbps mode, co-channel interference  6  dB 
+C/I4M,-4MHz 4 Mbps mode, Adjacent (-4 MHz) interference  -4  dB 
+C/I4M,+4MHz 4 Mbps mode, Adjacent (+4 MHz) interference  -11  dB 
+C/I4M,-8MHz 4 Mbps mode, Adjacent (-8 MHz) interference  -27  dB 
+C/I4M,+8MHz 4 Mbps mode, Adjacent (+8 MHz) interference  -46  dB 
+
+
+PAGE 28
+ 
+ 
+28 
+Symbol Description Min. Typ. Max. Units 
+C/I4M,-12MHz 4 Mbps mode, Adjacent (-12 MHz) interference  -40  dB 
+C/I4M,+12MHz 4 Mbps mode, Adjacent (+12 MHz) interference  -50  dB 
+C/I4M≥24MHz 4 Mbps mode, Adjacent (≥24 MHz) interference  -56  dB 
+C/I2MBLE,image Image frequency interference  -29  dB 
+C/I2MBLE,image,2MHz Adjacent (2 MHz) interference to in-band image frequency  -38  dB 
+C/I125k BLE LR,co-channel 125 kbps Bluetooth LE LR mode, co-channel interference  1  dB 
+C/I125k BLE LR,-1MHz 125 kbps Bluetooth LE LR mode, Adjacent (-1 MHz) 
+interference  -13  dB 
+C/I125k BLE LR,+1MHz 125 kbps Bluetooth LE LR mode, Adjacent (+1 MHz) 
+interference  -16  dB 
+C/I125k BLE LR,-2MHz 125 kbps Bluetooth LE LR mode, Adjacent (-2 MHz) 
+interference  -36  dB 
+C/I125k BLE LR,+2MHz 125 kbps Bluetooth LE LR mode, Adjacent (+2 MHz) 
+interference  -52  dB 
+C/I125k BLE LR,≥3MHz 125 kbps Bluetooth LE LR mode, Adjacent (≥3 MHz) 
+interference  -55  dB 
+C/I125k BLE LR,image Image frequency interference  -36  dB 
+C/IIEEE 802.15.4,-5MHz IEEE 802.15.4 mode, Adjacent (-5 MHz) rejection  -35  dB 
+C/IIEEE 802.15.4,+5MHz IEEE 802.15.4 mode, Adjacent (+5 MHz) rejection  -38  dB 
+C/IIEEE 802.15.4,±10MHz IEEE 802.15.4 mode, Alternate (±10 MHz) rejection  -50  dB 
+RX selectivity with equal modulation on interfering signal7
+ 
+7  Desired signal level at PIN = -67 dBm. One interferer is used, having equal modulation as the desired signal. The input  
+  power of the interferer where the sensitivity equals BER = 0.1% is presented.
+5.2.7. RX intermodulation
+Symbol Description Min. Typ. Max. Units 
+PIMD,5TH,1M,BLE IMD performance, Bluetooth LE 1 Mbps, 5th offset channel, 
+packet length ≤37 bytes  -19  dBm 
+PIMD,5TH,2M,BLE IMD performance, Bluetooth LE 2 Mbps, 5th offset channel, 
+packet length ≤37 bytes  -16  dBm 
+RX intermodulation:  Desired signal level at PIN = -64 dBm. Two interferers with equal input power are used. 
+The interferer closest in frequency is not modulated, the other interferer is modulated equal with the desired signal. 
+The input power of the interferers where the sensitivity equals BER = 1E-3 is presented.
+
+
+PAGE 29
+ 
+ 
+29 
+5.2.8. Radio timing parameters
+Symbol Description Min. Typ. Max. Units 
+tTXEN,BLE,1M Time between TXEN task and READY event after channel FREQUENCY 
+configured (1 Mbps Bluetooth LE and 150 µs TIFS)  140  µs 
+tTXEN,FAST,BLE,1M Time between TXEN task and READY event after channel FREQUENCY 
+configured (1 Mbps Bluetooth LE with fast ramp-up and 150 µs TIFS)  40  µs 
+tTXDIS,BLE,1M When in TX, delay between DISABLE task and DISABLED event for 
+MODE = Nrf_1Mbit and MODE = Ble_1Mbit  2  µs 
+tRXEN,BLE,1M Time between the RXEN task and READY event after channel 
+FREQUENCY configured (1 Mbps Bluetooth LE)  134  µs 
+tRXEN,FAST,BLE,1M Time between the RXEN task and READY event after channel 
+FREQUENCY configured (1 Mbps Bluetooth LE with fast ramp-up)  40  µs 
+tRXDIS,BLE,1M When in RX, delay between DISABLE task and DISABLED event for 
+MODE = Nrf_1Mbit and MODE = Ble_1Mbit  1  µs 
+tTXDIS,BLE,2M When in TX, delay between DISABLE task and DISABLED event for 
+MODE = Nrf_2Mbit and MODE = Ble_2Mbit  2  µs 
+tRXDIS,BLE,2M When in RX, delay between DISABLE task and DISABLED event for 
+MODE = Nrf_2Mbit and MODE = Ble_2Mbit  1  µs 
+tTXEN,IEEE802.15.4 Time between TXEN task and READY event after channel FREQUENCY 
+configured (IEEE 802.15.4 mode)  130  µs 
+tTXEN,FAST,IEEE802.15.4 Time between TXEN task and READY event after channel FREQUENCY 
+configured (IEEE 802.15.4 mode with fast ramp-up)  40  µs 
+tTXDIS,IEEE802.15.4 When in TX, delay between DISABLE task and DISABLED event (IEEE 
+802.15.4 mode)  18  µs 
+tRXEN,IEEE802.15.4 Time between the RXEN task and READY event after channel 
+FREQUENCY configured (IEEE 802.15.4 mode)  130  µs 
+tRXEN,FAST,IEEE802.15.4 Time between the RXEN task and READY event after channel 
+FREQUENCY configured (IEEE 802.15.4 mode with fast ramp-up)  40  µs 
+tRXDIS,IEEE802.15.4 When in RX, delay between DISABLE task and DISABLED event (IEEE 
+802.15.4 mode)  0.2  µs 
+tRX-to-TX turnaround, 
+IEEE802.15.4 Maximum RX-to-TX turnaround time in IEEE 802.15.4 mode  17  µs 
+5.2.9. RSSI specifications
+Symbol Description Min. Typ. Max. Units 
+RSSIACC RSSI accuracy in the range −90 to −30 dBm  ±2  dB 
+RSSIRESOLUTION RSSI resolution  1  dB 
+RSSIPERIOD RSSI sampling time from RSSISTART task  0.25  µs 
+RSSISETTLE RSSI settling time after signal level change  15 20 µs 
+
+
+PAGE 30
+ 
+ 
+30 
+5.3. GPIO electrical specification
+Symbol Description Min. Typ. Max. Units 
+VIH Input high voltage 0.7 × VDD  VDD V 
+VIL Input low voltage VSS  0.3 × VDD V 
+VOH,SD 
+Output high voltage, standard drive, 0.5 mA, VDD ≥ 
+1.7 V 
+VDD − 0.4  VDD V 
+VOH,HDH Output high voltage, high drive, 5 mA, VDD ≥ 2.7 V VDD − 0.4  VDD V 
+VOH,HDL Output high voltage, high drive, 3 mA, VDD ≥ 1.7 V VDD − 0.4  VDD V 
+VOL,SD 
+Output low voltage, standard drive, 0.5 mA, VDD ≥ 
+1.7 V 
+VSS  VSS + 0.4 V 
+IOL,SD 
+Current at VSS + 0.4 V, output set low, standard 
+drive, VDD ≥ 1.7 V 
+1 3 4 mA 
+IOL,HDL 
+Current at VSS + 0.4 V, output set low, high drive, 
+VDD ≥ 1.7 V 
+3   mA 
+IOL,ED 
+Current at VSS + 0.4 V, output set low, extra drive, 
+VDD ≥ 1.7 V 
+16   mA 
+IOH,SD 
+Current at VDD − 0.4 V, output set high, standard 
+drive, VDD ≥ 1.7 V 
+1 3 4 mA 
+IOH,HDL 
+Current at VDD − 0.4 V, output set high, high drive, 
+VDD ≥ 1.7 V 
+4   mA 
+IOH,ED 
+Current at VDD − 0.4 V, output set high, extra 
+drive, VDD ≥ 1.7 V 
+14   mA 
+IGPIO,TOTAL 
+Recommended maximum sustained current drawn 
+by all GPIOs 
+  15 mA 
+tHR,12pF 
+Rise/Fall time, high drive mode, 20–80%, 12 pF 
+load¹ 
+ 4  ns 
+tER,12pF 
+Rise/Fall time, extra drive mode, 20–80%, 12 pF 
+load¹ 
+ 0.9  ns 
+RPU Pull-up resistance 12 14 16 kΩ 
+RPD Pull-down resistance 12 14 18 kΩ 
+tOE,ED Output enable delay in extra drive mode   855 ns 
+CPAD Pad capacitance  1  pF 
+CPAD_NFC Pad capacitance on NFC pads  5  pF 
+
+
+PAGE 31
+ 
+ 
+31 
+5.4. Absolute maximum ratings
+ Parameter Min. Max. Unit 
+Supply voltage 
+VDD VDD supply voltage -0.3 3.9 V 
+VDDEXT VDD supply voltage under extended operating 
+temperature -0.3 3.7 V 
+I/O pin voltage 
+VI/O, VDD≤3.6 V IO voltage -0.3 VDD + 0.3 V 
+VI/O, VDD ˃ 3.6 V IO voltage -0.3 3.9 V 
+VI/O,EXT, VDDEXT ≤3.4 V IO voltage under extended operating temperature -0.3 VDD + 0.3 V 
+VI/O,EXT, VDDEXT ˃ 3.4 V IO voltage under extended operating temperature -0.3 3.7 V 
+Radio 
+RF input level   10 dBm 
+RRAM memory 
+Endurance  10,000  
+Write/ 
+rewrite 
+cycles 
+Retention at 85° C  10  y 
+Retention at 105° C  2  y 
+ Note Min. Max. Unit 
+Environmental QFN package types 
+Storage temperature  -40 +125 °C 
+Reflow soldering temperature Reflow cycle time is 30 seconds with 3 maximum 
+reflow cycles. 
+ 260 °C 
+Moisture Sensitivity Level (MSL)   2  
+ESD Human Body Model (HBM)   1 kV 
+ESD Charged Device Model (CDM)   500 V 
+Environmental CSP package types 
+Storage temperature Recommended storage condition is < 40° C and < 
+90% RH (relative humidity) -40 +125 °C 
+Reflow soldering temperature Reflow cycle time is 30 seconds with 3 maximum 
+reflow cycles. 
+ 260 °C 
+Moisture Sensitivity Level (MSL)   1  
+ESD Human Body Model (HBM)   3 kV 
+ESD Charged Device Model (CDM)   250 V 
+
+
+PAGE 32
+ 
+ 
+32 
+6. Block diagram
+Model : AN54LV-15 
+
+
+PAGE 33
+ 
+ 
+33 
+7. Antenna
+• Antenna Gain and Efficiency 
+ 
+AN54LV-15 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+PAGE 34
+ 
+ 
+34 
+8. Reference circuit
+Module is pre-programmed with Raytac’s testing code. Default is using “DC-DC 
+mode”. The Nordic NCS firmware is set to use external 32.768KHz so please 
+add it to make module work.
+REMARK:
+** DECD decoupling capacitor (2.2μF) is already built inside the module. **  
+**When enabling the DC/DC regulator, please make sure the end device PCBA built     
+with inductor (L1) and connected to the DCC pin. In case L1 inductor is not mounted 
+on board and not detected, the power operation remains in LDO mode.** 
+** When NOT using NFC, please remove NFC1 / C19 / C20. **
+** When using internal 32.768KHz RC oscillator, please remove X2 / C12 / C13. **
+
+
+PAGE 35
+ 
+ 
+35 
+9. Certification
+9.1. Declaration ID for Bluetooth
+BT 6.0
+Declaration ID QDID(s) and Included DN(s) Company Specification Name 
+Q373526 
+Q360916 – Controller Subsystem 
+Q361608 – Host Subsystem 
+Raytac Corporation 6.0 
+Profile Description Service Description 
+Alert Notification Profile Alert Notification Service 
+Blood Pressure Profile 
+Blood Pressure Service 
+Device Information Service 
+Cycling Speed & Cadence Profile 
+Cycling Speed & Cadence Service 
+Device Information Service 
+Glucose Profile 
+Glucose Service 
+Device Information Service 
+Health Thermometer Profile 
+Health Thermometer Service 
+Device Information Service 
+Heart Rate Profile 
+Heart Rate Service 
+Device Information Service 
+HID over GATT Profile 
+HID Service 
+Battery Service 
+Proximity Profile 
+Link Loss Service 
+Immediate Alert Service 
+TX Power Service 
+Running Speed & Cadence Profile 
+Running Speed & Cadence Service 
+Device Information Service 
+Time Profile Time Profile Service 
+Glucose Profile (Central)  
+Mesh Profile 
+Mesh Provisioning Service 
+Mesh Proxy Service 
+
+
+PAGE 36
+ 
+ 
+36 
+9.2. FCC Certificate (USA)
+2.4GHz wireless module
+
+
+PAGE 37
+ 
+ 
+37 
+SAR report
+
+
+PAGE 38
+ 
+ 
+38 
+
+
+PAGE 39
+ 
+ 
+39 
+9.3. TELEC Certificate (Japan)
+1 Mbps & 2 Mbps
+
+
+PAGE 40
+ 
+ 
+40 
+9.4. NCC Certificate (Taiwan) 
+1 Mbps & 2 Mbps
+AN54LV
+
+
+PAGE 41
+ 
+ 
+41 
+AN54LV-P
+
+
+PAGE 42
+ 
+ 
+42 
+AN54LV-U
+
+
+PAGE 43
+ 
+ 
+43 
+AN54LV-K
+
+
+PAGE 44
+ 
+ 
+44 
+9.5. CE Test Report (EU)
+1 Mbps & 2 Mbps
+
+
+PAGE 45
+ 
+ 
+45 
+
+
+PAGE 46
+ 
+ 
+46 
+
+
+PAGE 47
+ 
+ 
+47 
+
+
+PAGE 48
+ 
+ 
+48 
+
+
+PAGE 49
+ 
+ 
+49 
+RCM SDoc
+
+
+PAGE 50
+ 
+ 
+50 
+
+
+PAGE 51
+ 
+ 
+51 
+RSM SDoc
+
+
+PAGE 52
+ 
+ 
+52 
+9.6. IC Certificate (Canada)
+2.4GHz wireless module
+
+
+PAGE 53
+ 
+ 
+53 
+9.7. SRRC Certificate (China)
+
+
+PAGE 54
+ 
+ 
+54 
+
+
+PAGE 55
+ 
+ 
+55 
+9.8. KC Certificate (South Korea)
+2.4GHz wireless module
+
+
+PAGE 56
+ 
+ 
+56 
+9.9. WPC Certificate (India)
+
+
+PAGE 57
+ 
+ 
+57 
+
+
+PAGE 58
+ 
+ 
+58 
+9.10. EU and UKCA Declarations of Conformity
+The product complies with the applicable requirements of both the European Union and 
+United Kingdom regulations, including the essential requirements of the following directives:
+• Radio Equipment Directive: 2014/53/EU
+• RoHS Directive: 2011/65/EU Annex II and its amendment Directive (EU) 2015/863
+Conformity is demonstrated with reference to the following harmonized standards, based on 
+test reports issued by SGS Taiwan Ltd.:
+• EN 300 328 V2.2.2:2019
+• EN 301 489-1 V2.2.3 : 2019-11
+• EN 301 489-17 V3.3.1 : 2024-09
+• EN 55032 : 2015+A11:2020
+• EN 61000-4-2 : 2009
+• EN IEC 61000-4-3 : 2020
+• EN 61000-4-4 : 2012
+• EN 61000-4-6 : 2014+AC:2015
+• IEC 62368-1 : 2018 and BS EN IEC 62368-1 : 2020+A11:2020
+RoHS compliance reports were issued by TÜV Rheinland Hong Kong Ltd., covering 
+Directive 2011/65/EU and its amendment Directive (EU) 2015/863.
+9.11. RoHS & REACH report
+Please visit “Support” page of our website to download.
+9.12. End-product label
+It is suggested using following content adding to package or user manual or label to obey the 
+regulation. Any rules of end-product label shall refer to each regulation for final reference.
+
+
+PAGE 59
+ 
+ 
+59 
+9.12.1. FCC (USA)
+The FCC statement should be included in the user manual when there is no enough space 
+on label. Otherwise, it should be included on the label.
+“This device complies with part 15 of the FCC rules. Operation is subject to the following two 
+conditions. (1) This device may not cause harmful interference. (2) This device must accept 
+any interference received, including interference that may cause undesired operation.”
+The final end product must be labeled in a visible area with the following: “Contain FCC ID: 
+SH6AN54LV”.
+9.12.2. TELEC (Japan)
+When manufacturer is placing the product on the Japanese market, the product must be 
+affixed with the following Specified Radio Equipment marking:
+9.12.3. NCC (Taiwan)
+根據 NCC LP0002 低功率射頻器材技術規範_章節 3.8.2：  
+• 取得審驗證明之低功率射頻器材，非經核准，公司、商號或使用者均不得擅自變更模組
+之頻率、加大功率或更改原設計之特性與功能。
+• 低功率射頻器材之使用不得影響飛航安全及干擾合法通信；經發現有干擾現象時，應立
+即停用，並改善至無干擾時方得繼續使用。
+• 低功率射頻器材須忍受合法通信或工業、科學及醫療用電波輻射性電機設備之干擾。
+前述合法通信，係指依《電信管理法》規定作業之無線電通信。
+此模組於取得認證後, 將依規定於模組本體標示審驗合格標籤，並要求平台廠商於平台上標
+示。
+請依下列標籤式樣自製標籤，標貼或印鑄於器材本體明顯處，始得販賣或公開陳列。
+
+
+PAGE 60
+ 
+ 
+60 
+Series 標籤樣式 
+AN54LV Series  
+AN54LV-P Series  
+AN54LV-U Series  
+AN54LV-K Series  
+以 AN54LV-15 為例，平台廠商必須於平台上標示字樣「本產品內含射頻模組：ID 編號
+CCAM25Y10270T0」。
+「平台」定義如下：若器材組裝本案模組，消費者仍能正常使用該器材主要功能，該器材得視 
+為平台。若器材不組裝本案模組，消費者不能正常使用該器材主要功能，該器材不能視為平
+台。
+該類不同廠牌型號器材組裝本案審驗模組後，須分別申請型式認證。
+9.12.4. IC (Canada)
+The IC statement should be included in the user manual when there is no enough space on 
+label. Otherwise, it should be included on the label.
+You are cautioned that changes or modifications not expressly approved by the party 
+responsible for compliance could void the user’s authority to operate the equipment. 
+This device contains licence-exempt transmitter(s)/receiver(s) that comply with Innovation, 
+Science and Economic Development Canada’s licence-exempt RSS(s). Operation is subject 
+to the following two conditions:
+1. This device may not cause interference, and 
+2. This device must accept any interference, including interference that may cause undesired 
+operation of the device.
+L’émetteur/récepteur exempt de licence contenu dans le présent appareil est conforme aux 
+CNR d’Innovation, Sciences et Développement économique Canada applicables aux 
+appareils radio exempts de licence. L’exploitation est autorisée aux deux conditions 
+
+
+PAGE 61
+ 
+ 
+61 
+suivantes :
+1. l'appareil ne doit pas produire de brouillage, et 
+2. l'utilisateur de l'appareil doit accepter tout brouillage radioelectrique subi, meme si le 
+brouillage est susceptible d'en compromettre le fonctionnement.
+The final end product must be labeled in a visible area with the following: “Contain IC ID: 
+8017A-AN54LV”.
+9.13. Compliance and Certification
+9.13.1. List of Applicable FCC Rules
+This module has been tested and found to comply with the following requirements for 
+Modular Approval.
+• 47 CFR Part 15 Subpart C Intentional Radiators.
+9.13.2. RF Exposure Considerations
+This module has been evaluated for portable RF exposure conditions and is compliant with 
+FCC RF exposure requirements when used in portable configurations. The module is 
+approved for use without a minimum separation distance from the user's body.
+Host product manufacturers integrating this module must ensure that their final host product 
+maintains the portable use conditions as tested and documented in the RF exposure 
+compliance reports referenced in the RF exposure exhibit.
+Configuration with multiple transmitters in the same host, routine evaluation or SAR testing 
+for the simultaneous transmission of the co-located transmitters according to KDB 447498 is 
+required. The potable host product shall be evaluated for ensuring to continue compliance 
+FCC rule part 2.1093 & part 1.1310 by C2PC. The additional guidance for the portable host 
+products is provided in KDB Publication 996369 D02 and D04.
+For the host product is not installed according to this guide, the module certification will be 
+invalid, and a new grant certification will be required for the host product.
+End-user documentation shall include the RF exposure information provided below.
+
+
+PAGE 62
+ 
+ 
+62 
+RF Exposure Statement:
+This equipment complies with FCC radiation exposure limits set forth for an uncontrolled 
+environment. This transmitter must not be co-located or operating in conjunction with any 
+other antenna or transmitter. The device has been evaluated for portable operation without 
+separation distance from the user and meets the FCC RF exposure requirements for such 
+use.
+9.13.3. Antennas
+This radio transmitter has been approved by Federal Communications Commission and 
+Innovation, Science and Economic Development Canada to operate with the antenna types 
+listed below, with the maximum permissible gain indicated. Antenna types not included in this 
+list that have a gain greater than the maximum gain indicated for any type listed are strictly 
+prohibited for use with this device.
+Cet émetteur radio a été approuvé par la Commission fédérale des communications et 
+Innovation, Sciences et Développement économique Canada pour fonctionner avec les 
+types d'antennes énumérés ci-dessous, avec le gain maximal autorisé indiqué. Les types 
+d'antennes non mentionnés dans cette liste dont le gain est supérieur au gain maximal 
+indiqué pour l'un des types énumérés sont strictement interdits avec cet appareil.
+On board antenna
+Antenna 
+Type Supplier Antenna 
+Part No.  
+Freq. 
+ (MHz) 
+Peak Antenna  
+Gain (dBi) 
+PIFA Raytac AN54LV 2400~2500 0.57 
+Dipole Raytac AN54LV-P 2400~2500 0.8 
+External antenna
+Antenna 
+Type Supplier Antenna 
+Part No.  
+Freq. 
+ (MHz) 
+Peak Antenna  
+Gain (dBi) 
+Dipole molex 2042811100 2400~2500 2 
+Dipole KYOCERA 1001932PT-AC10L0100 2400~2485 2.03 
+Dipole Raytac AN54LV-K 2400~2500 2.11 
+
+
+PAGE 63
+ 
+ 
+63 
+9.13.4. Information on Test Modes and Additional Testing 
+Requirements
+The module can be configured to continuously transmit on a specific frequency with a fixed 
+modulation pattern. This allows evaluation of radiated emissions and spurious emissions in a 
+controlled condition.
+These test modes are intended for compliance testing only and must not be enabled during 
+normal operation of the final product.
+For more detailed information, please contact the grantee for assistance with test modes 
+needed for module/host compliance test requirements.
+9.13.5. Additional Testing, Part 15 Subpart B Disclaimer
+The modular transmitter is only FCC authorized for the specific rule parts (i.e., FCC 
+transmitter rules) listed on the grant, and that the host product manufacturer is responsible 
+for compliance to any other FCC rules that apply to the host not covered by the modular 
+transmitter grant of certification.
+The final host product still requires Part 15 Subpart B compliance testing with the modular 
+transmitter installed.
+9.13.6. Note EMI Considerations
+Note that a host manufacture is recommended to use KDB996369 D04 Module Integration 
+Guide recommending as "best practice" RF design engineering testing and evaluation in 
+case non-linear interactions generate additional non-compliant limits due to module 
+placement to host components or properties.
+For standalone mode, reference the guidance in KDB996369 D04 Module Integration Guide 
+and for simultaneous mode; see KDB996369 D02 Module Q&A Question 12, which permits 
+the host manufacturer to confirm compliance.
+
+
+PAGE 64
+ 
+ 
+64 
+9.13.7. How to Make Changes
+You are cautioned that changes or modifications not expressly approved by the party 
+responsible for compliance could void the user’s authority to operate the equipment. 
+Only Grantees are permitted to make permissive changes, if the module will be used 
+differently than granted conditions, please contact us to ensure modifications will not affect 
+compliance. 
+
+
+PAGE 65
+ 
+ 
+65 
+10. Notes and Cautions
+To ensure proper integration and long-term reliability of this RF module, the following 
+regulatory and technical considerations must be observed:
+The OEM integrator must not provide instructions to the end user regarding how to install or 
+remove this RF module in the user manual of the final product that integrates this module. 
+The end user manual shall include all required regulatory information and warnings as 
+shown in the official user manual.
+This module is not designed for lifetime use. Like general electronic products, it may degrade 
+after continuous usage over the years. To ensure optimal performance and longevity, please 
+observe the following precautions:
+• Follow the guidelines of this document while designing circuit/end-product. Any 
+discrepancy of core Bluetooth technology and technical specification of IC should refer 
+to definition of Bluetooth Organization and Nordic Semiconductor as final reference.
+• Do not supply voltage that is not within range of specification.
+• Eliminate static electricity at any cost when working with the module as it may cause 
+damage. It is highly recommended adding anti-ESD components to circuit design to 
+prevent damage from real-life ESD events. Anti-ESD methods can be also applied in 
+mechanical design.
+• Do not expose modules under direct sunlight for long duration. Modules should be kept 
+away from humid and salty air conditions, and any corrosive gasses or substances. 
+Store it within -40℃ to +125℃ before and after installation.
+• Avoid any physical shock, intense stress to the module or its surface.
+• Do not wash the module. No-Clean Paste is used in production. Washing it will oxidize 
+the metal shield and have chemistry reaction with No-Clean Paste. Functions of the 
+module are not guaranteed if it has been washed.
+The module is not suitable for life support device or system and not allowed to be used in 
+destructive device or systems in any direct or indirect ways. The customer agrees to 
+indemnify Raytac for any losses when applying modules in applications such as the ones 
+described above.
+
+
+PAGE 66
+ 
+ 
+66 
+11. Useful links
+⚫ Nordic Infocenter: https://docs.nordicsemi.com/
+All the necessary technical files and software development kits of Nordic’s chip are on 
+this website.
+⚫ Nordic DevZone: https://devzone.nordicsemi.com/questions/ 
+A highly recommended website for firmware developer. Interact with other developers 
+and Nordic’s employees will help with your questions. The site also includes tutorials in 
+detail to help you get started.
+⚫ Official page of nRF54L15 : https://www.nordicsemi.com/Products/nRF54L15
+A brief introduction to nRF54L15 and download links for Nordic’s developing software 
+and SoftDevices.
+
+
+PAGE 67
+ 
+ 
+67 
+Full list of Raytac’s Wi-Fi modules
+⚫ AN7002Q series (QFN package IC) 
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM* Flash 
+Memory* 
+AN7002Q nRF7002 
+AN7002Q 1 Chip 
+Antenna N/A N/A 
+AN7002Q-P 1 PCB 
+Antenna N/A N/A 
+AN7002Q-U 1 u.FL 
+Connector N/A N/A 
+*RAM and Flash Memory depend on the AN7002Q series module’s host MCU. 
+ 
+⚫ AN7002Q + MDBT53 series
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM Flash 
+Memory 
+AN7002Q + 
+MDBT53 
+nRF7002 +  
+nRF5340 
+AN02C53C 1 Chip 
+Antenna 512 kB 1 MB 
+AN02P53P 1 PCB 
+Antenna 512 kB 1 MB 
+AN02U53U 1 u.FL 
+Connector 512 kB 1 MB 
+
+
+PAGE 68
+ 
+ 
+68 
+Full list of Raytac’s Bluetooth modules
+⚫ AN54LQ series (QFN package IC)
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM NVM 
+AN54LQ 
+nRF54L15 AN54LQ-15 1 
+Chip 
+Antenna 
+256 kB 1524 KB 
+nRF54L10 AN54LQ-10 1 192 kB 1012 KB 
+nRF54L05 AN54LQ-05 1 96 kB 500 KB 
+AN54LQ-P 
+nRF54L15 AN54LQ-P15 1 
+PCB 
+Antenna 
+256 kB 1524 KB 
+nRF54L10 AN54LQ-P10 1 192 kB 1012 KB 
+nRF54L05 AN54LQ-P05 1 96 kB 500 KB 
+AN54LQ-U 
+nRF54L15 AN54LQ-U15 1 
+u.FL 
+Connector 
+256 kB 1524 KB 
+nRF54L10 AN54LQ-U10 1 192 kB 1012 KB 
+nRF54L05 AN54LQ-U05 1 96 kB 500 KB 
+⚫ AN54LV series (WLCSP package IC)
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM NVM 
+AN54LV 
+nRF54L15 
+AN54LV-15 1 Chip 
+Antenna 
+256 kB 1524 KB 
+AN54LV-P AN54LV-P15 1 PCB 
+Antenna 
+AN54LV-U AN54LV-U15 1 u.FL 
+Connector 
+AN54LV-K AN54LV-K15 1 Pin 
+Antenna 
+
+
+PAGE 69
+ 
+ 
+69 
+⚫ MDBT53 series (WLCSP package IC)
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM Flash 
+Memory 
+MDBT53 nRF5340 MDBT53-1M 1 Chip 
+Antenna 512 kB 1 MB 
+MDBT53-P nRF5340 MDBT53-P1M 1 PCB 
+Antenna 512 kB 1 MB 
+MDBT53-U nRF5340 MDBT53-U1M 1 u.FL 
+Connector 512 kB 1 MB 
+⚫ MDBT53V series (WLCSP package IC)
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM Flash 
+Memory 
+MDBT53V nRF5340 MDBT53V-1M 1 Chip 
+Antenna 512 kB 1 MB 
+MDBT53V-P nRF5340 MDBT53V-P1M 1 PCB 
+Antenna 512 kB 1 MB 
+
+
+PAGE 70
+ 
+ 
+70 
+⚫ MDBT50 series (QFN package IC)
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM Flash 
+Memory 
+MDBT50 
+nRF52820 MDBT50-256R 1 Chip 
+Antenna 
+32 kB 256 kB 
+nRF52833 MDBT50-512K 1 128 kB 512 kB 
+MDBT50-P 
+nRF52820 MDBT50-P256R 1 PCB 
+Antenna 
+32 kB 256 kB 
+nRF52833 MDBT50-P512K 1 128 kB 512 kB 
+⚫ MDBT50Q series (aQFN package IC)
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM Flash 
+Memory 
+MDBT50Q 
+nRF52840 MDBT50Q-1MEN 3 
+Chip 
+Antenna 
+256 kB 1 MB 
+nRF52840 MDBT50Q-1MV2 2 
+nRF52833 MDBT50Q-512K 1 128 kB 512 kB 
+MDBT50Q-P 
+nRF52840 MDBT50Q-P1MEN 3 
+PCB 
+Antenna 
+256 kB 1 MB 
+nRF52840 MDBT50Q-P1MV2 2 
+nRF52833 MDBT50Q-P512K 1 128 kB 512 kB 
+MDBT50Q-U 
+nRF52840 MDBT50Q-U1MEN 3 
+u.FL 
+Connector 
+256 kB 1 MB 
+nRF52840 MDBT50Q-U1MV2 2 
+nRF52833 MDBT50Q-U512K 1 128 kB 512 kB 
+Dongle 
+nRF52840 
+MDBT50Q-RX 1, 2 
+PCB 
+Antenna 
+256 kB 1 MB 
+MDBT50Q-CX-40 1 
+nRF52833 MDBT50Q-CX-33 1 128 kB 512 kB 
+
+
+PAGE 71
+ 
+ 
+71 
+⚫ MDBT42T series (WLCSP package IC)
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM Flash 
+Memory 
+MDBT42T 
+nRF52805 
+MDBT42T-192K 
+1 
+Chip 
+Antenna 
+24 kB 192 kB 
+MDBT42T-P MDBT42T-P192K PCB 
+Antenna 
+⚫ MDBT42TV series (WLCSP package IC)
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM Flash 
+Memory 
+MDBT42TV 
+nRF52805 
+MDBT42TV-192K 
+1 
+Chip 
+Antenna 
+24 kB 192 kB 
+MDBT42TV-P MDBT42TV-P192K PCB 
+Antenna 
+⚫ MDBT42 series (WLCSP package IC)
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM Flash 
+Memory 
+MDBT42 
+nRF52832 
+MDBT42-512KV2 
+2 
+Chip 
+Antenna 64 kB 512 kB 
+MDBT42-P MDBT42-P512KV2 PCB 
+Antenna 
+⚫ MDBT42V series (WLCSP package IC)
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM Flash 
+Memory 
+MDBT42V 
+nRF52832 
+MDBT42V-512KV2 
+2 
+Chip 
+Antenna 
+64 kB 512 kB 
+MDBT42V-P MDBT42V-P512KV2 PCB 
+Antenna 
+
+
+PAGE 72
+ 
+ 
+72 
+⚫ MDBT42Q series (QFN package IC)
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM Flash 
+Memory 
+MDBT42Q 
+nRF52832 MDBT42Q-512KEN 3 
+Chip 
+Antenna 
+64 kB 512 kB 
+nRF52832 MDBT42Q-512KV2 2 
+nRF52810 MDBT42Q-192KV2 2 
+24 kB 192 kB 
+nRF52811 MDBT42Q-192KL 1 
+MDBT42Q-P 
+nRF52832 MDBT42Q-P512KEN 3 
+PCB 
+Antenna 
+64 kB 512 kB 
+nRF52832 MDBT42Q-P512KV2 2 
+nRF52810 MDBT42Q-P192KV2 2 
+24 kB 192 kB 
+nRF52811 MDBT42Q-P192KL 1 
+MDBT42Q-U 
+nRF52832 MDBT42Q-U512KEN 3 u.FL 
+Connector 64 kB 512 kB 
+nRF52832 MDBT42Q-U512KV2 2 
+⚫ MDBT40 series
+Series Nordic 
+Solution Raytac No. IC 
+Ver. Antenna RAM Flash 
+Memory 
+MDBT40 nRF51822 
+MDBT40-256V3 
+3 Chip 
+Antenna 
+16 kB 256 kB 
+MDBT40-256RV3 32 kB 256 kB 
+MDBT40-P nRF51822 
+MDBT40-P256V3 
+3 PCB 
+Antenna 
+16 kB 256 kB 
+MDBT40-P256RV3 32 kB 256 kB 
+
+
+PAGE 73
+ 
+ 
+73 
+Release Note
+⚫ 2026/02/25 Version 1.0: 1st Release.
+⚫ 2026/07/08 Version 1.1: 
+(1) Updated in Section 2.3. RF layout suggestion (AKA, antenna keep-out area) 
+(2) Updated in Section 4.2. Packaging info 
+(3) Added antenna test report in Section 7: Antenna.
+(4) Added Certificate in Section 9.9: WPC Certificate (India) 
+(5) Updated SGS test report references in Section 9.10: EU and UKCA Declarations of 
+Conformity.
+ 

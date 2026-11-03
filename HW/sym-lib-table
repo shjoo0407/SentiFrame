@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "SentiFrame") (type "KiCad") (uri "${KIPRJMOD}/libraries/SentiFrame.kicad_sym") (options "") (descr "Project-local component catalog")))

@@ -1,0 +1,1384 @@
+(kicad_sch (version 20250114) (generator "eeschema") (uuid 64ff32fa-9e2b-421a-8739-79c293fe895d) (paper "A3") (title_block (title "User interface and test") (date "2026-09-17") (rev "CATALOG-0.1") (comment 1 "UNWIRED - NOT FOR FABRICATION"))
+(lib_symbols
+(symbol "SentiFrame:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:D_Schottky"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Schottky"
+			(at 0 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "diode Schottky"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "D_Schottky_0_1"
+			(polyline
+				(pts
+					(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "D_Schottky_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:LED"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 0 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "LED diode"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LED_0_1"
+			(polyline
+				(pts
+					(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 0) (xy 1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 -1.27) (xy -1.27 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "LED_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "K"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:Motor_DC"
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "M"
+			(at 2.54 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Motor_DC"
+			(at 2.54 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 -2.286 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 -2.286 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "DC Motor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "DC Motor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "PinHeader*P2.54mm* TerminalBlock*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Motor_DC_0_0"
+			(polyline
+				(pts
+					(xy -1.27 -3.302) (xy -1.27 0.508) (xy 0 -2.032) (xy 1.27 0.508) (xy 1.27 -3.302)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Motor_DC_0_1"
+			(polyline
+				(pts
+					(xy 0 2.032) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.7272) (xy 0 2.0828)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 -1.524)
+				(radius 3.2512)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -4.7752) (xy 0 -5.1816)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -7.62) (xy 0 -7.112)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "Motor_DC_1_1"
+			(pin passive line
+				(at 0 5.08 270)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -7.62 90)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:Q_NMOS_GSD" (pin_names (offset 0.635)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 12.7 0) (effects (font (size 1.27 1.27))))
+(property "Value" "Q_NMOS_GSD" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+(symbol "Q_NMOS_GSD_0_1" (rectangle (start -15.24 7.62) (end 15.24 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "Q_NMOS_GSD_1_1"
+(pin input line (at -20.32 5.08 0) (length 5.08) (name "G" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0)))))
+(pin passive line (at -20.32 2.54 0) (length 5.08) (name "S" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0)))))
+(pin passive line (at 20.32 5.08 180) (length 5.08) (name "D" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0)))))
+))
+(symbol "SentiFrame:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:SW_Push"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "SW"
+			(at 1.27 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 0 -1.524 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "switch normally-open pushbutton push-button"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "SW_Push_0_1"
+			(circle
+				(center -2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 1.27) (xy 0 3.048)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 2.032 0)
+				(radius 0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 1.27) (xy -2.54 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:TestPoint"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.762)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "TP"
+			(at 0 6.858 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 5.08 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "test point tp"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Pin* Test*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TestPoint_0_1"
+			(circle
+				(center 0 3.302)
+				(radius 0.762)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "TestPoint_1_1"
+			(pin passive line
+				(at 0 0 90)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+(text "05 / User interface and test" (at 20 17 0) (effects (font (size 3 3)) (justify left)) (uuid ff73cfe8-a872-4efd-ac0a-34e6f1176853))
+(symbol (lib_id "SentiFrame:Q_NMOS_GSD") (at 59.69 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 12e14244-1c0e-4101-adff-8f4b40245ae7)
+(property "Reference" "Q1" (at 59.69 51.42000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Value" "DMN1019USN-7" (at 59.69 54.92000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:SC-59" (at 59.69 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMN1019USN.pdf" (at 59.69 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "DMN1019USN-7" (at 59.69 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "PACKAGE CHECKED" (at 59.69 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "SC59: 1=G, 2=S, 3=D; motor low-side candidate." (at 59.69 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/DMN1019USN.pdf" (at 59.69 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 09e80ffe-3dcf-4c60-8c7f-216635c31513))
+(pin "2" (uuid ff15f75c-f96c-45ed-87fa-259d73e1bc5e))
+(pin "3" (uuid 9aaa82f3-6303-4185-9301-051213c886f3))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "Q1") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:Motor_DC") (at 154.94 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid aae1d2d6-eb68-4a21-9e9a-8c3cb1a72793)
+(property "Reference" "M1" (at 154.94 51.540000000000006 0) (effects (font (size 1.1 1.1))))
+(property "Value" "ERM vibration motor / TBD" (at 154.94 55.040000000000006 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 154.94 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 154.94 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 154.94 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "SELECT MPN" (at 154.94 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Select rated voltage/current, startup current, dimensions and mounting." (at 154.94 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 154.94 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 9dad7eec-a44e-4223-baa6-36eace519166))
+(pin "2" (uuid 9d8b35eb-29c5-4033-8a3c-33ec0883a0cb))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "M1") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:D_Schottky") (at 245.11 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 9166f563-6b40-423c-b467-93017cd0524f)
+(property "Reference" "D4" (at 245.11 51.540000000000006 0) (effects (font (size 1.1 1.1))))
+(property "Value" "Motor flyback / TBD" (at 245.11 55.040000000000006 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 245.11 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 245.11 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 245.11 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "SELECT MPN" (at 245.11 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Choose current/voltage/leakage after motor selection." (at 245.11 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 245.11 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid ffbfcba4-8009-4a56-999c-80bec165f582))
+(pin "2" (uuid 17da69e4-9748-4249-a8a2-b19f317619df))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "D4") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:SW_Push") (at 330.2 66.04 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 7d443034-6636-43f1-a075-e07f97c886ba)
+(property "Reference" "SW1" (at 330.2 51.540000000000006 0) (effects (font (size 1.1 1.1))))
+(property "Value" "USER / SOS button / TBD" (at 330.2 55.040000000000006 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 330.2 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 330.2 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 330.2 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "SELECT MPN" (at 330.2 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Select mechanical side/top actuation, height, seal and footprint." (at 330.2 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 330.2 66.04 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 7a1d5b4f-6bd6-4b72-b973-53991a0163d5))
+(pin "2" (uuid c8b45f9f-d6aa-4592-b7df-ef56e10d9503))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "SW1") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:LED") (at 59.69 119.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 6c1155ed-3bee-449e-9a47-6e67409c43a6)
+(property "Reference" "D5" (at 59.69 104.88 0) (effects (font (size 1.1 1.1))))
+(property "Value" "Status LED / TBD" (at 59.69 108.38 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 59.69 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 59.69 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 59.69 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "SELECT MPN" (at 59.69 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Choose brightness at low pulse current and package." (at 59.69 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 59.69 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid c55cae70-b151-4556-9110-09a6915f2197))
+(pin "2" (uuid f80b4e3c-a87f-490b-87f4-e53ddc75fc82))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "D5") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 144.78 119.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 47c33d6f-d543-4c93-bc03-07d66961af1b)
+(property "Reference" "R18" (at 144.78 104.88 0) (effects (font (size 1.1 1.1))))
+(property "Value" "100R / gate" (at 144.78 108.38 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 144.78 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 144.78 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 144.78 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 144.78 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Candidate values; adjust for motor, LED and button topology." (at 144.78 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 144.78 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 850ca7a5-3ea3-4e3d-b3ca-0080476d1b24))
+(pin "2" (uuid 45654705-0972-4898-9235-ca3f937887c1))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "R18") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 204.47 119.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid c1038e02-beb5-4f5e-b681-34fae45963d8)
+(property "Reference" "R19" (at 204.47 104.88 0) (effects (font (size 1.1 1.1))))
+(property "Value" "100k / gate pull-down" (at 204.47 108.38 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 204.47 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 204.47 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 204.47 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 204.47 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Candidate values; adjust for motor, LED and button topology." (at 204.47 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 204.47 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 9a06eb1d-f5da-424a-a500-876509f61d73))
+(pin "2" (uuid 3707cdae-564c-4c9d-9bfb-7216b7cba4fe))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "R19") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 265.43 119.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 55f0bd1a-b119-46ac-b258-585c32fc178a)
+(property "Reference" "R20" (at 265.43 104.88 0) (effects (font (size 1.1 1.1))))
+(property "Value" "LED resistor / TBD" (at 265.43 108.38 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 265.43 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 265.43 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 265.43 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 265.43 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Candidate values; adjust for motor, LED and button topology." (at 265.43 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 265.43 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid b3b16e81-9dea-42c7-ac87-4c619a06d898))
+(pin "2" (uuid 8c58e902-0343-4250-b99d-7f4334d44648))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "R20") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 325.12 119.38 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid e4d448ed-3941-423f-987a-a38aa4a987c2)
+(property "Reference" "R21" (at 325.12 104.88 0) (effects (font (size 1.1 1.1))))
+(property "Value" "10k / button pull-up" (at 325.12 108.38 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 325.12 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 325.12 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 325.12 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 325.12 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Candidate values; adjust for motor, LED and button topology." (at 325.12 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 325.12 119.38 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 87b8030e-1f17-4ab5-a76d-caa0050bc41d))
+(pin "2" (uuid 504cc704-0193-453d-9567-9826a324e4a3))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "R21") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 59.69 165.1 0) (unit 1) (in_bom yes) (on_board yes) (dnp yes) (uuid 0e05f120-7162-4522-a5b3-e16d01f26d43)
+(property "Reference" "C20" (at 59.69 150.6 0) (effects (font (size 1.1 1.1))))
+(property "Value" "100nF / button filter" (at 59.69 154.1 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0402_1005Metric" (at 59.69 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 59.69 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 59.69 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 59.69 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Optional hardware debounce; may use firmware debounce." (at 59.69 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 59.69 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid bd145f0b-92f0-4f91-a128-69f2bd67b03e))
+(pin "2" (uuid 7a9ff770-245d-4d94-8b5b-431d33417e05))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "C20") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 119.38 165.1 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 4c7c3a1f-725b-48d6-bf3f-af864493ac4c)
+(property "Reference" "C21" (at 119.38 150.6 0) (effects (font (size 1.1 1.1))))
+(property "Value" "Motor bulk / TBD" (at 119.38 154.1 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 119.38 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 119.38 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 119.38 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "SELECT VALUE / PACKAGE" (at 119.38 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Choose from motor pulse droop and battery impedance." (at 119.38 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 119.38 165.1 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 2ed2bbe4-ab6d-453a-a1c8-965b78219107))
+(pin "2" (uuid 3fc3c677-b956-4a8a-866f-090238cdf62e))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "C21") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:TestPoint") (at 44.45 214.63 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 9c38819c-0cc7-48e4-9d19-0e0e6fa83452)
+(property "Reference" "TP6" (at 44.45 200.13 0) (effects (font (size 1.1 1.1))))
+(property "Value" "VBUS" (at 44.45 203.63 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 44.45 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 44.45 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 44.45 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 44.45 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Bring-up test access; not all pads must remain on production board." (at 44.45 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 44.45 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid b6e27758-b1aa-46a2-b070-d72951944bfb))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "TP6") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:TestPoint") (at 102.87 214.63 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid bdefc760-d327-4fca-9bff-a289cb8d1132)
+(property "Reference" "TP7" (at 102.87 200.13 0) (effects (font (size 1.1 1.1))))
+(property "Value" "SYS" (at 102.87 203.63 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 102.87 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 102.87 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 102.87 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 102.87 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Bring-up test access; not all pads must remain on production board." (at 102.87 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 102.87 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 0d988200-9dfa-4134-be25-c470aaae894e))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "TP7") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:TestPoint") (at 161.29 214.63 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 25795bcd-b897-4a09-ad20-e461c4b1ae1b)
+(property "Reference" "TP8" (at 161.29 200.13 0) (effects (font (size 1.1 1.1))))
+(property "Value" "VBAT" (at 161.29 203.63 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 161.29 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 161.29 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 161.29 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 161.29 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Bring-up test access; not all pads must remain on production board." (at 161.29 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 161.29 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid af6abc23-c3ec-4f0b-986e-d442b7538e84))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "TP8") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:TestPoint") (at 218.44 214.63 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid cd515e94-0264-4f6c-a0d0-7d475ed74f35)
+(property "Reference" "TP9" (at 218.44 200.13 0) (effects (font (size 1.1 1.1))))
+(property "Value" "VDD_MCU" (at 218.44 203.63 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 218.44 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 218.44 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 218.44 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 218.44 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Bring-up test access; not all pads must remain on production board." (at 218.44 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 218.44 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 2f614b8d-de07-431e-80b2-a3c8976e5e27))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "TP9") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:TestPoint") (at 276.86 214.63 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid c17d9c6d-ccf9-4cf1-87cd-f7c2404ae72f)
+(property "Reference" "TP10" (at 276.86 200.13 0) (effects (font (size 1.1 1.1))))
+(property "Value" "SDA" (at 276.86 203.63 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 276.86 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 276.86 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 276.86 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 276.86 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Bring-up test access; not all pads must remain on production board." (at 276.86 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 276.86 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 543b7c64-1ac8-4074-9058-502fc21b7a49))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "TP10") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:TestPoint") (at 335.28 214.63 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid d15166f7-175c-460c-a29e-2617cc3d27ea)
+(property "Reference" "TP11" (at 335.28 200.13 0) (effects (font (size 1.1 1.1))))
+(property "Value" "SCL" (at 335.28 203.63 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:TestPoint_Pad_D1.0mm" (at 335.28 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 335.28 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 335.28 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 335.28 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Bring-up test access; not all pads must remain on production board." (at 335.28 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 335.28 214.63 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 9b51569f-cbbd-47e2-980f-af958306ce64))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/64ff32fa-9e2b-421a-8739-79c293fe895d" (reference "TP11") (unit 1))))
+)
+(text "Battery, motor, button, LED and inter-board connectors await mechanical selection." (at 20 251.0 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid 0b7ee029-1dc0-43c1-9184-1df70a5552bc))
+(text "No invented manufacturer footprints are assigned to unresolved parts." (at 20 255.1 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid 2750e69c-a02f-4b41-b1f3-446cdec463f2))
+(text "Mechanical BOM also needs frame, PPG window/light seal, insulation and battery restraint." (at 20 259.2 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid 1d3497ca-636a-4f43-bc18-22e8890203f9))
+(text "No radio antenna, Wi-Fi module, LLM processor or Hailo is needed on the glasses." (at 20 263.3 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid 7bfb24ae-0836-424c-bf89-e4b18c676634))
+(embedded_fonts no))
