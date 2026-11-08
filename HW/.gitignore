@@ -1,0 +1,80 @@
+# 운영체제 및 편집기 로컬 파일
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+/.history/
+
+# KiCad 사용자 설정, 잠금 및 자동 백업
+*.kicad_prl
+~*.lck
+*.kicad_pcb.lck
+*.kicad_sch.lck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.sch-bak
+*.brd-bak
+*.bak
+*.bck
+*-backups/
+_autosave-*
+fp-info-cache
+/backups/
+/tmp/
+/en/freerouting.log
+
+# Python 가상환경 및 캐시
+.venv/
+.pi-venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.ipynb_checkpoints/
+.coverage
+.coverage.*
+htmlcov/
+
+# 로컬 환경 변수 (공유용 예제는 유지)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# 펌웨어 SDK, 툴체인 및 빌드 중간 결과
+/firmware/.deps/
+/firmware/build*/
+/firmware/cmake-build-*/
+/firmware/build*.log
+
+# 재다운로드 가능한 ML 원본과 재생성 가능한 입력 캐시
+# 출처 문서, SHA256SUMS, dataset_summary.json 및 평가 결과는 유지
+/ml/data/uci455/archives/
+/ml/data/uci455/raw/
+/ml/data/uci455/cache/
+
+# 발표자료 임시 렌더링 (같은 폴더의 .mjs와 assets/는 유지)
+/presentations/.build/with-demo/
+/presentations/.build/without-demo/
+node_modules/
+
+# KiCad 원본/라이브러리, manufacturing/, firmware/release/,
+# preview/ 검증 자료, ml/results/, presentations/output/는 추적 대상
+
+docs
+tools
+# 참고 자료 원본 — 저장소에는 링크만 남긴다 (assets/README.md)
+assets/datasheets/
+assets/upstream/
+assets/pcba-passives/*.pdf

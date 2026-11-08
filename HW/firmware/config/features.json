@@ -1,0 +1,5 @@
+{
+  "charging": false,
+  "imu": true,
+  "ppg": true
+}

@@ -1,0 +1,1509 @@
+(kicad_sch (version 20250114) (generator "eeschema") (uuid 7ca6a258-7bbc-466c-8d95-a6618f975396) (paper "A3") (title_block (title "USB-C data and protection") (date "2026-09-17") (rev "CATALOG-0.1") (comment 1 "UNWIRED - NOT FOR FABRICATION"))
+(lib_symbols
+(symbol "SentiFrame:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:CP2102N-A02-GQFN20" (pin_names (offset 0.635)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 20.32 0) (effects (font (size 1.27 1.27))))
+(property "Value" "CP2102N-A02-GQFN20" (at 0 17.78 0) (effects (font (size 1.27 1.27))))
+(symbol "CP2102N-A02-GQFN20_0_1" (rectangle (start -17.78 15.24) (end 17.78 -15.24) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "CP2102N-A02-GQFN20_1_1"
+(pin bidirectional line (at -22.86 12.7 0) (length 5.08) (name "GPIO.1" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0)))))
+(pin bidirectional line (at -22.86 10.16 0) (length 5.08) (name "GPIO.0" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at -22.86 7.62 0) (length 5.08) (name "GND" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0)))))
+(pin bidirectional line (at -22.86 5.08 0) (length 5.08) (name "D+" (effects (font (size 1.0 1.0)))) (number "4" (effects (font (size 1.0 1.0)))))
+(pin bidirectional line (at -22.86 2.540000000000001 0) (length 5.08) (name "D-" (effects (font (size 1.0 1.0)))) (number "5" (effects (font (size 1.0 1.0)))))
+(pin power_out line (at -22.86 0.0 0) (length 5.08) (name "VDD" (effects (font (size 1.0 1.0)))) (number "6" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at -22.86 -2.540000000000001 0) (length 5.08) (name "VREGIN" (effects (font (size 1.0 1.0)))) (number "7" (effects (font (size 1.0 1.0)))))
+(pin input line (at -22.86 -5.08 0) (length 5.08) (name "VBUS" (effects (font (size 1.0 1.0)))) (number "8" (effects (font (size 1.0 1.0)))))
+(pin input line (at -22.86 -7.619999999999999 0) (length 5.08) (name "~{RST}" (effects (font (size 1.0 1.0)))) (number "9" (effects (font (size 1.0 1.0)))))
+(pin no_connect line (at -22.86 -10.159999999999998 0) (length 5.08) (name "NC" (effects (font (size 1.0 1.0)))) (number "10" (effects (font (size 1.0 1.0)))))
+(pin output line (at -22.86 -12.700000000000001 0) (length 5.08) (name "~{SUSPEND}" (effects (font (size 1.0 1.0)))) (number "11" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at 22.86 12.7 180) (length 5.08) (name "GND" (effects (font (size 1.0 1.0)))) (number "12" (effects (font (size 1.0 1.0)))))
+(pin input line (at 22.86 10.16 180) (length 5.08) (name "WAKEUP" (effects (font (size 1.0 1.0)))) (number "13" (effects (font (size 1.0 1.0)))))
+(pin output line (at 22.86 7.62 180) (length 5.08) (name "SUSPEND" (effects (font (size 1.0 1.0)))) (number "14" (effects (font (size 1.0 1.0)))))
+(pin input line (at 22.86 5.08 180) (length 5.08) (name "~{CTS}" (effects (font (size 1.0 1.0)))) (number "15" (effects (font (size 1.0 1.0)))))
+(pin output line (at 22.86 2.540000000000001 180) (length 5.08) (name "~{RTS}" (effects (font (size 1.0 1.0)))) (number "16" (effects (font (size 1.0 1.0)))))
+(pin input line (at 22.86 0.0 180) (length 5.08) (name "RXD" (effects (font (size 1.0 1.0)))) (number "17" (effects (font (size 1.0 1.0)))))
+(pin output line (at 22.86 -2.540000000000001 180) (length 5.08) (name "TXD" (effects (font (size 1.0 1.0)))) (number "18" (effects (font (size 1.0 1.0)))))
+(pin bidirectional line (at 22.86 -5.08 180) (length 5.08) (name "GPIO.3" (effects (font (size 1.0 1.0)))) (number "19" (effects (font (size 1.0 1.0)))))
+(pin bidirectional line (at 22.86 -7.619999999999999 180) (length 5.08) (name "GPIO.2" (effects (font (size 1.0 1.0)))) (number "20" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at 22.86 -10.159999999999998 180) (length 5.08) (name "EP_GND" (effects (font (size 1.0 1.0)))) (number "21" (effects (font (size 1.0 1.0)))))
+))
+(symbol "SentiFrame:D_TVS"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_TVS"
+			(at 0 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Bidirectional transient-voltage-suppression diode"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "diode TVS thyrector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "D_TVS_0_1"
+			(polyline
+				(pts
+					(xy -2.54 1.27) (xy -2.54 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27) (xy -2.54 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy -0.508 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 0) (xy -1.27 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "D_TVS_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name "A1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name "A2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "SentiFrame:SN74LVC2G125DCUR" (pin_names (offset 0.635)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 12.7 0) (effects (font (size 1.27 1.27))))
+(property "Value" "SN74LVC2G125DCUR" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+(symbol "SN74LVC2G125DCUR_0_1" (rectangle (start -15.24 7.62) (end 15.24 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "SN74LVC2G125DCUR_1_1"
+(pin input line (at -20.32 5.08 0) (length 5.08) (name "~{1OE}" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0)))))
+(pin input line (at -20.32 2.54 0) (length 5.08) (name "1A" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0)))))
+(pin tri_state line (at -20.32 0.0 0) (length 5.08) (name "1Y" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at -20.32 -2.54 0) (length 5.08) (name "GND" (effects (font (size 1.0 1.0)))) (number "4" (effects (font (size 1.0 1.0)))))
+(pin input line (at 20.32 5.08 180) (length 5.08) (name "2A" (effects (font (size 1.0 1.0)))) (number "5" (effects (font (size 1.0 1.0)))))
+(pin tri_state line (at 20.32 2.54 180) (length 5.08) (name "2Y" (effects (font (size 1.0 1.0)))) (number "6" (effects (font (size 1.0 1.0)))))
+(pin input line (at 20.32 0.0 180) (length 5.08) (name "~{2OE}" (effects (font (size 1.0 1.0)))) (number "7" (effects (font (size 1.0 1.0)))))
+(pin power_in line (at 20.32 -2.54 180) (length 5.08) (name "VCC" (effects (font (size 1.0 1.0)))) (number "8" (effects (font (size 1.0 1.0)))))
+))
+(symbol "SentiFrame:TPD2EUSB30DRTR" (pin_names (offset 0.635)) (in_bom yes) (on_board yes)
+(property "Reference" "U" (at 0 12.7 0) (effects (font (size 1.27 1.27))))
+(property "Value" "TPD2EUSB30DRTR" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+(symbol "TPD2EUSB30DRTR_0_1" (rectangle (start -15.24 7.62) (end 15.24 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))
+(symbol "TPD2EUSB30DRTR_1_1"
+(pin passive line (at -20.32 5.08 0) (length 5.08) (name "D+" (effects (font (size 1.0 1.0)))) (number "1" (effects (font (size 1.0 1.0)))))
+(pin passive line (at -20.32 2.54 0) (length 5.08) (name "D-" (effects (font (size 1.0 1.0)))) (number "2" (effects (font (size 1.0 1.0)))))
+(pin passive line (at 20.32 5.08 180) (length 5.08) (name "GND" (effects (font (size 1.0 1.0)))) (number "3" (effects (font (size 1.0 1.0)))))
+))
+(symbol "SentiFrame:USB_C_Receptacle_USB2.0_16P"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 22.225 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB_C_Receptacle_USB2.0_16P"
+			(at 0 19.685 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 3.81 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
+			(at 3.81 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "usb universal serial bus type-C USB2.0"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "USB*C*Receptacle*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "USB_C_Receptacle_USB2.0_16P_0_0"
+			(rectangle
+				(start -0.254 -17.78)
+				(end 0.254 -16.764)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 10.16 15.494)
+				(end 9.144 14.986)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 10.16 10.414)
+				(end 9.144 9.906)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 10.16 7.874)
+				(end 9.144 7.366)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 10.16 2.794)
+				(end 9.144 2.286)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 10.16 0.254)
+				(end 9.144 -0.254)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 10.16 -2.286)
+				(end 9.144 -2.794)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 10.16 -4.826)
+				(end 9.144 -5.334)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 10.16 -12.446)
+				(end 9.144 -12.954)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start 10.16 -14.986)
+				(end 9.144 -15.494)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "USB_C_Receptacle_USB2.0_16P_0_1"
+			(rectangle
+				(start -10.16 17.78)
+				(end 10.16 -17.78)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -8.89 -3.81) (xy -8.89 3.81)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -7.62 -3.81)
+				(end -6.35 3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(arc
+				(start -7.62 3.81)
+				(mid -6.985 4.4423)
+				(end -6.35 3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -7.62 3.81)
+				(mid -6.985 4.4423)
+				(end -6.35 3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(arc
+				(start -8.89 3.81)
+				(mid -6.985 5.7067)
+				(end -5.08 3.81)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -5.08 -3.81)
+				(mid -6.985 -5.7067)
+				(end -8.89 -3.81)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -6.35 -3.81)
+				(mid -6.985 -4.4423)
+				(end -7.62 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -6.35 -3.81)
+				(mid -6.985 -4.4423)
+				(end -7.62 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy -5.08 3.81) (xy -5.08 -3.81)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center -2.54 1.143)
+				(radius 0.635)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 4.318) (xy 0 6.858) (xy 1.27 4.318) (xy -1.27 4.318)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -2.032) (xy 2.54 0.508) (xy 2.54 1.778)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -3.302) (xy -2.54 -0.762) (xy -2.54 0.508)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -5.842) (xy 0 4.318)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 0 -5.842)
+				(radius 1.27)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start 1.905 1.778)
+				(end 3.175 3.048)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+		)
+		(symbol "USB_C_Receptacle_USB2.0_16P_1_1"
+			(pin passive line
+				(at 0 -22.86 90)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 15.24 180)
+				(length 5.08)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 10.16 180)
+				(length 5.08)
+				(name "CC1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -2.54 180)
+				(length 5.08)
+				(name "D+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 2.54 180)
+				(length 5.08)
+				(name "D-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -12.7 180)
+				(length 5.08)
+				(name "SBU1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 15.24 180)
+				(length 5.08)
+				(hide yes)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -22.86 90)
+				(length 5.08)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "A12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -22.86 90)
+				(length 5.08)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 15.24 180)
+				(length 5.08)
+				(hide yes)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 7.62 180)
+				(length 5.08)
+				(name "CC2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -5.08 180)
+				(length 5.08)
+				(name "D+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 0 180)
+				(length 5.08)
+				(name "D-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 15.24 -15.24 180)
+				(length 5.08)
+				(name "SBU2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 15.24 180)
+				(length 5.08)
+				(hide yes)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -22.86 90)
+				(length 5.08)
+				(hide yes)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "B12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -7.62 -22.86 90)
+				(length 5.08)
+				(name "SHIELD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "SH"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)
+(text "03 / USB-C data and protection" (at 20 17 0) (effects (font (size 3 3)) (justify left)) (uuid e57cb50a-7c2e-4f43-947e-f06806d880c9))
+(symbol (lib_id "SentiFrame:USB_C_Receptacle_USB2.0_16P") (at 48.26 71.12 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 96fbd771-99d9-4b49-b41a-bd9ade5348bc)
+(property "Reference" "J1" (at 48.26 44.120000000000005 0) (effects (font (size 1.1 1.1))))
+(property "Value" "USB4105-GF-A" (at 48.26 47.620000000000005 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal" (at 48.26 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://gct.co/files/drawings/usb4105.pdf" (at 48.26 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "USB4105-GF-A" (at 48.26 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "PACKAGE CHECKED" (at 48.26 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "USB2 receptacle. Shell has duplicated mechanical pads." (at 48.26 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/USB4105.pdf" (at 48.26 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "A1" (uuid 117322be-1fcf-4b6b-8873-d28e088f9e0f))
+(pin "A4" (uuid e6a7aae3-c14d-4938-94bb-934dded78097))
+(pin "A5" (uuid c094b23a-752c-488e-b060-1903c84ab8c3))
+(pin "A6" (uuid 1dfc69c7-33cf-4c29-95b6-38022f1e460d))
+(pin "A7" (uuid 1723b09a-f9c8-4778-a438-770a763b2827))
+(pin "A8" (uuid 0de05bc2-d604-4eeb-9d96-bd0dea791a77))
+(pin "A9" (uuid a3057d93-da68-46bb-be30-bcb7ef76f30a))
+(pin "A12" (uuid f514fb25-57a6-4e79-9752-bbd6cefceede))
+(pin "B1" (uuid 6f2b8f75-6f80-4b4f-869b-aa9a1d031067))
+(pin "B4" (uuid d48a8dae-ebfb-43e1-8b73-0c8ef9d216de))
+(pin "B5" (uuid 3f1c8279-8ddc-475b-9020-e6fe2d6fdfe1))
+(pin "B6" (uuid 97bd6aef-e50c-4ce2-8260-810cac54133c))
+(pin "B7" (uuid ad7790e6-bece-49b3-8419-462a1358c5a2))
+(pin "B8" (uuid 7e1a356a-9b36-407a-82cc-3b067ab5f208))
+(pin "B9" (uuid 92cc550f-9d52-4924-a085-a2efb399729e))
+(pin "B12" (uuid 8ba172ef-1218-493e-a31f-0b173827c9c8))
+(pin "SH" (uuid 0b7e19f3-a390-4bba-bb8e-b12c9aeaa99b))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "J1") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:CP2102N-A02-GQFN20") (at 144.78 71.12 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 774c1166-5276-47eb-af47-58b922ea7ab6)
+(property "Reference" "U4" (at 144.78 48.88 0) (effects (font (size 1.1 1.1))))
+(property "Value" "CP2102N-A02-GQFN20" (at 144.78 52.38 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:SiliconLabs_QFN-20-1EP_3x3mm_P0.5mm_EP1.8x1.8mm" (at 144.78 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" (at 144.78 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "CP2102N-A02-GQFN20" (at 144.78 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "PINOUT CHECKED" (at 144.78 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "No VIO on QFN20. USB-powered bridge; UART translation/isolation must be designed." (at 144.78 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/CP2102N.pdf" (at 144.78 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 262354e8-531f-48cd-b41b-c40ddcd1e566))
+(pin "2" (uuid dce1aa48-e11c-41a9-b2a7-19b7106858e0))
+(pin "3" (uuid 7a28f767-59dc-4a39-a33c-4626bbed694c))
+(pin "4" (uuid 8d286c1a-d203-419a-9d38-de3ffdf5aea2))
+(pin "5" (uuid c65f8ea1-4a26-40e6-9cdc-9c3c5194b593))
+(pin "6" (uuid 036f6ab7-1ba1-44d7-84ee-b3a0de7736cc))
+(pin "7" (uuid be7d8076-466d-48a9-9ce6-97f96b4403db))
+(pin "8" (uuid 88623429-c4dc-4908-9f73-8b3f223c9ea2))
+(pin "9" (uuid b74ae6ba-cd20-4e6e-9298-6e00fefbf4b9))
+(pin "10" (uuid 88737cda-c743-4684-af69-c811b243d04e))
+(pin "11" (uuid 6b75d38f-3213-4852-9c1f-8bbac5b2e8a0))
+(pin "12" (uuid 0788074c-fea5-4ed6-9290-1cbcc9b80532))
+(pin "13" (uuid 44427984-9785-4fde-87c2-fd994059305d))
+(pin "14" (uuid 530363a2-2544-4b1e-9d90-07d8beab9f19))
+(pin "15" (uuid bcde6d62-095f-402b-b9fd-ad41f99366b7))
+(pin "16" (uuid 3e037465-88de-47dd-95c5-4d9c102b1b5c))
+(pin "17" (uuid b7e76647-53bc-4fdb-9d6c-3dc935c0d526))
+(pin "18" (uuid 2df75165-c408-48a2-9bdd-6342f25c1cbb))
+(pin "19" (uuid 605fd402-555e-4349-ada8-36181834a559))
+(pin "20" (uuid 74bd0260-a17a-43b8-a0d6-dae0937c5a9f))
+(pin "21" (uuid 4b4b7615-6aad-4a37-ad42-5b727b96b1a6))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "U4") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:SN74LVC2G125DCUR") (at 245.11 71.12 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ae189595-bd38-4a43-90ff-ba575132824e)
+(property "Reference" "U5" (at 245.11 56.50000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Value" "SN74LVC2G125DCUR" (at 245.11 60.00000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:VSSOP-8_2.3x2mm_P0.5mm" (at 245.11 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc2g125.pdf" (at 245.11 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "SN74LVC2G125DCUR" (at 245.11 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CONDITIONAL" (at 245.11 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Ioff buffer candidate; one rail cannot translate both UART directions. Final topology TBD." (at 245.11 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/SN74LVC2G125.pdf" (at 245.11 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid f5b82d79-3bf5-489c-92c0-ee68aad6cb85))
+(pin "2" (uuid 021b8a9e-1052-473d-b314-00f383b88dd3))
+(pin "3" (uuid 06e7299c-dcbb-451f-b234-9c8b39477e80))
+(pin "4" (uuid 22745288-d619-42e1-8c5d-789cda8eb855))
+(pin "5" (uuid b132ccb5-6ee2-4189-984a-16c24664b551))
+(pin "6" (uuid fa67e7af-c960-4bcf-b1f6-65c14b3b885e))
+(pin "7" (uuid cc06e56e-2c2f-4109-98f0-175d7e121b6d))
+(pin "8" (uuid 237ddff4-e5f0-4f92-bb43-7021194c8656))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "U5") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:TPD2EUSB30DRTR") (at 330.2 71.12 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid c36b16d3-44d0-455a-91ff-3f5b8a3dee36)
+(property "Reference" "U6" (at 330.2 56.50000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Value" "TPD2EUSB30DRTR" (at 330.2 60.00000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:Texas_DRT-3" (at 330.2 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf" (at 330.2 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "TPD2EUSB30DRTR" (at 330.2 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "PINOUT CHECKED" (at 330.2 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "For D+/D- only; choose separate VBUS/CC protection." (at 330.2 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/TPD2EUSB30.pdf" (at 330.2 71.12 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid a9111431-b661-47c4-8bf1-7a810f70d762))
+(pin "2" (uuid 5d482f99-b2a1-460a-9ca5-e893c7f7dec4))
+(pin "3" (uuid 45ad03c8-87e3-420c-a035-4345fd3cd640))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "U6") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 39.37 132.08 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 0712dd82-953f-4544-bd7b-b76b90d1203c)
+(property "Reference" "R6" (at 39.37 117.58000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Value" "5.1k 1% / CC1" (at 39.37 121.08000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 39.37 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://gct.co/files/drawings/usb4105.pdf" (at 39.37 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 39.37 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 39.37 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Separate Rd for CC1 and CC2. Bridge VBUS divider per AN004; remaining values need rail design." (at 39.37 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/USB4105.pdf" (at 39.37 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 87bbfdf2-c79f-4996-87d5-67d86b5ff21c))
+(pin "2" (uuid 2ac07c26-657c-4d66-ae44-15f634a63d8c))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "R6") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 97.79 132.08 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5b9606f2-f2c0-41c7-b3d8-eb9f14aeb2f4)
+(property "Reference" "R7" (at 97.79 117.58000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Value" "5.1k 1% / CC2" (at 97.79 121.08000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 97.79 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://gct.co/files/drawings/usb4105.pdf" (at 97.79 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 97.79 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 97.79 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Separate Rd for CC1 and CC2. Bridge VBUS divider per AN004; remaining values need rail design." (at 97.79 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/USB4105.pdf" (at 97.79 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 4b71c327-c5da-4c20-8e47-27c4df18f101))
+(pin "2" (uuid dfc1c0ad-cf8b-481a-af3d-64e6dfe6308a))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "R7") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 156.21 132.08 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ac9211e6-77a1-41fc-8edf-b39446185e1e)
+(property "Reference" "R8" (at 156.21 117.58000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Value" "10k / RST pull-up" (at 156.21 121.08000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 156.21 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" (at 156.21 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 156.21 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 156.21 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Separate Rd for CC1 and CC2. Bridge VBUS divider per AN004; remaining values need rail design." (at 156.21 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/CP2102N.pdf" (at 156.21 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid ac6af92c-046e-4a99-8da8-c43ea95ae89e))
+(pin "2" (uuid e8cd4299-7a2f-4054-a70e-2cab0d212e8c))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "R8") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 214.63 132.08 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid b2a88260-9b90-470d-8e52-d4f48fa2f114)
+(property "Reference" "R9" (at 214.63 117.58000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Value" "VBUS sense / TBD" (at 214.63 121.08000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 214.63 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" (at 214.63 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 214.63 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 214.63 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Separate Rd for CC1 and CC2. Bridge VBUS divider per AN004; remaining values need rail design." (at 214.63 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/CP2102N.pdf" (at 214.63 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 8777782d-e4b2-4e16-b928-3700d2ca0c19))
+(pin "2" (uuid c53e86d5-1c5a-407e-aac1-45f86ecb5835))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "R9") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 271.78 132.08 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ab311c9b-7045-4951-b1f2-6d74a8cb69e8)
+(property "Reference" "R10" (at 271.78 117.58000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Value" "VBUS sense / TBD" (at 271.78 121.08000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 271.78 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" (at 271.78 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 271.78 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 271.78 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Separate Rd for CC1 and CC2. Bridge VBUS divider per AN004; remaining values need rail design." (at 271.78 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/CP2102N.pdf" (at 271.78 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 7c242cef-cc07-4899-9041-852a4933b321))
+(pin "2" (uuid b565dfed-f792-4ae4-b45d-814459e4e8ca))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "R10") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:R") (at 330.2 132.08 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 580d8a81-f317-494e-8611-92afd8a4fe8f)
+(property "Reference" "R11" (at 330.2 117.58000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Value" "OE bias / TBD" (at 330.2 121.08000000000001 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:R_0402_1005Metric" (at 330.2 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" (at 330.2 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 330.2 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 330.2 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Separate Rd for CC1 and CC2. Bridge VBUS divider per AN004; remaining values need rail design." (at 330.2 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/CP2102N.pdf" (at 330.2 132.08 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 20e644a4-e236-4539-8cd3-6adf8fdbe95f))
+(pin "2" (uuid 5169a190-b76c-484d-adbc-a6bc25cbc485))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "R11") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 39.37 176.53 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 62054786-6cb3-47d2-928a-d4ba92cedfef)
+(property "Reference" "C10" (at 39.37 162.03 0) (effects (font (size 1.1 1.1))))
+(property "Value" "4.7uF / VREGIN" (at 39.37 165.53 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0603_1608Metric" (at 39.37 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" (at 39.37 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 39.37 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 39.37 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Reference decoupling; check effective capacitance." (at 39.37 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/CP2102N.pdf" (at 39.37 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 11995878-3a09-4893-a2b0-3bbac227b051))
+(pin "2" (uuid dbed10cf-d25b-4d8e-aa09-89023f9abd66))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "C10") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 97.79 176.53 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ca76275f-1f9a-4add-862c-15c4588e80fe)
+(property "Reference" "C11" (at 97.79 162.03 0) (effects (font (size 1.1 1.1))))
+(property "Value" "100nF / VREGIN" (at 97.79 165.53 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0402_1005Metric" (at 97.79 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" (at 97.79 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 97.79 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 97.79 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Reference decoupling; check effective capacitance." (at 97.79 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/CP2102N.pdf" (at 97.79 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 8d570ec3-a0ca-48ab-9a94-46f5f66d2842))
+(pin "2" (uuid a8a49a05-37e2-40de-b064-25e81c51aa5a))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "C11") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 156.21 176.53 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid ea14be04-8fc3-4187-978f-03977da94e8e)
+(property "Reference" "C12" (at 156.21 162.03 0) (effects (font (size 1.1 1.1))))
+(property "Value" "4.7uF / VDD" (at 156.21 165.53 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0603_1608Metric" (at 156.21 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" (at 156.21 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 156.21 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 156.21 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Reference decoupling; check effective capacitance." (at 156.21 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/CP2102N.pdf" (at 156.21 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid db985ec7-dd08-4ac0-880e-8dac69a1b9af))
+(pin "2" (uuid d0b4c5c8-eb88-4936-bd93-65139705416c))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "C12") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 214.63 176.53 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 930f751b-c530-413d-8fe4-ad3f3ce3929b)
+(property "Reference" "C13" (at 214.63 162.03 0) (effects (font (size 1.1 1.1))))
+(property "Value" "100nF / VDD" (at 214.63 165.53 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0402_1005Metric" (at 214.63 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" (at 214.63 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 214.63 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 214.63 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Reference decoupling; check effective capacitance." (at 214.63 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/CP2102N.pdf" (at 214.63 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 80f3e9a1-4bc0-4a74-8b1c-63ee79407a3c))
+(pin "2" (uuid 8558b9c5-b822-4e0d-81b0-a21e05b89a00))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "C13") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:C") (at 271.78 176.53 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 6d68bbca-fd3b-4830-9a73-5f6cfad068de)
+(property "Reference" "C14" (at 271.78 162.03 0) (effects (font (size 1.1 1.1))))
+(property "Value" "100nF / buffer" (at 271.78 165.53 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "SentiFrame:C_0402_1005Metric" (at 271.78 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc2g125.pdf" (at 271.78 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 271.78 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "CANDIDATE" (at 271.78 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Reference decoupling; check effective capacitance." (at 271.78 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "${KIPRJMOD}/assets/datasheets/SN74LVC2G125.pdf" (at 271.78 176.53 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid dd3b1aae-eeb0-42ee-aa2f-8a1e8ac1a0c6))
+(pin "2" (uuid 2e2c660c-9e5a-4c28-a742-86c9f818d364))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "C14") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:D_TVS") (at 64.77 215.9 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 769ed9e0-4855-428b-8997-e21c58ec62bb)
+(property "Reference" "D1" (at 64.77 201.4 0) (effects (font (size 1.1 1.1))))
+(property "Value" "VBUS TVS / TBD" (at 64.77 204.9 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 64.77 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 64.77 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 64.77 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "SELECT MPN" (at 64.77 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Select working voltage, clamping voltage, leakage and package after rail limits." (at 64.77 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 64.77 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 3aac84ed-6a9b-403c-b75f-3ae897123c83))
+(pin "2" (uuid d7f0faf3-6c9f-4d2c-b55a-507562d8b796))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "D1") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:D_TVS") (at 154.94 215.9 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid a5da16ad-31a9-4d1f-b066-85a324372d80)
+(property "Reference" "D2" (at 154.94 201.4 0) (effects (font (size 1.1 1.1))))
+(property "Value" "CC1 TVS / TBD" (at 154.94 204.9 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 154.94 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 154.94 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 154.94 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "SELECT MPN" (at 154.94 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Select working voltage, clamping voltage, leakage and package after rail limits." (at 154.94 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 154.94 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid f21fb3d9-f1bf-48f2-830b-105cc96eed3b))
+(pin "2" (uuid 7c5ece4f-5a05-4e07-a1d5-be4379d286f3))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "D2") (unit 1))))
+)
+(symbol (lib_id "SentiFrame:D_TVS") (at 245.11 215.9 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid 5d2fb09d-bbee-40b7-87bc-5c27ca204231)
+(property "Reference" "D3" (at 245.11 201.4 0) (effects (font (size 1.1 1.1))))
+(property "Value" "CC2 TVS / TBD" (at 245.11 204.9 0) (effects (font (size 1.1 1.1))))
+(property "Footprint" "" (at 245.11 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Datasheet" "" (at 245.11 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "MPN" "" (at 245.11 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Status" "SELECT MPN" (at 245.11 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Design_Note" "Select working voltage, clamping voltage, leakage and package after rail limits." (at 245.11 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(property "Local_Datasheet" "" (at 245.11 215.9 0) (effects (font (size 1.1 1.1)) (hide yes)))
+(pin "1" (uuid 377d0efd-422a-450f-b46e-0d5b8ddab6f3))
+(pin "2" (uuid 9f2acdca-9b17-49bc-9b21-4b0a9de16018))
+(instances (project "SentiFrame" (path "/038166a6-9b7d-41c9-a03b-f3b7d3a9b467/7ca6a258-7bbc-466c-8d95-a6618f975396" (reference "D3") (unit 1))))
+)
+(text "USB-C is the glasses DEVICE port. Connect to Pi USB-A; Pi USB-C is its power input." (at 20 251.0 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid 0258c270-b791-44d0-b0a5-890bca031457))
+(text "AN54LV-15 has no USB: CP2102N is included for USB-UART data." (at 20 255.1 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid c3de15d1-efbf-4dbd-b75f-1b060b6e3331))
+(text "USB data only when host/application handshake succeeds; otherwise use BLE, even while charging." (at 20 259.2 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid 4abd8026-2a72-41c3-bc23-1655a66cd0ea))
+(text "QFN20 bridge has no VIO. UART level translation and Ioff/back-power paths are NOT yet resolved." (at 20 263.3 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid 4bb8e9ab-a0da-40b6-bf6a-b0587065cbd5))
+(text "CC1 and CC2 each need a separate 5.1k Rd. No USB PD is assumed." (at 20 267.4 0) (effects (font (size 1.35 1.35)) (justify left)) (uuid 5188394a-4792-4656-9725-2091e054d4b2))
+(embedded_fonts no))

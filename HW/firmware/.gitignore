@@ -1,0 +1,57 @@
+# 로컬 SDK, 툴체인 및 빌드 중간 결과
+/.deps/
+/build*/
+/cmake-build-*/
+/build*.log
+
+# Python 가상환경 및 캐시
+.venv/
+.pi-venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+
+# 운영체제 및 편집기 로컬 파일
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+.history/
+*.swp
+*.swo
+*~
+
+# 로컬 환경 변수 (공유용 예제는 유지)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# 소스, 보드 설정, third_party/, 의존성 잠금 파일, 검증 보고서와
+# release/의 HEX/BIN/ELF/ZIP 배포 파일은 추적 대상
+
+build-matrix-000
+build-matrix-001
+build-matrix-010
+build-matrix-100
+build-matrix-011
+build-matrix-110
+build-matrix-101
+build-matrix-111
+boards
+tools
+release
+app-test-report.json
+*.md
