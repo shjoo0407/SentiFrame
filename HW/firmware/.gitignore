@@ -39,19 +39,11 @@ Desktop.ini
 !.env.sample
 !.env.template
 
-# 소스, 보드 설정, third_party/, 의존성 잠금 파일, 검증 보고서와
-# release/의 HEX/BIN/ELF/ZIP 배포 파일은 추적 대상
-
-build-matrix-000
-build-matrix-001
-build-matrix-010
-build-matrix-100
-build-matrix-011
-build-matrix-110
-build-matrix-101
-build-matrix-111
-boards
-tools
-release
+# 기능 조합별 빌드 결과와 테스트 보고서 (다시 만들 수 있다)
+/build-matrix-*/
 app-test-report.json
-*.md
+
+# 배포용 HEX/BIN/ELF/ZIP 은 git 대신 GitHub Releases 에 올린다
+/release/
+
+# 소스, 보드 정의(boards/), 도구(tools/), third_party/, 문서(*.md)는 추적 대상
