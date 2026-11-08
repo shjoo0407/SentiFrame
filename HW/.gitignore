@@ -74,3 +74,7 @@ node_modules/
 
 docs
 tools
+# 참고 자료 원본 — 저장소에는 링크만 남긴다 (assets/README.md)
+assets/datasheets/
+assets/upstream/
+assets/pcba-passives/*.pdf
