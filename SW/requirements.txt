@@ -1,0 +1,7 @@
+# SW/fall_detection 실행에 필요한 패키지 (Python 3.11 에서 확인)
+numpy==2.4.6
+pandas==3.0.6
+scikit-learn==1.9.1
+lightgbm==4.7.0
+joblib==1.6.0
+matplotlib==3.11.2   # compare_models.py 의 결과 이미지

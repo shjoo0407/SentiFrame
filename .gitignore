@@ -12,3 +12,9 @@ venv/
 
 # 데이터 — 저장소에 올리지 않는다
 data/
+UCI/
+Tests 복사본/
+
+# 실행 결과물 — 다시 실행하면 생긴다
+results/
+*.joblib
