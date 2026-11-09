@@ -41,9 +41,12 @@ git push -u origin hw/missing-files
 - 1·2단계에서 파일이 없다고 나오면 이미 지워진 것이다. 넘어가도 된다. 자료는 [assets/README.md](assets/README.md)의 링크에서 다시 받을 수 있다
 - 그다음 GitHub에서 PR을 연다. 제목은 `[HW] - 빠진 파일 추가`
 
-## 2. 문서에 적을 것
+## 2. 문서 확인하고 채우기
 
-위 PR에서 아래 내용을 해당 문서에 직접 적는다.
+위 PR에서 함께 한다.
+
+- [README.md](README.md), [firmware/README.md](firmware/README.md), [firmware/PROTOCOL.md](firmware/PROTOCOL.md)에서 코드·설계와 다른 곳이 있으면 고친다. 특히 `PROTOCOL.md`는 수신 프로그램을 만들 때 기준이 되므로 꼼꼼히 본다
+- 아래 내용을 해당 문서에 직접 적는다
 
 | 내용 | 적을 곳 |
 |---|---|
